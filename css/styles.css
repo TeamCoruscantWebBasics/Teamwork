@@ -1,0 +1,114 @@
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+
+*{
+    margin:0;
+    padding:0;
+}
+
+html{
+    font: 14px "Helvetica Neue", Helvetica, Arial, FontAwesome, sans-serif;
+
+}
+
+
+/*START .UPPER-NAV*/
+.upper-nav{
+    font-size: 0.8rem;
+    background-color: #f8f8f8;
+    border-bottom: 2px solid #ebebeb;
+}
+
+.upper-nav ul{
+    margin: 1% auto;
+}
+
+.upper-nav li{
+    display: inline-block;
+    padding-right: 5%;
+    padding-left: 1%;
+    border-right: 1px solid rgba(85, 85, 85, 0.3);
+}
+
+.upper-nav a{
+    text-decoration: none;
+    color:#555555;
+}
+
+.upper-nav select{
+    border:none;
+    background-color: #f8f8f8;
+}
+
+.upper-nav span{
+    vertical-align: middle; /*TODO:vertical align*/
+}
+
+.upper-nav i{
+    margin-left: 5%;
+}
+/*END .UPPER-NAV*/
+
+/*START .SEARCH-BAR*/
+.logo::before{
+    content: url("../img/site-logo.jpg");
+    vertical-align: -35%;
+    padding-right: 3%;
+}
+
+.logo{
+    font-weight: bold;
+}
+
+.search-bar{
+    border: 1px solid rgba(85, 85, 85, 0.3);
+    margin-top: 2%;
+    border-radius: 20px;
+}
+
+.search-bar i{
+    margin-left: 30%;
+    padding: 1.5%;
+    background-color: #eeeeee;
+    border-radius: 100px;
+}
+
+.search-bar-nav select, .search-bar-nav input{
+    border: none;
+    padding: 1% 2%;
+}
+
+.search-bar-nav select{
+    margin-right: 2%;
+    border-right: 1px solid rgba(85, 85, 85, 0.3);
+}
+
+
+.shopping-card p{
+    display: inline-block;
+    margin-top: 5%;
+}
+
+.shopping-card i{
+    font-size: 1.5rem;
+    padding: 2%;
+    background-color: #eeeeee;
+    border-radius: 100px;
+    position: relative;
+}
+
+.number-of-products{  /*Това не ми харесва как стана*/
+    padding: 2px;
+    background-color: #0188cc;
+    border-radius: 150px;
+    position: absolute;
+    right: 85%;
+    color:#ffffff;
+}
+
+.products{
+    margin-left: 5%;
+}
+
+.products span{
+    font-weight: bold;
+}
