@@ -1,9 +1,12 @@
 @import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
 
+
+/*RESETS*/
 *{
     margin:0;
     padding:0;
 }
+/*END RESETS*/
 
 html{
     font: 14px "Helvetica Neue", Helvetica, Arial, FontAwesome, sans-serif;
@@ -39,8 +42,8 @@ html{
     background-color: #f8f8f8;
 }
 
-.upper-nav span{
-    vertical-align: middle; /*TODO:vertical align*/
+.upper-nav > .col-md-2{
+    margin: 0.5% auto;
 }
 
 .upper-nav i{
@@ -112,3 +115,158 @@ html{
 .products span{
     font-weight: bold;
 }
+/*END .SEARCH-BAR*/
+
+
+/*START NAVBAR*/
+.navbar{
+    height: 5%;
+    background-color: #0188cc;
+    border-radius: 0;
+}
+
+
+.navbar a{
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar ul{
+    margin-bottom: 0;
+}
+
+.navbar > .col-md-2, .navbar > .col-md-3{
+    margin: 1% auto;
+}
+
+.hot-line{
+    color:#ffffff;
+}
+
+.navbar li{
+    display: inline-block;
+    padding: 2% 5%;
+}
+
+.navbar li:hover{ /*TODO: have a bottom margin or padding?*/
+    background-color: #0076b3;
+    cursor: pointer;
+}
+
+.navbar select{
+    border:none;
+    background-color: #0188cc;
+    color: #ffffff;
+    font-size: 1.2rem;
+}
+
+.navbar select:active{
+    border:none;
+}
+
+.hot-line::before{
+    font-family:  FontAwesome;
+    content: "\f095";
+    padding-right: 2%;
+}
+
+.navbar label{
+    color:#ffffff;
+}
+/*END NAVBAR*/
+
+
+/*START .NEWSLETTER-BAR*/
+.newsletter-bar{
+    background-color: #0188cc;
+    color: #ffffff;
+}
+
+.newsletter-bar > div{
+    margin: 2% auto;
+}
+
+.food-span-left{
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding-right: 3%;
+    border-right: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.foot-span-right{
+    padding-left: 3%;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.discount-price{
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.subscribe-email{
+    font-size: 0.8rem;
+    margin-left: 30%;
+}
+
+.subscribe-email button{
+    border: none;
+    background-color: #006599;
+    padding: 2%;
+    margin-left: -5px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.subscribe-email input{
+    border: none;
+    padding: 2%;
+    width: 60%;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    color:#000000;
+}
+/*END .NEWSLETTER-BAR*/
+
+/*START .FOOT-NAVBAR*/
+
+.foot-navbar{
+    font-size: 0.8rem;
+    border-bottom: 2px solid #ebebeb;
+}
+
+.foot-navbar ul{
+    margin: 0.5% auto;
+}
+
+.foot-navbar li{
+    display: inline-block;
+    margin: auto 2%;
+}
+
+.foot-navbar a{
+    text-decoration: none;
+    color: #000000;
+}
+/*END0 .FOOT-NAVBAR*/
+
+/*START .FOOT-BOTTOM*/
+.foot-bottom h1{
+    font-size: 2rem;
+    padding-bottom: 15%;
+}
+
+.foot-bottom li, p{
+    padding: 2% 0;
+    list-style-type: none;
+}
+
+.foot-bottom a{
+    text-decoration: none;
+    color: #000000;
+}
+
+.foot-bottom i{
+    margin-left: 10%;
+}
+/*END .FOOT-BOTTOM*/
