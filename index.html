@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width"/>
     <title>SmartTech</title>  <!--TODO: name-->
     <link rel="stylesheet" href="css/lib/bootstrap-3.3.7-dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/index-css.css">
 </head>
 <body>
     <div class="container">
@@ -52,12 +52,12 @@
                 <div class="col-md-6 search-bar">
                     <select name="search-bar">
                         <option value="1">All Categories</option>
-                        <option value="2"> Category 1</option>
-                        <option value="3"> Category 2 </option>
-                        <option value="4"> Category 3</option>
+                        <option value="2">Gadgets</option>
+                        <option value="3">Clothing </option>
+                        <option value="4">Gifts</option>
                     </select>
                     <input type="text" placeholder="Search entire store here..."/>
-                    <i class="fa fa-search" aria-hidden="true"></i>
+                    <button><i class="fa fa-search" aria-hidden="true"></i></button>
                 </div>
                 <div class="col-md-3 shopping-card">
                     <i class="fa fa-shopping-cart" aria-hidden="true"></i>
@@ -69,19 +69,19 @@
                 <div class="col-md-2">
                     <label for="our-categories-select"><i class="fa fa-list-ul" aria-hidden="true"></i></label>
                     <select id="our-categories-select">
-                        <option value="0">Our Categories</option>
-                        <option value="1">TV</option>
-                        <option value="2">PC</option>
-                        <option value="3">Smart Phones</option>
+                        <option value="1">Our Categories</option>
+                        <option value="2">Gadgets</option>
+                        <option value="3">Clothing </option>
+                        <option value="4">Gifts</option>
                     </select>
                 </div>
                 <div class="col-md-7">
                     <ul>
                         <li><a href="#">Home</a></li>
-                        <li><a href="#">Demo</a></li> <!--TODO: make this hover with JS-->
-                        <li><a href="#">Mega menu</a></li> <!--TODO: make this hover with JS-->
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Buy Theme</a></li>
+                        <li><a href="#">Gadgets</a></li> <!--TODO: make this hover with JS-->
+                        <li><a href="#">Clothing</a></li> <!--TODO: make this hover with JS-->
+                        <li><a href="#">Gifts</a></li>
+                        <li><a href="#">Community</a></li>
                     </ul>
                 </div>
                 <div class="col-md-3">
@@ -91,9 +91,70 @@
         </header>
         <main>
             <div class="row">
-                <div class="col-md-4"></div>
-                <div class="col-md-4"><h1>MAIN CONTENT</h1></div>
-                <div class="col-md-4"></div>
+                <section class="col-md-8 main-slider">
+                    <h2>Product Description</h2>
+                    <h1>Product Title</h1>
+                    <h3>Starting at <span>$8.65</span></h3>
+                </section>
+                <section class="col-md-4">
+                    <section class="top-product">
+                        <h2>Product Description</h2>
+                        <h1>Product Title</h1>
+                        <h3>$299.99</h3>
+                    </section>
+                    <section class="weekly-sale">
+                        <h1>Weekly <span>Sale!</span></h1>
+                        <p>Saving up to 50% of all online <br/>
+                            store items this week.</p>
+                        <button><a href="#">Shop now</a></button>
+                    </section>
+                </section>
+            </div>
+            <div class="row services">
+                <section class="col-md-3 free-shipping">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <i class="fa fa-truck" aria-hidden="true"></i>
+                        </div>
+                        <div class="col-md-9">
+                            <h1>Free Shipping</h1>
+                            <p>On order over $99</p>
+                        </div>
+                    </div>
+                </section>
+                <section class="col-md-3 money-returns">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <i class="fa fa-money" aria-hidden="true"></i>
+                        </div>
+                        <div class="col-md-9">
+                            <h1>Money Returns</h1>
+                            <p>30 days money return</p>
+                        </div>
+                    </div>
+                </section>
+                <section class="col-md-3 support">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <i class="fa fa-question" aria-hidden="true"></i>
+                        </div>
+                        <div class="col-md-9">
+                            <h1>24/7 Support</h1>
+                            <p>Hotline:(+100)1234567890</p>
+                        </div>
+                    </div>
+                </section>
+                <section class="col-md-3 safe-payment">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <i class="fa fa-credit-card-alt" aria-hidden="true"></i>
+                        </div>
+                        <div class="col-md-9">
+                            <h1>Safe Payment</h1>
+                            <p>Protect online payment</p>
+                        </div>
+                    </div>
+                </section>
             </div>
         </main>
         <footer>
@@ -141,9 +202,9 @@
                 <section class="col-md-3">
                     <h1>Categories</h1>
                     <ul>
-                        <li><a href="#">TV</a></li>
-                        <li><a href="#">PC</a></li>
-                        <li><a href="#">Smart Phones</a></li>
+                        <li><a href="#">Gadgets</a></li>
+                        <li><a href="#">Clothing</a></li>
+                        <li><a href="#">Gifts</a></li>
                     </ul>
                 </section>
                 <section class="col-md-3">

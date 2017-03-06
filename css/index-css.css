@@ -14,7 +14,7 @@ html{
 }
 
 
-/*START .UPPER-NAV*/
+/*START .upper-nav*/
 .upper-nav{
     font-size: 0.8rem;
     background-color: #f8f8f8;
@@ -49,9 +49,9 @@ html{
 .upper-nav i{
     margin-left: 5%;
 }
-/*END .UPPER-NAV*/
+/*END .upper-nav*/
 
-/*START .SEARCH-BAR*/
+/*START .search-bar*/
 .logo::before{
     content: url("../img/site-logo.jpg");
     vertical-align: -35%;
@@ -68,11 +68,12 @@ html{
     border-radius: 20px;
 }
 
-.search-bar i{
-    margin-left: 30%;
+.search-bar button{
+    margin-left: 31.9%;
     padding: 1.5%;
     background-color: #eeeeee;
-    border-radius: 100px;
+    border-radius: 150px;
+    border: none;
 }
 
 .search-bar-nav select, .search-bar-nav input{
@@ -115,10 +116,10 @@ html{
 .products span{
     font-weight: bold;
 }
-/*END .SEARCH-BAR*/
+/*END .search-bar*/
 
 
-/*START NAVBAR*/
+/*START navbar*/
 .navbar{
     height: 5%;
     background-color: #0188cc;
@@ -174,10 +175,10 @@ html{
 .navbar label{
     color:#ffffff;
 }
-/*END NAVBAR*/
+/*END navbar*/
 
 
-/*START .NEWSLETTER-BAR*/
+/*START .newsletter-bar*/
 .newsletter-bar{
     background-color: #0188cc;
     color: #ffffff;
@@ -226,9 +227,9 @@ html{
     border-bottom-left-radius: 15px;
     color:#000000;
 }
-/*END .NEWSLETTER-BAR*/
+/*END .newsletter-bar*/
 
-/*START .FOOT-NAVBAR*/
+/*START .foot-navbar*/
 
 .foot-navbar{
     font-size: 0.8rem;
@@ -248,9 +249,9 @@ html{
     text-decoration: none;
     color: #000000;
 }
-/*END0 .FOOT-NAVBAR*/
+/*END0 .foot-navbar*/
 
-/*START .FOOT-BOTTOM*/
+/*START .foot-bottom*/
 .foot-bottom h1{
     font-size: 2rem;
     padding-bottom: 15%;
@@ -269,4 +270,154 @@ html{
 .foot-bottom i{
     margin-left: 10%;
 }
-/*END .FOOT-BOTTOM*/
+/*END .foot-bottom*/
+
+/*START .main-slider*/
+.main-slider{
+    background: url("../img/placehold-main-slider-800x500.png");
+    height: 500px;
+    margin-top: -1.7%;
+}
+
+.main-slider h2{
+    margin: 15% auto auto 4%;
+    font-size: 2rem;
+    color: #888888;
+}
+
+.main-slider h1, .main-slider h3{
+    margin-left: 4%;
+}
+
+.main-slider h1{
+    font-weight: bold;
+    color: #0088ce;
+}
+
+.main-slider h3{
+    color: #888888;
+    font-size: 1.5rem;
+}
+
+.main-slider h3 > span{
+    font-size: 2.5rem;
+    color: #000000;
+    font-weight: bold;
+}
+/*END .main-slider*/
+
+/*START .top-product*/
+.top-product{
+    background: url("../img/placehold-top-product-370x250.png");
+    width: 391px;
+    height: 250px;
+    margin-top: -11%;
+    margin-left: -4.5%;
+    border-left: 2px solid black; /*TODO:temp*/
+}
+
+.top-product  h2{
+    padding: 15% 0 0 4%;
+    font-size: 1.3rem;
+    color: #888888;
+}
+
+.top-product h1, .top-product h3{
+    margin-left: 4%;
+}
+
+.top-product h1{
+    color: #0088ce;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.top-product h3{
+    color: #000000;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+/*START .top-product*/
+
+/*START .weekly-sale*/
+.weekly-sale{
+    background-color: #0088ce;
+    margin-top: -6%;
+    margin-left: -4.5%;
+    width: 391px;
+    height: 252px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.weekly-sale h1{
+    padding-top: 20%;
+    color: #ffffff;
+}
+
+.weekly-sale h1 > span{
+    color: #000000;
+    font-weight: bold;
+}
+
+.weekly-sale p{
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.weekly-sale button{
+    padding: 10px 20px;
+    background-color: #006ea3;
+    border: none;
+    border-radius: 20px;
+    color: #ffffff;
+}
+
+.weekly-sale button:hover{
+    background-color: #007cb5;
+}
+
+.weekly-sale button a{
+    text-decoration: none;
+    color: #ffffff;
+}
+/*END .weekly-sale*/
+
+/*START .services*/
+.services h1{
+    font-size: 1rem;
+    margin-bottom: 0;
+    font-weight: bold;
+}
+
+.services p{
+    color: #989898;
+    padding-top: 0.5%
+}
+
+.services i{
+    font-size: 3rem;
+    margin-top: 30%;
+    color: #0088cc;
+}
+
+.services section{
+    margin: 5% auto;
+}
+
+.free-shipping{
+    border: 2px solid  #dddddd;
+}
+
+.money-returns{
+    border-top: 2px solid  #dddddd;
+    border-bottom: 2px solid  #dddddd;;
+}
+
+.support{
+    border: 2px solid  #dddddd;
+}
+
+.safe-payment{
+    border: 2px solid  #dddddd;
+    border-left: none;
+}
