@@ -246,3 +246,33 @@ article p {
     border-left: 1px solid #dddddd;
     padding-left: 10px;
 }
+
+.pages {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.pages a {
+    color: #555555;
+    font-size: 1.1em;
+    display: block;
+    width: 25px;
+    height: 25px;
+}
+
+.pages a:hover {
+    text-decoration: none;
+}
+
+.pages li {
+    display: inline-block;
+    border: 1px solid #cccccc;
+    line-height: 25px;
+    text-align: center;
+    border-radius: 3px;
+}
+
+.pages .selected {
+    background-color: #0088cc;
+    color: white;
+}
