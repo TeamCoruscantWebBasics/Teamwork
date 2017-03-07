@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width"/>
+    <title>SmartTech</title>  <!--TODO: name-->
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="css/lib/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/index-css.css">
+    <link rel="stylesheet" href="css/list-products.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script>
+        $( function() {
+            $( "#slider-range" ).slider({
+                range: true,
+                min: 0,
+                max: 1000,
+                values: [ 75, 700 ],
+                slide: function( event, ui ) {
+                    $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+                }
+            });
+            $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) +
+                    " - $" + $( "#slider-range" ).slider( "values", 1 ) );
+        } );
+    </script>
+</head>
+<body>
+<div class="container">
+    <header>
+        <div class="row upper-nav">
+            <div class="col-md-2"><span>Welcome to SmartTech center</span></div>
+            <div class="col-md-2"></div>
+            <div class="col-md-6">
+                <ul>
+                    <li><a href="#">Login/Register</a></li>
+                    <li><a href="#">Store Location</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Newsletter</a></li>
+                    <li><a href="#">
+                        <select name="language">
+                            <option value="1">English</option>
+                            <option value="2">Russian</option>
+                            <option value="3">Bulgarian</option>
+                        </select>
+                    </a></li>
+                    <li><a href="#">
+                        <select name="currency">
+                            <option value="1">USD</option>
+                            <option value="2">RUB</option>
+                            <option value="3">BGN</option>
+                        </select>
+                    </a></li>
+                </ul>
+            </div>
+            <div class="col-md-2">
+                    <span>
+                        <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-vimeo" aria-hidden="true"></i></a>
+                    </span>
+            </div>
+        </div>
+        <div class="row search-bar-nav">
+            <div class="col-md-3">
+                <h1 class="logo">SmartTech</h1>
+            </div>
+            <div class="col-md-6 search-bar">
+                <select name="search-bar">
+                    <option value="1">All Categories</option>
+                    <option value="2">Gadgets</option>
+                    <option value="3">Clothing </option>
+                    <option value="4">Gifts</option>
+                </select>
+                <input type="text" placeholder="Search entire store here..."/>
+                <button><i class="fa fa-search" aria-hidden="true"></i></button>
+            </div>
+            <div class="col-md-3 shopping-card">
+                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                <p class="number-of-products">3</p>
+                <p class="products"><span>My cart</span><br/>3 items - $500.00</p>
+            </div>
+        </div>
+        <div class="row navbar">
+            <div class="col-md-2">
+                <label for="our-categories-select"><i class="fa fa-list-ul" aria-hidden="true"></i></label>
+                <select id="our-categories-select">
+                    <option value="1">Our Categories</option>
+                    <option value="2">Gadgets</option>
+                    <option value="3">Clothing </option>
+                    <option value="4">Gifts</option>
+                </select>
+            </div>
+            <div class="col-md-7">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Gadgets</a></li> <!--TODO: make this hover with JS-->
+                    <li><a href="#">Clothing</a></li> <!--TODO: make this hover with JS-->
+                    <li><a href="#">Gifts</a></li>
+                    <li><a href="#">Community</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <span class="hot-line">Hotline: (+100)1234567890</span>
+            </div>
+        </div>
+    </header>
+    <main>
+        <p><span>Home &rsaquo; </span>Gifts for programmmers</p>
+        <aside class="row col-md-3">
+            <h4>Categories</h4>
+            <ul>
+                <li><label for="men"><input type="checkbox" id="men" name="men">Gifts for men</label></li>
+                <li><label for="her"><input type="checkbox" id="her" name="her">Gifts for her</label></li>
+                <li><label for="kids"><input type="checkbox" id="kids" name="kids">Gifts for kids</label></li>
+                <li><label for="programmers"><input type="checkbox" id="programmers" name="programmers" checked="checked">Gifts for programmers</label></li>
+                <li><label for="valentine"><input type="checkbox" id="valentine" name="valentine">Gifts for Valentine's Day</label></li>
+                <li><label for="birthday"><input type="checkbox" id="birthday" name="birthday">Birthday gifts</label></li>
+                <li><label for="christmas"><input type="checkbox" id="christmas" name="christmas">Christmas gifts</label></li>
+                <li><label for="unusual"><input type="checkbox" id="unusual" name="unusual">Unusual gifts</label></li>
+                <li><label for="special"><input type="checkbox" id="special" name="special">Special gifts</label></li>
+                <li><label for="funny"><input type="checkbox" id="funny" name="funny">Funny gifts</label></li>
+            </ul>
+            <div>
+                <h4>Price</h4>
+                <div id="slider-range"></div>
+                <input type="text" id="amount" readonly>
+            </div>
+            <button id="filter">Filter</button>
+            <h4>Rating</h4>
+            <p class="rating"><span class="yellow">&starf;&starf;&starf;&starf;&starf;</span><span class="rating-count">(25)</span></p>
+            <p class="rating"><span class="yellow">&starf;&starf;&starf;&starf;</span>&star;<span class="rating-count">(48)</span></p>
+            <p class="rating"><span class="yellow">&starf;&starf;&starf;</span>&star;&star;<span class="rating-count">(18)</span></p>
+            <p class="rating"><span class="yellow">&starf;&starf;</span>&star;&star;&star;<span class="rating-count">(8)</span></p>
+            <p class="rating"><span class="yellow">&starf;</span>&star;&star;&star;&star;<span class="rating-count">(3)</span></p>
+            <h4>Size</h4>
+            <span class="size">S</span>
+            <span class="size selected">M</span>
+            <span class="size">L</span>
+            <span class="size">XL</span>
+            <h4>Color</h4>
+            <ul>
+                <li><label for="red"><input type="checkbox" id="red" name="red">Red</label><span>(18)</span></li>
+                <li><label for="yellow"><input type="checkbox" id="yellow" name="yellow">Yellow</label><span>(9)</span></li>
+                <li><label for="black"><input type="checkbox" id="black" name="black">Black</label><span>(24)</span></li>
+                <li><label for="blue"><input type="checkbox" id="blue" name="blue">Blue</label><span>(17)</span></li>
+                <li><label for="grey"><input type="checkbox" id="grey" name="grey">Grey</label><span>(22)</span></li>
+                <li><label for="pink"><input type="checkbox" id="pink" name="pink">Pink</label><span>(5)</span></li>
+                <li><label for="white"><input type="checkbox" id="white" name="white">White</label><span>(8)</span></li>
+                <li><label for="green"><input type="checkbox" id="green" name="green">Green</label><span>(10)</span></li>
+            </ul>
+            <a href="#">+ See more</a>
+        </aside>
+    </main>
+    <footer>
+        <div class="row newsletter-bar">
+            <div class="col-md-6">
+                <span class="food-span-left">Subscribe our newsletter</span>
+                <span class="foot-span-right">Get <span class="discount-price">25% Off</span> for first purchase!</span>
+            </div>
+            <div class="col-md-6">
+                <form class="subscribe-email">
+                    <input type="email" placeholder="Your email here..."/>
+                    <button class="foot-subscribe-btn">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="row foot-navbar">
+            <div class="col-md-11">
+                <ul>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Customer Service</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Site Map</a></li>
+                    <li><a href="#">Search Terms</a></li>
+                    <li><a href="#">Advanced Search</a></li>
+                    <li><a href="#">Orders and Returns</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="col-md-1"></div>
+        </div>
+        <div class="row foot-bottom">
+            <section class="col-md-3">
+                <h1>Contact SmartTech!</h1>
+                <p>Address: Sofia, Izgrev residential area, 15-17 Tintyava str, fl. 1</p>
+                <p>Phone: (+100)1234567890</p>
+                <p>Support: Support@smarttech.com</p>
+                <p>
+                    <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                    <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                    <a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
+                    <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                    <a href="#"><i class="fa fa-vimeo" aria-hidden="true"></i></a>
+                </p>
+            </section>
+            <section class="col-md-3">
+                <h1>Categories</h1>
+                <ul>
+                    <li><a href="#">Gadgets</a></li>
+                    <li><a href="#">Clothing</a></li>
+                    <li><a href="#">Gifts</a></li>
+                </ul>
+            </section>
+            <section class="col-md-3">
+                <h1>Customer Service</h1>
+                <ul>
+                    <li><a href="#">Shipping and Returns</a></li>
+                    <li><a href="#">Secure Shopping</a></li>
+                    <li><a href="#">International Shipping</a></li>
+                    <li><a href="#">Affiliates</a></li>
+                    <li><a href="#">Contacts</a></li>
+                </ul>
+            </section>
+            <section class="col-md-3">
+                <h1>Information</h1>
+                <ul>
+                    <li><a href="#">Our Blog</a></li>
+                    <li><a href="#">About Our Shop</a></li>
+                    <li><a href="#">Secure Shopping</a></li>
+                    <li><a href="#">Delivery information</a></li>
+                    <li><a href="#">Store Locations</a></li>
+                    <li><a href="#">FAQs</a></li>
+                </ul>
+            </section>
+        </div>
+    </footer>
+</div>
+</body>
+</html>

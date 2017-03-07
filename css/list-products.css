@@ -1,0 +1,110 @@
+main::after {
+    clear: left;
+    content: '';
+    display: block;
+}
+
+body {
+    color: #555555;
+}
+
+main > p {
+    margin: 0;
+    padding: 0 0 15px;
+    border-bottom: 1px solid #dddddd;
+    margin-bottom: 30px;
+}
+
+main > p span {
+    color: #989898;
+    word-spacing: 0.7em;
+}
+
+aside h4 {
+    margin: 20px 0;
+    font-size: 1.3em;
+    font-weight: 700;
+    color: black;
+}
+
+aside ul {
+    list-style: none;
+}
+
+aside input[type=checkbox] {
+    margin-right: 10px;
+    margin-top: 0;
+    vertical-align: middle;
+}
+
+aside li {
+    margin-bottom: 5px;
+}
+
+aside label {
+    font-weight: 600;
+}
+
+div#slider-range {
+    color: #0088CC;
+}
+
+#amount {
+    border:0;
+    color:#555555;
+    font-weight:bold;
+    text-align: center;
+    padding-top: 20px;
+    width: 100%;
+}
+
+#filter {
+    background-color: #0088CC;
+    padding: 5px 15px;
+    color: white;
+    border: none;
+    border-radius: 26px;
+    margin: 10px 0 30px;
+}
+
+aside .rating {
+    font-size: 1.2em;
+    margin: 0;
+    color: #cccccc;
+}
+
+.yellow {
+    color: #FECB00;
+}
+
+aside .rating-count {
+    margin-left: 10px;
+}
+
+aside .size {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: inline-block;
+    border: 1px solid #cccccc;
+    line-height: 50px;
+    text-align: center;
+    font-weight: 700;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+aside .size.selected {
+    background-color: #0088cc;
+    color: white;
+}
+
+aside li span {
+    color: #cccccc;
+    margin-left: 10px;
+}
+
+aside > a {
+    color: #888888;
+    text-decoration: underline;
+}
