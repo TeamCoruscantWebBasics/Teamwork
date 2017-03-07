@@ -1,7 +1,8 @@
-main::after {
+main::after, article::after {
     clear: left;
     content: '';
     display: block;
+    padding-bottom: 5px;
 }
 
 body {
@@ -12,7 +13,6 @@ main > p {
     margin: 0;
     padding: 0 0 15px;
     border-bottom: 1px solid #dddddd;
-    margin-bottom: 30px;
 }
 
 main > p span {
@@ -42,7 +42,7 @@ aside li {
 }
 
 aside label {
-    font-weight: 600;
+    font-weight: 500;
 }
 
 div#slider-range {
@@ -107,4 +107,142 @@ aside li span {
 aside > a {
     color: #888888;
     text-decoration: underline;
+}
+
+#products header h3 {
+    color: black;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+#products header p {
+    padding-top:  0;
+}
+
+#products header p span {
+    padding-right: 15px;
+}
+
+#products header p span:not(:first-of-type) {
+    padding-left: 15px;
+    border-left: 1px solid #cccccc;
+}
+
+#products header p span:last-of-type i {
+    font-size: 1.2em;
+}
+
+#products header p span i {
+    margin-left: 5px;
+}
+
+#products header p span:last-of-type a:last-of-type {
+    color: #555555;
+}
+
+article img {
+    width: 100%;
+}
+
+article {
+    border: 1px solid #cccccc;
+    height: 200px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+article p {
+    padding: 0;
+    margin: 0;
+}
+
+.img-container {
+    align-self: center;
+}
+
+.item-description {
+    padding-top: 20px;
+}
+
+.item-type {
+    font-size: 0.9em;
+    color: #cccccc;
+}
+
+.item-name {
+    font-size: 1.1em;
+    color: #0088cc;
+    font-weight: 600;
+}
+
+.item-reviews {
+    margin-left: 10px;
+    color: #cccccc;
+    font-size: 0.8em;
+}
+
+.item-info {
+    list-style: none;
+}
+
+.item-info li:before {
+    content: "\f10c";
+    font-family: FontAwesome;
+    font-size: 0.5em;
+    vertical-align: middle;
+    color: #cccccc; /* or whatever color you prefer */
+    margin-right: 5px;
+}
+
+.fa-heart, .fa-bars {
+    padding: 7px;
+    border-radius: 50%;
+    border: 1px solid #cccccc;
+    color: #aaaaaa;
+}
+
+.heart, .bars {
+    text-align: right;
+    margin: 2px;
+}
+
+.actions {
+    padding: 0;
+}
+
+.item-price {
+    text-align: center;
+    margin: 7px;
+    color: black;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.availability {
+    text-align: center;
+    font-weight: 600;
+    font-size: 0.85em;
+}
+
+.availability span {
+    color: #85B125;
+}
+
+.actions button {
+    color: white;
+    background-color: #0088cc;
+    border: none;
+    padding: 7px 20px;
+    border-radius: 17px;
+    display: block;
+    margin: 15px auto;
+}
+
+.actions {
+    border-left: 1px solid #dddddd;
+    padding-left: 10px;
 }
