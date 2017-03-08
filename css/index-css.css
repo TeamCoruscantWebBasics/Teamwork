@@ -421,3 +421,336 @@ html{
     border: 2px solid  #dddddd;
     border-left: none;
 }
+/*END .services*/
+
+/*START #tabs*/
+#tabs{
+    padding: 0;
+}
+
+#tabs ul{
+    margin-bottom: 0;
+}
+
+#tabs li{
+    display:inline-block;
+
+}
+
+#tabs li a{
+    display: block;
+    color: #000000;
+    background-color: #f2f2f2;
+    padding: 10px;
+    text-decoration: none;
+}
+
+#tabs li a:focus{
+    background-color: #0188cc;
+    color: #ffffff;
+}
+
+#tabs section{
+    /*padding: 0 1%;*/
+    /*border: 2px solid #e6e6e6;*/
+    padding: 0;
+    position: relative;
+}
+
+#tabs img{
+    margin: 5% 15%
+}
+
+#tabs h2{
+    font-size: 1.5rem;
+    color: #aaaaaa;
+}
+
+#tabs h1{
+    font-size: 2rem;
+    color: #0168b7;
+}
+
+#tabs h1 a:hover{
+    color: #0168b7;
+}
+
+#tabs p{
+    color: #fbcb00;
+    font-size: 1.5rem;
+}
+
+#tabs p span{
+    color: #aaaaaa;
+    margin-left: 5%;
+    font-size: 1.2rem;
+}
+
+.product-price span a{
+    text-decoration: none;
+    color: #949494;
+    padding: 10px;
+}
+
+.product-price span a:hover{
+    color: #ffffff;
+}
+
+.product-price .shopping-card-income{
+    position: absolute;
+    left: 70%;
+    background-color: #efefef;
+    border-radius: 100px;
+
+}
+
+.product-price .shopping-card-income:hover{
+    background-color: #0188ca;
+    color: #ffffff;
+}
+
+#tabs ul li:focus{
+    background-color: #0188cc;
+}
+
+/*.more-info{*/
+    /*position: relative;*/
+    /*top: -32px;*/
+    /*left: 15%;*/
+    /*text-align: center;*/
+    /*background-color: #0188cc;*/
+    /*width: 190px;*/
+    /*display: none;*/
+/*}*/
+
+.product-container{
+    border: 2px solid #e6e6e6;
+    margin: 3% 1%;
+}
+
+.product-container h1, .product-container h2, .product-container h3, .product-container p{
+    margin-left: 3%;
+}
+
+.product-container h3{
+    margin-bottom: 5%;
+}
+
+.product-discount{
+    position: absolute;
+    top: 25px;
+    left: 16.3%;
+    width: 18%;
+    background-color: #f63233;
+    color:#ffffff;
+    padding: 3px;
+    text-align: center;
+}
+
+.product-price .product-discount-price{
+    background-color: #ffffff;
+    color: #f63233;
+    margin-left: 3%;
+    text-decoration: line-through;
+}
+
+.new-product{
+    background-color: #0188cc;
+}
+
+.favorite-product{
+    position: absolute;
+    top: 28px;
+    left: 70%;
+}
+
+.favorite-product button, .product-details button{
+    border: none;
+    padding: 7px;
+    border-radius: 100px;
+    background-color: #e7e7e7;
+    color: #aaaaaa;
+}
+
+.favorite-product button:hover{
+    background-color: #f63234;
+    color: #ffffff;
+}
+
+.product-details{
+    position: absolute;
+    top: 70px;
+    left: 70%;
+}
+
+.product-details button:hover{
+    background-color: #0188cc;
+    color: #ffffff;
+}
+/*END #tabs*/
+
+/*START .top-selling-week*/
+.most-selling-container{
+    background: url("../img/placehold-top-selling-product-450x340.png");
+    width: 450px;
+    height: 340px;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 2%;
+    margin-right: 1%;
+}
+
+.most-selling-container h1{
+    margin-top: 15%;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.most-selling-container h1, .most-selling-container p, .most-selling-container span, .most-selling-container button{
+    margin-left: 5%;
+}
+
+.most-selling-container span{
+    color: #aaaaaa;
+    margin-left: 0;
+    padding-left: 2%;
+}
+
+.most-selling-container span:first-of-type{
+    border-right: 2px solid #aaaaaa;
+    padding-right: 3%;
+    margin-left: 3%;
+}
+
+.most-selling-container button{
+    margin-top: 10%;
+    padding: 5px 10px;
+    border: none;
+    background-color: #0188cc;
+    color: #ffffff;
+    border-radius: 15px;
+}
+
+.most-selling-container button:hover{
+    background-color: #01669e;
+}
+
+.most-selled-product .product-container{
+    width: 18%;
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 0;
+    position: relative;
+    margin-left: 0.5%;
+    margin-right: 0.5%;
+}
+
+.most-selled-product .product-container img{
+    margin: 2% 4%;
+}
+
+.most-selled-product .product-container .favorite-product, .most-selled-product .product-container .product-details{
+    position: absolute;
+    margin-top: -10%;
+    left: 80%;
+}
+
+.most-selled-product .product-container h1{
+    margin: 2% 0 0 0;
+    font-size: 2rem;
+}
+
+.most-selled-product .product-container h1 a{
+    color: #0068b9;
+}
+
+.most-selled-product .product-container h2{
+    margin: 2% 0 0 0;
+    font-size: 1rem;
+    color: #aaaaaa;
+}
+
+.most-selled-product .product-container p{
+    color: #fdca00;
+    font-size: 1.2rem;
+}
+
+.most-selled-product .product-container p span{
+    color: #aaaaaa;
+}
+
+.most-selled-product .product-container h1, .most-selled-product .product-container h2, .most-selled-product .product-container p{
+    margin-left: 5%;
+}
+
+.most-selled-product .product-container .product-discount{
+    position: absolute;
+    margin-top: -10%;
+    margin-left: -12%;
+}
+
+.most-selled-product-second-row{
+    margin-left: 2%;
+}
+
+.most-selled-product .product-discount-price{
+    margin-right: 3%;
+}
+
+.top-selling-label{
+    margin-top: 5%;
+    margin-bottom: 2%;
+    font-size: 1.8rem;
+    margin-left: 2%;
+    padding-bottom: 1%;
+    border-bottom: 2px solid #e5e5e5;
+    font-weight: bold;
+}
+
+.top-selling-2{  /*TODO: BUG*/
+    background-color: #f8f8f8;
+}
+/*END .top-selling-week*/
+
+/*START .from-blog*/
+
+.blog-post-container{
+    margin-bottom: 10%;
+}
+
+.from-blog-label{
+    margin-top: 5%;
+    margin-bottom: 2%;
+    font-size: 1.8rem;
+    padding-bottom: 1%;
+    border-bottom: 2px solid #e5e5e5;
+}
+
+.from-blog-label h1{
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.blog-post-comments-date{
+    color: #999999;
+    margin-bottom: 0.5%;
+}
+
+.blog-post-comments-date i{
+    color: #dddddd;
+}
+
+.blog-post-container h1{
+    font-size: 1.8rem;
+    margin-top: 0.5%;
+    font-weight: bold;
+}
+
+.blog-post-container a{
+    text-decoration: none;
+    color: #0187ce;
+}
+
+.blog-post-container a:hover{
+    text-decoration: underline;
+}
