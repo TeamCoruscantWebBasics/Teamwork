@@ -198,16 +198,35 @@ aside > a {
     margin-right: 5px;
 }
 
-.fa-heart, .fa-bars {
-    padding: 7px;
+.heart a, .bars a {
     border-radius: 50%;
     border: 1px solid #cccccc;
     color: #aaaaaa;
+    display: block;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    margin-right: 0;
 }
 
-.heart, .bars {
-    text-align: right;
-    margin: 2px;
+#products .actions p.heart,
+#products .actions p.bars {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-bottom: 3px;
+}
+
+.heart a:hover {
+    background-color: #f63233;
+    color: white;
+    border: none;
+}
+
+.bars a:hover {
+    background-color: #0088cc;
+    color: white;
+    border: none;
 }
 
 .actions {
@@ -319,6 +338,7 @@ aside > a {
     padding: 0;
     margin: 0;
     height: 40px;
+    display: block;
 }
 
 .recent-item .item-rating {
@@ -392,4 +412,78 @@ aside > a {
     text-decoration: none;
     color: #f63233;
     font-size: 1.1em;
+}
+
+.recent-item .img-container {
+    position: relative;
+}
+
+.recent-item .actions,
+.recent-item .quickview {
+    display: none;
+    border: none;
+}
+
+.recent-item .actions a {
+    display: block;
+    margin-bottom: 5px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    background-color: #dddddd;
+    color: #888888;
+    border-radius: 50%;
+}
+
+.recent-item .actions i {
+    border: none;
+}
+
+.recent-item .actions a:first-of-type:hover {
+    background-color: #f63233;
+}
+
+.recent-item .actions a:first-of-type:hover i {
+    color: white;
+}
+
+.recent-item .actions a:last-of-type:hover {
+    background-color: #0088cc;
+}
+
+.recent-item .actions a:last-of-type:hover i {
+    color: white;
+}
+
+.recent-item:hover .actions {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+}
+
+.quickview a {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 5px 0;
+    background-color: #888888;
+    color: white;
+}
+
+.recent-item:hover .quickview {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.quickview a:hover {
+    text-decoration: none;
+    background-color: #0088cc;
+}
+
+.recent-item .item-name:hover {
+    color: #0088cc;
 }
