@@ -1,4 +1,4 @@
-main::after, article::after {
+main::after, #products article::after {
     clear: left;
     content: '';
     display: block;
@@ -140,11 +140,11 @@ aside > a {
     color: #555555;
 }
 
-article img {
+#products article img {
     width: 100%;
 }
 
-article {
+#products article {
     border: 1px solid #cccccc;
     height: 200px;
     padding-top: 7px;
@@ -155,7 +155,7 @@ article {
     margin-bottom: 10px;
 }
 
-article p {
+#products article p {
     padding: 0;
     margin: 0;
 }
@@ -275,4 +275,121 @@ article p {
 .pages .selected {
     background-color: #0088cc;
     color: white;
+}
+
+#recently-viewed {
+    padding-bottom: 40px;
+}
+
+#recently-viewed img {
+    max-width: 100%;
+}
+
+#recent-items {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: space-between;
+
+}
+
+.recent-item {
+    border: 1px solid #cccccc;
+    flex-basis: 18%;
+}
+
+#recently-viewed > ul:first-of-type{
+    float: right;
+}
+
+.recent-item .img-container {
+    margin-bottom: 5px;
+    padding: 0;
+}
+.recent-item .item-type {
+    margin-bottom: 0;
+}
+
+.recent-item {
+    padding: 5px;
+}
+
+.recent-item .item-name {
+    font-size: 1em;
+    padding: 0;
+    margin: 0;
+    height: 40px;
+}
+
+.recent-item .item-rating {
+    margin: 0;
+    padding: 0;
+    font-size: 1.1em;
+}
+
+.recent-item .item-price {
+    text-align: left;
+    margin: 0;
+    line-height: 40px;
+    padding-top: 10px;
+}
+
+.recent-item .item-price a {
+    float: right;
+    padding: 0 7px;
+    color: #777;
+    line-height: 1.5em;
+    font-size: 1.5em;
+    background-color: #eeeeee;
+    border-radius: 0.75em;
+    cursor: pointer;
+}
+
+.recent-item .item-price a:hover {
+    background-color: #0088cc;
+    color: white;
+}
+
+.recent-item > a:hover {
+    text-decoration: none;
+}
+
+.recent-item.new-item .img-container,
+.recent-item.discount-item .img-container{
+    position: relative;
+}
+
+.recent-item.new-item .img-container::before,
+.recent-item.discount-item .img-container::before{
+    z-index: 5;
+    padding: 5px 10px;
+    color: white;
+    left: 0;
+    top: 0;
+    position: absolute;
+    border-radius: 3px;
+}
+
+.recent-item.new-item .img-container::before {
+    content: "New";
+    background-color: #0088cc;
+}
+
+.recent-item.discount-item .img-container::before {
+    content: "-20%";
+    background-color: #F63233;
+}
+
+.discount-item .old-price {
+    font-size: 0.85em;
+    color: #cccccc;
+    text-decoration: line-through;
+    font-weight: normal;
+    margin-left: 10px;
+}
+
+.recent-item.discount-item .new-price {
+    text-decoration: none;
+    color: #f63233;
+    font-size: 1.1em;
 }
