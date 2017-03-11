@@ -127,6 +127,8 @@ html{
 .navbar{
     background-color: #0188cc;
     border-radius: 0;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .flex-item-main-nav{
@@ -147,9 +149,9 @@ html{
     margin-bottom: 0;
 }
 
-/*.navbar > .col-md-2, .navbar > .col-md-3{*/
-    /*margin: 1% auto;*/
-/*}*/
+.navbar > .col-md-2, .navbar > .col-md-3{
+    margin: 1% auto;
+}
 
 .hot-line{
     color:#ffffff;
@@ -157,6 +159,8 @@ html{
 
 .navbar li{
     display: inline-block;
+    box-sizing: border-box;
+    padding: 3%;
 }
 
 .navbar li:hover{
@@ -201,7 +205,11 @@ html{
 }
 
 .nav-hotline, .nav-select{
-    margin-top: 1%;
+    margin-top: 2%;
+}
+
+.nav-select{
+    margin-left: 2%;
 }
 
 @media screen and (max-width: 1200px){
@@ -234,6 +242,7 @@ html{
 
     .navbar li{
         display: block;
+        padding: 0;
     }
 
     .search-bar-nav{
@@ -440,62 +449,22 @@ html{
 }
 
 @media screen and (max-width: 992px){
-    /*img{*/
-       /*max-width: 100%;*/
-    /*}*/
-    /*!*TODO*!*/
-    /*.main-slider{*/
-        /*width: 59.5%;*/
-    /*}*/
-
-    /*.top-product h2{*/
-        /*margin-top: 4%;*/
-    /*}*/
+    .main-slider{
+        max-width: 100%;
+    }
 }
 
 @media screen and (max-width: 768px){
-    /*.main-slider{*/
-        /*width: 100%;*/
-        /*margin-top: -15%;*/
-        /*z-index: 9;*/
-    /*}*/
-
-    /*.main-slider h2{*/
-        /*padding-top: 15%;*/
-    /*}*/
-
-    /*.top-product{*/
-        /*position: absolute;*/
-        /*top: 41.5%;*/
-        /*left: 4.5%;*/
-        /*border-left: 0;*/
-        /*z-index: 9;*/
-    /*}*/
-
-    /*.weekly-sale{*/
-        /*position: relative;*/
-        /*!*top: 30%;*!*/
-        /*bottom: -10%;*/
-        /*left: 52.3%;*/
-        /*z-index: 1;*/
-        /*height: 500px; !*TODO*!*/
-
-    /*}*/
-
+    .main-slider h2{
+        margin-top: 2%;
+    }
 }
 
-@media screen and (max-width: 480px){ /*TODO:тука да се опитам с боотстрап*/
+@media screen and (max-width: 480px){
     .main-slider{
         width: 100%;
     }
 
-    .top-product{
-        top: 23.5%;
-    }
-
-    .weekly-sale{
-
-    }
 }
 
 /*END .main-slider*/
@@ -503,7 +472,7 @@ html{
 /*START .top-product*/
 .top-product{
     background: url("../img/placehold-top-product-370x250.png");
-    width: 370px;
+    width: 380px;
     height: 250px;
     margin-top: -5.5%;
     margin-left: -4.5%;
@@ -532,6 +501,22 @@ html{
     font-size: 2.5rem;
     font-weight: bold;
 }
+
+@media screen and (max-width: 1200px){
+
+}
+
+@media screen and (max-width: 992px){
+
+}
+
+@media screen and (max-width: 768px){
+
+}
+
+@media screen and (max-width: 480px){
+
+}
 /*START .top-product*/
 
 /*START .weekly-sale*/
@@ -540,7 +525,7 @@ html{
     margin-top: -6%;
     margin-left: -4.5%;
     width: 391px;
-    height: 252px;
+    height: 272px;
     text-align: center;
     vertical-align: middle;
 }
@@ -574,6 +559,24 @@ html{
 .weekly-sale button a{
     text-decoration: none;
     color: #ffffff;
+}
+
+@media screen and (max-width: 1200px){
+
+}
+
+@media screen and (max-width: 992px){
+    .weekly-sale{
+        height: 267px;
+    }
+}
+
+@media screen and (max-width: 768px){
+
+}
+
+@media screen and (max-width: 480px){
+
 }
 /*END .weekly-sale*/
 
@@ -628,16 +631,16 @@ html{
 @media screen and (max-width: 768px){
     .services .row{
         text-align: center;
-        /*margin-top: -100px;*/
     }
 
-    /*.services .col-md-3{*/
-        /*height: 100px;*/
-    /*}*/
+    .services i{
+        margin-top:2%;
+    }
 
-    /*.services .col-md-3 i{ !*TODO*!*/
-        /*margin-bottom: 3%;*/
-    /*}*/
+    .services section{
+        margin-top: 0.5%;
+        margin-bottom: 0.5%;
+    }
 }
 
 @media screen and (max-width: 480px){
@@ -1120,6 +1123,20 @@ html{
 
 .blog-post-container a:hover{
     text-decoration: underline;
+}
+
+@media screen and (max-width: 992px){
+    .from-blog article{
+        width: 95%
+    }
+
+    .from-blog{
+        text-align: center;
+    }
+
+    .blog-post-container{
+        margin-bottom: 1%;
+    }
 }
 /*END .from-blog*/
 
