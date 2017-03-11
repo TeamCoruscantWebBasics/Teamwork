@@ -125,7 +125,6 @@ html{
 
 /*START navbar*/
 .navbar{
-    height: 5%;
     background-color: #0188cc;
     border-radius: 0;
 }
@@ -148,9 +147,9 @@ html{
     margin-bottom: 0;
 }
 
-.navbar > .col-md-2, .navbar > .col-md-3{
-    margin: 1% auto;
-}
+/*.navbar > .col-md-2, .navbar > .col-md-3{*/
+    /*margin: 1% auto;*/
+/*}*/
 
 .hot-line{
     color:#ffffff;
@@ -158,10 +157,9 @@ html{
 
 .navbar li{
     display: inline-block;
-    padding: 2% 5%;
 }
 
-.navbar li:hover{ /*TODO: have a bottom margin or padding?*/
+.navbar li:hover{
     background-color: #0076b3;
     cursor: pointer;
 }
@@ -228,6 +226,10 @@ html{
         flex-wrap: wrap;
         flex-direction: column;
         text-align: center;
+    }
+
+    .flex-item-nav-select, .flex-item-main-nav, .flex-item-hotline{
+        flex-grow: 1;
     }
 
     .navbar li{
