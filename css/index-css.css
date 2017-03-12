@@ -13,10 +13,11 @@ html{
 
 }
 
-/*img{*/
-    /*max-width: 100%;*/
-    /*min-width: 100px;*/
-/*}*/
+.flex-box-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
 
 /*START .upper-nav*/
 .upper-nav{
@@ -216,6 +217,20 @@ html{
 
 }
 
+@media screen and (max-width: 1024px){
+    .search-bar button{
+        position: absolute;
+        top: 1px;
+        left: 61%;
+        padding: 5px;
+    }
+
+    .number-of-products{
+        position: absolute;
+        right: 82%;
+    }
+}
+
 @media screen and (max-width: 992px){
     #responsive-icon{
         display: block;
@@ -250,10 +265,7 @@ html{
     }
 
     .search-bar button{
-        position: absolute;
-        top: 1px;
-        left: 61%;
-        padding: 4px;
+
     }
 
     .number-of-products{
@@ -294,6 +306,148 @@ html{
 }
 /*END navbar*/
 
+/*START .shopping-cart-details*/
+
+.shopping-card-details hr{
+    margin: 1% auto;
+}
+
+.shopping-card-details h1, .shopping-card-details>p, .shopping-card-total-price,    .shopping-card-buttons{
+    padding-left: 2%;
+}
+
+.shopping-card-item{
+    padding: 2%;
+}
+
+.shopping-card-item a{
+        color: #000000;
+}
+
+.shopping-card-details img{
+    padding: 2%;
+    border: 2px solid #eeeeee;
+    width: 75px;
+    height: 75px;
+}
+
+.shopping-card-details h1{
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.shopping-card-details h1 span{
+    text-decoration: underline;
+    color: #f93332;
+}
+
+.shopping-card-details h2{
+    font-size: 1rem;
+}
+
+.shopping-card-details p{
+    margin-top: 0.5%;
+    display: inline;
+    word-wrap: break-word;
+}
+
+.shopping-card-details .shopping-card-price, .shopping-card-details .shopping-card-price-2{
+    position: absolute;
+    top: 32%;
+    left: 30%;
+    font-weight: bold;
+}
+
+.shopping-card-details .shopping-card-price-2{
+    top: 59%;
+}
+
+.shopping-card-total-price span{
+    font-weight: bold;
+}
+
+.shopping-card-price{
+    font-weight: bold;
+}
+
+.shopping-card-count-products{
+    font-weight: normal;
+    color: #f93332;
+}
+
+.shopping-card-buttons button{
+    margin: 5% 2%;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 15px;
+    color: #ffffff;
+    font-size: 0.9rem;
+}
+
+ .shopping-card-btn-go{
+    background-color: #bbbbbb;
+}
+
+ .shopping-card-btn-go:hover{
+    background-color: #a7a7a7;
+}
+
+.shopping-card-btn-checkout{
+    background-color: #0089ca;
+}
+
+.shopping-card-btn-checkout:hover{
+    background-color: #006fa5;
+}
+
+.shopping-card-details{
+    width: 300px;
+    position: absolute;
+    top: 90%;
+    right: 10%;
+    z-index: 9;
+    background-color: #ffffff;
+    border: 2px solid #eeeeee;
+    display: none;
+}
+
+.shopping-card:hover div.shopping-card-details{
+    display: block;
+    cursor: default;
+}
+
+.shopping-card:hover{
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px){
+    .shopping-card-details{
+        right: 35%;
+    }
+
+    .shopping-card{
+        text-align: center;
+    }
+
+    .number-of-products{
+        right: 57%;
+    }
+
+    .shopping-card-details .shopping-card-price, .shopping-card-details .shopping-card-price-2{
+        left: 41%;
+    }
+}
+
+@media screen and (max-width: 480px){
+    .shopping-card-details{
+        right: 35%;
+    }
+
+    .number-of-products{
+        right: 60%;
+    }
+}
+/*END .shopping-cart-details*/
 
 /*START .newsletter-bar*/
 .newsletter-bar{
@@ -409,13 +563,11 @@ html{
 
 /*START .main-slider*/
 .main-slider{
-    background: url("../img/placehold-main-slider-800x500.png");
+    background: url("../img/homepage/mainSlider-retroGame-800x500.jpg") no-repeat;;
     height: 500px;
     margin-top: -1.7%;
-}
-
-.main-slider img{
-    max-width: 100%;
+    background-size: 100%;
+    border: 2px solid red;
 }
 
 .main-slider h2{
@@ -471,13 +623,11 @@ html{
 
 /*START .top-product*/
 .top-product{
-    background: url("../img/placehold-top-product-370x250.png");
+    background: url("../img/homepage/topProduct-keyboardLock-370x250.jpg");
     width: 380px;
     height: 250px;
     margin-top: -5.5%;
     margin-left: -4.5%;
-    /*border: 2px solid red;*/
-    /*TODO: fuck them*/
 }
 
 .top-product  h2{
@@ -497,7 +647,7 @@ html{
 }
 
 .top-product h3{
-    color: #000000;
+    color: #0088ce;
     font-size: 2.5rem;
     font-weight: bold;
 }
@@ -511,7 +661,9 @@ html{
 }
 
 @media screen and (max-width: 768px){
-
+    .top-product{
+        margin: 0 auto;
+    }
 }
 
 @media screen and (max-width: 480px){
@@ -565,14 +717,26 @@ html{
 
 }
 
-@media screen and (max-width: 992px){
+@media screen and (max-width: 1024px){
     .weekly-sale{
         height: 267px;
     }
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 992px){
 
+}
+
+@media screen and (max-width: 768px){
+    .weekly-sale{
+        height: 267px;
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .weekly-sale h1{
+        padding-top: 5%;
+    }
 }
 
 @media screen and (max-width: 480px){
@@ -620,12 +784,16 @@ html{
     border-left: none;
 }
 
-@media screen and (max-width: 1200px){
-
+@media screen and (max-width: 1024px){
+    .services p {
+        font-size: 0.8rem;
+    }
 }
 
 @media screen and (max-width: 992px){
-
+    .services p {
+        font-size: 0.8rem;
+    }
 }
 
 @media screen and (max-width: 768px){
@@ -655,6 +823,7 @@ html{
 
 #tabs ul{
     margin-bottom: 0;
+    margin-left: 2.5%;
 }
 
 #tabs li{
@@ -682,6 +851,8 @@ html{
 
 #tabs img{
     padding: 3%;
+    width: 190px;
+    height: 190px;
 }
 
 #tabs h2{
@@ -696,6 +867,11 @@ html{
 
 #tabs h1 a:hover{
     color: #0168b7;
+}
+
+
+#tabs .stars-rate{
+    font-size: 1.3rem;
 }
 
 .product-price span a{
@@ -721,23 +897,10 @@ html{
     color: #ffffff;
 }
 
-#tabs ul{
-    margin-left: 4%;
-}
 
 #tabs ul li:focus{
     background-color: #0188cc;
 }
-
-/*.more-info{*/
-    /*position: relative;*/
-    /*top: -32px;*/
-    /*left: 15%;*/
-    /*text-align: center;*/
-    /*background-color: #0188cc;*/
-    /*width: 190px;*/
-    /*display: none;*/
-/*}*/
 
 .product-container{
     border: 2px solid #e6e6e6;
@@ -811,19 +974,37 @@ html{
     width: 18%;
 }
 
-@media screen and (max-width: 1200px){
+@media screen and (max-width: 1024px){
 
+    #tabs .product-container img{
+        width: 250px;
+        height: 250px;
+    }
 }
 
 @media screen and (max-width: 992px){
     #tabs ul{
-        margin-left: 6%;
+        margin-left: 4%;
+    }
+
+    #tabs .product-container img{
+        width: 350px;
+        height: 350px;
     }
 }
 
 @media screen and (max-width: 768px){
     #tabs ul{
-        margin-left: 8%;
+        margin-left: 5.5%;
+    }
+
+    #tabs .favorite-product, #tabs .product-details{
+        left: 78%;
+    }
+
+    #tabs .product-container img{
+        width: 250px;
+        height: 250px;
     }
 }
 
@@ -837,7 +1018,12 @@ html{
     }
 
     #tabs img{
-        margin-left: 25%;
+        margin-left: 30%;
+    }
+
+    #tabs .product-container img{
+        width: 190px;
+        height: 190px;
     }
 
     #tabs h2, #tabs h1, #tabs .stars-rate, #tabs .product-price{
@@ -858,6 +1044,7 @@ html{
 
     #tabs .product-price{
         margin-top: -4%;
+        margin-bottom: 1%;
     }
 
     #tabs .shopping-card-income{
@@ -865,8 +1052,8 @@ html{
     }
 
     #tabs .favorite-product, #tabs .product-details{
-        left: 63%;
-        top: 6%;
+        left: 62%;
+        top: 7%;
     }
 
     #tabs .product-details{
@@ -874,27 +1061,19 @@ html{
     }
 
     #tabs .product-discount{
-        left: 28%;
+        left: 33%;
         top: 4%;
         width: 12%;
     }
 }
 /*END #tabs*/
 
+
+
 /*START .top-selling-week*/
 
-.flex-box-container{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.flex-item{
-
-}
-
 .most-selling-container{
-    background: url("../img/placehold-top-selling-product-450x340.png");
+    background: url("../img/homepage/mostSelledProduct-hat-450x340.jpg");
     width: 450px;
     height: 340px;
     vertical-align: top;
@@ -946,6 +1125,9 @@ html{
 .most-selled-product .product-container img{
     max-width: 100%;
     padding: 3%;
+    width: 190px;
+    height: 190px;
+
 }
 
 .most-selled-product .product-container .favorite-product, .most-selled-product .product-container .product-details{
@@ -1004,7 +1186,7 @@ html{
     background-color: #f8f8f8;
 }
 
-@media screen and (max-width: 1024px){
+@media screen and (max-width: 1200px){
     .most-selled-product-second .product-container .favorite-product, .most-selled-product-second .product-container .product-details{
         left: 60%;
     }
@@ -1014,13 +1196,35 @@ html{
     }
 }
 
-@media screen and (max-width: 960px){
+@media screen and (max-width: 1024px){
+    .top-selling .product-container img{
+        width: 250px;
+        height: 250px;
+    }
+}
 
+@media screen and (max-width: 992px){
+    .top-selling .product-container img{
+        width: 350px;
+        height: 350px;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .top-selling .product-container img{
+        width: 250px;
+        height: 250px;
+    }
 }
 
 @media screen and (max-width: 480px){
     .top-selling .flex-box-container{
         flex-direction: column;
+    }
+
+    .top-selling .product-container img{
+        width: 190px;
+        height: 190px;
     }
 
     .most-selling-container{
@@ -1029,7 +1233,7 @@ html{
 
     .most-selled-product .product-container img{
         padding: 0;
-        margin: 1% 30% 0.5% 30%;
+        margin: 1% 33% 0.5%;
     }
 
     .most-selled-product .product-container h1, .most-selled-product .product-container h2, .most-selled-product .product-container .stars-rate, .most-selled-product .product-container .product-price{
@@ -1057,7 +1261,7 @@ html{
     }
 
     .most-selled-product .product-container .favorite-product, .most-selled-product .product-container .product-details{
-        left: 63%;
+        left: 66%;
     }
 
     .most-selled-product .product-container .product-details{
@@ -1065,13 +1269,13 @@ html{
     }
 
     .most-selled-product .product-container .product-discount{
-        left: 30%;
+        left: 33%;
         top: 2%;
         width: 12%;
     }
 
     .most-selled-product-second-row .product-container .favorite-product, .most-selled-product-second-row .product-container .product-details{
-        left: 60%;
+        left: 65%;
     }
 
     .most-selled-product-second-row .product-container{
@@ -1083,6 +1287,11 @@ html{
 /*END .top-selling-week*/
 
 /*START .from-blog*/
+
+.from-blog img{
+    width: 370px;
+    height: 230px;
+}
 
 .blog-post-container{
     margin-bottom: 10%;
@@ -1125,9 +1334,22 @@ html{
     text-decoration: underline;
 }
 
+@media screen and (max-width: 1024px){
+    .from-blog img{
+        max-width: 100%;
+    }
+
+
+}
+
 @media screen and (max-width: 992px){
     .from-blog article{
         width: 95%
+    }
+
+    .from-blog img{
+        width: 450px;
+        height: 310px;
     }
 
     .from-blog{
@@ -1136,6 +1358,13 @@ html{
 
     .blog-post-container{
         margin-bottom: 1%;
+    }
+}
+
+@media  screen and  (max-width: 768px){
+    .from-blog img{
+        max-width: 100%;
+
     }
 }
 /*END .from-blog*/
