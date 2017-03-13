@@ -1,0 +1,109 @@
+main > ul li {
+    display: inline-block;
+}
+
+#steps li i {
+    float: left;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    font-size: 25px;
+    border: 2px solid #cccccc;
+    border-radius: 50%;
+    color: #cccccc;
+    margin-right: 15px;
+}
+
+#steps h5 {
+    margin: 0;
+    font-weight: bold;
+    font-size: 1.15em;
+}
+
+#steps span {
+    display: block;
+    margin-top: 10px;
+    color: #aaaaaa;
+}
+
+#steps li.current i {
+    border-color: #0088cc;
+    color: #0088cc;
+}
+
+#steps {
+    padding: 40px 0;
+}
+
+td img {
+    max-width: 100px;
+    max-height: 100px;
+}
+
+td .img-container {
+    padding: 5px;
+    border: 1px solid #cccccc;
+    width: 110px;
+    float: left;
+    margin-right: 30px;
+}
+
+td, th {
+    padding: 20px;
+    border: 1px solid #cccccc;
+    text-align: center;
+}
+
+
+td p {
+    float: left;
+    margin-top: 30px;
+}
+
+table {
+    font-size: 1.2em;
+    color: #555555;
+    font-weight: 400;
+}
+
+thead th {
+    background-color: #f9f9f9;
+    color: black;
+}
+
+thead th:first-of-type {
+    text-align: left;
+}
+
+.input-group {
+    width: 120px;
+    margin: 0 auto;
+}
+
+.remove-item {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.form-control {
+    border-left: none;
+    border-right: none;
+}
+
+button.btn-number[data-type=plus] {
+    border-left: none;
+}
+
+input.input-number {
+    text-align: center;
+}
+
+.glyphicon {
+    color: #bbbbbb;
+}
+
+td button.btn-number {
+    outline: none;
+}
