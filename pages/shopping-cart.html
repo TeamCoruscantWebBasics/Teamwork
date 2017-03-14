@@ -6,9 +6,9 @@
     <link rel="stylesheet" href="../css/lib/bootstrap-3.3.7-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/index-css.css">
     <link rel="stylesheet" href="../css/shopping-cart.css">
-    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-    <!--<script src="//netdna.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>-->
-    <!--<script src="http://bootsnipp.com/dist/scripts.min.js"></script>-->
+    <script src="../scripts/lib/jquery-3.1.1.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <script src="http://bootsnipp.com/dist/scripts.min.js"></script>
 </head>
 <body>
 <div class="container">
@@ -97,13 +97,13 @@
                 <td>
                     <div class="input-group">
                         <span class="input-group-btn">
-                            <button type="button" class="btn btn-default btn-number" data-type="minus" data-field="quant[1]">
+                            <button type="button" class="btn btn-default btn-number" data-type="minus" data-field="quant[2]">
                                 <span class="glyphicon glyphicon-minus"></span>
                             </button>
                         </span>
-                        <input type="text" name="quant[1]" class="form-control input-number" value="1">
+                        <input type="text" name="quant[2]" class="form-control input-number" value="1">
                         <span class="input-group-btn">
-                            <button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[1]">
+                            <button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[2]">
                                 <span class="glyphicon glyphicon-plus"></span>
                             </button>
                         </span>
@@ -216,6 +216,39 @@
             }
         });
     });
+</script>
+<script>
+    $('tbody input').change(updateTotalPrice);
+
+    function updateTotalPrice() {
+        if($(this).val() <= 20) {
+            let quantity = $(this).val();
+            let price = $(this).closest('td').prev('td').text().slice(1);
+            let totalPrice = quantity * price;
+            $(this).closest('td').next('td').text('$' + totalPrice.toFixed(2));
+        } else {
+            $(this).closest('td').next('td').text('$0.00');
+        }
+
+        updateGrandTotal();
+    }
+
+    function updateGrandTotal() {
+        let grandTotal = 0;
+        let pricesArray = $('tbody td:nth-of-type(4)');
+        pricesArray.each(function () {
+            grandTotal += Number($(this).text().slice(1));
+        });
+
+        $('tfoot td:last-of-type').text("Grand total: $" + grandTotal.toFixed(2));
+    }
+
+    $('.remove-item').click(removeRow);
+
+    function removeRow() {
+        $(this).parent().parent().remove();
+        updateGrandTotal();
+    }
 </script>
 </body>
 </html>
