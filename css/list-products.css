@@ -64,7 +64,8 @@ div#slider-range {
     color: white;
     border: none;
     border-radius: 26px;
-    margin: 10px 0 30px;
+    margin: 10px auto 30px;
+    margin-left: calc(50% - 37px);
 }
 
 aside .rating {
@@ -82,15 +83,15 @@ aside .rating-count {
 }
 
 aside .size {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     display: inline-block;
     border: 1px solid #cccccc;
-    line-height: 50px;
+    line-height: 40px;
     text-align: center;
     font-weight: 700;
-    margin-right: 10px;
+    margin-right: 1px;
     cursor: pointer;
 }
 
@@ -486,4 +487,133 @@ aside > a {
 
 .recent-item .item-name:hover {
     color: #0088cc;
+}
+
+#recently-viewed h4 {
+    margin: 20px 0;
+    font-size: 1.3em;
+    font-weight: 700;
+    color: black;
+}
+
+@media screen and (max-width: 991px){
+    aside {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        height: 500px;
+    }
+
+    aside > * {
+        order: 10;
+    }
+
+    #categories {
+        order: 0;
+    }
+
+    #size {
+        order: 2;
+    }
+
+    #colors {
+        order: 4;
+    }
+
+    #rating {
+        order: 3;
+    }
+
+    #price {
+        order: 1;
+    }
+
+    #size span {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+    }
+
+    #filter {
+        margin-top: 90px;
+        margin-left: 0;
+    }
+
+    main > p {
+        text-align: center;
+    }
+
+    #products header {
+        text-align: center;
+    }
+
+    .img-container {
+        max-height: 100%;
+    }
+
+    .img-container img {
+        max-width: 90%;
+    }
+
+    .pages {
+        text-align: center;
+    }
+
+    #recent-items {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .recent-item {
+        flex-basis: 30%;
+        margin-bottom: 25px;
+    }
+
+    .recent-item .actions {
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: block;
+    }
+
+    .recent-item .quickview {
+        display: block;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+    }
+
+    #recently-viewed {
+        padding-bottom: 0;
+    }
+
+    .recent-item .item-name {
+        text-decoration: underline;
+    }
+
+    .quickview a {
+        text-decoration: none;
+        background-color: #0088cc;
+    }
+
+    .recent-item .actions a:first-of-type {
+        background-color: #f63233;
+    }
+
+    .recent-item .actions a:first-of-type i {
+        color: white;
+    }
+
+    .recent-item .actions a:last-of-type {
+        background-color: #0088cc;
+    }
+
+    .recent-item .actions a:last-of-type i {
+        color: white;
+    }
+
+    .recent-item .item-price a {
+        background-color: #0088cc;
+        color: white;
+    }
 }
