@@ -4,12 +4,6 @@
     list-style-type: none;
 }
 
-@media screen and (max-width: 768px){
-    #steps {
-        display: block; /*TODO: responsive*/
-    }
-}
-
 /*START payment-methods*/
 
 #payment-method{
@@ -25,6 +19,10 @@
 #payment-method li{
     display: inline-block;
     margin: auto 2%;
+}
+
+#payment-method li:hover{
+    cursor: pointer;
 }
 
 #discover-card, #dinners-club-card, #master-card, #paypal-card, #visa-card{
@@ -57,25 +55,33 @@
     border-radius: 2px;
 }
 
-#payment-buttons{
-    text-align: center;
-    margin: 2% auto;
-}
+/*#buttons{*/
+    /*text-align: center;*/
+    /*margin: 2% auto;*/
+/*}*/
 
-#payment-buttons input, #payment-buttons button{
-    color: white;
-    border: none;
-    margin-left: 1%;
-    margin-right: 1%;
-    padding: 8px 25px;
-    border-radius: 25px;
-    font-size: 1.15em;
-}
+/*#buttons button{*/
+    /*color: #ffffff;*/
+    /*border: none;*/
+    /*margin-left: 1%;*/
+    /*margin-right: 1%;*/
+    /*padding: 8px 25px;*/
+    /*border-radius: 25px;*/
+    /*font-size: 1.15em;*/
+/*}*/
 
-#payment-buttons input{
+/*button a{*/
+    /*color: #ffffff;*/
+/*}*/
+
+/*button a:hover{*/
+    /*color: #ffffff;*/
+/*}*/
+
+.go-to-delivery{
     background-color: #0188cc;
 }
 
-#payment-buttons input:hover, #payment-buttons button:hover{
-    text-decoration: underline;
+@media screen and (max-width: 480px){
+
 }

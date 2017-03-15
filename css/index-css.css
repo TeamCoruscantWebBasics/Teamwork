@@ -84,8 +84,8 @@ html{
 }
 
 .search-bar button{
-    margin-left: 31.9%;
-    padding: 1.5%;
+    margin-left: 31%;
+    padding: 1.5% 2%;
     background-color: #eeeeee;
     border-radius: 150px;
     border: none;
@@ -116,12 +116,14 @@ html{
 }
 
 .number-of-products{  /*Това не ми харесва как стана*/
-    padding: 2px;
+    padding: 2px 6px;
     background-color: #0188cc;
     border-radius: 150px;
     position: absolute;
-    right: 85%;
+    right: 82%;
+    top:10%;
     color:#ffffff;
+    font-size: 0.8rem;
 }
 
 .products{
@@ -399,6 +401,10 @@ html{
     border-radius: 15px;
     color: #ffffff;
     font-size: 0.9rem;
+}
+
+.shopping-card-buttons a{
+    color:#ffffff;
 }
 
  .shopping-card-btn-go{
@@ -904,9 +910,11 @@ html{
 
 .product-price .shopping-card-income{
     position: absolute;
+    padding: 2%;
     left: 70%;
     background-color: #efefef;
     border-radius: 100px;
+
 
 }
 
@@ -938,6 +946,7 @@ html{
     top: 1.6%;
     left: 3.3%;
     width: 25%;
+    border-radius: 3px;
     background-color: #f63233;
     color:#ffffff;
     padding: 3px;
@@ -967,11 +976,16 @@ html{
 }
 
 .favorite-product button, .product-details button{
-    border: none;
-    padding: 7px;
-    border-radius: 100px;
-    background-color: #e7e7e7;
+    border-radius: 50%;
+    border: 1px solid #cccccc;
     color: #aaaaaa;
+    background-color: #ffffff;
+    display: block;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+
 }
 
 .favorite-product button:hover{
