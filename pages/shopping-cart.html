@@ -7,64 +7,65 @@
     <link rel="stylesheet" href="../css/index-css.css">
     <link rel="stylesheet" href="../css/shopping-cart.css">
     <script src="../scripts/lib/jquery-3.1.1.min.js"></script>
-    <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-    <script src="http://bootsnipp.com/dist/scripts.min.js"></script>
+    <!--<script src="//netdna.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>-->
+    <!--<script src="http://bootsnipp.com/dist/scripts.min.js"></script>-->
+    <meta name="viewport" content="user-scalable=0, initial-scale=1.0">
 </head>
 <body>
 <div class="container">
     <main>
-        <ul id="steps" class="col-md-12">
-            <li class="col-md-3 current">
+        <ul id="steps" class="col-md-12 col-sm-12 col-xs-12">
+            <li class="col-md-3 current col-sm-3 col-xs-12">
                 <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
                 <span>Step 1</span>
                 <h5>Shopping Cart</h5>
             </li>
-            <li class="col-md-3">
+            <li class="col-md-3 col-sm-3 col-xs-12">
                 <i class="fa fa-credit-card" aria-hidden="true"></i>
                 <span>Step 2</span>
                 <h5>Payment Methods</h5>
             </li>
-            <li class="col-md-3">
+            <li class="col-md-3 col-sm-3 col-xs-12">
                 <i class="fa fa-truck" aria-hidden="true"></i>
                 <span>Step 3</span>
                 <h5>Delivery Methods</h5>
             </li>
-            <li class="col-md-3">
+            <li class="col-md-3 col-sm-3 col-xs-12">
                 <i class="fa fa-check" aria-hidden="true"></i>
                 <span>Step 4</span>
                 <h5>Confirmation</h5>
             </li>
         </ul>
-        <table class="col-md-12">
+        <table class="col-md-12 col-sm-12 col-xs-12">
             <thead>
             <tr>
-                <th class="col-md-5">
+                <th class="col-md-5 col-sm-5 col-xs-12">
                     Items
                 </th>
-                <th class="col-md-2">
+                <th class="col-md-2 col-sm-2">
                     Price
                 </th>
-                <th class="col-md-2">
+                <th class="col-md-2 col-sm-2">
                     Quantity
                 </th>
-                <th class="col-md-2">
+                <th class="col-md-2 col-sm-2">
                     Total Price
                 </th>
-                <th class="col-md-1">
+                <th class="col-md-1 col-sm-1">
                     &nbsp;
                 </th>
             </tr>
             </thead>
             <tbody>
             <tr>
-                <td>
+                <td data-label="Item">
                     <div class="img-container">
                         <img src="../img/6926CSS-ninja.jpg">
                     </div>
                     <p>CSS Puns Ninja</p>
                 </td>
-                <td>$25.95</td>
-                <td>
+                <td data-label="Price">$25.95</td>
+                <td data-label="Quantity">
                     <div class="input-group">
                         <span class="input-group-btn">
                             <button type="button" class="btn btn-default btn-number" data-type="minus" data-field="quant[1]">
@@ -79,7 +80,7 @@
                         </span>
                     </div>
                 </td>
-                <td>$51.90</td>
+                <td data-label="Total Price">$51.90</td>
                 <td>
                     <button class="remove-item">
                         <i class="fa fa-times" aria-hidden="true"></i>
@@ -87,14 +88,14 @@
                 </td>
             </tr>
             <tr>
-                <td>
+                <td data-label="Item">
                     <div class="img-container">
                         <img src="../img/12018Matias_EP_DE_03.jpg">
                     </div>
                     <p>Matias Ergo Pro Keyboard</p>
                 </td>
-                <td>$299.95</td>
-                <td>
+                <td data-label="Price">$299.95</td>
+                <td data-label="Quantity">
                     <div class="input-group">
                         <span class="input-group-btn">
                             <button type="button" class="btn btn-default btn-number" data-type="minus" data-field="quant[2]">
@@ -109,7 +110,7 @@
                         </span>
                     </div>
                 </td>
-                <td>$299.95</td>
+                <td data-label="Total Price">$299.95</td>
                 <td>
                     <button class="remove-item">
                         <i class="fa fa-times" aria-hidden="true"></i>
@@ -118,21 +119,23 @@
             </tr>
             </tbody>
             <tfoot>
-            <td colspan="3">
-                <p>
-                    Promotion Code
-                </p>
-                <div id="promo-code">
-                    <input type="text" name="promo-code" placeholder="Your code here">
-                    <i class="fa fa-arrow-right" aria-hidden="true"></i>
-                </div>
-            </td>
-            <td colspan="2">
-                Grand total: $351.85
-            </td>
+            <tr>
+                <td colspan="3">
+                    <p>
+                        Promotion Code
+                    </p>
+                    <div id="promo-code">
+                        <input type="text" name="promo-code" placeholder="Your code here">
+                        <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                    </div>
+                </td>
+                <td colspan="2">
+                    Grand total: $351.85
+                </td>
+            </tr>
             </tfoot>
         </table>
-        <div id="buttons" class="col-md-12">
+        <div id="buttons" class="col-md-12 col-sm-12 col-xs-12">
             <a href="#">Continue Shopping</a>
             <a href="#">Go Payment Methods</a>
         </div>
@@ -246,8 +249,10 @@
     $('.remove-item').click(removeRow);
 
     function removeRow() {
-        $(this).parent().parent().remove();
-        updateGrandTotal();
+        $(this).parent().parent().fadeOut(500 , function () {
+            $(this).remove();
+            updateGrandTotal();
+        });
     }
 </script>
 </body>
