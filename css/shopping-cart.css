@@ -187,7 +187,8 @@ tfoot td:last-of-type {
 
 
 @media screen and (max-width: 767px){
-    main > ul li i {
+    main > ul li i,
+    main section ul li i{
         margin-left: calc(50% - 110px);
     }
 
