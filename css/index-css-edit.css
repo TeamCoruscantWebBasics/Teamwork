@@ -236,13 +236,13 @@ header{
 
 .hot-line{
     color:#ffffff;
+    float: right;
 }
 
 .navbar li{
     display: inline-block;
     box-sizing: border-box;
     padding: 20px;
-    width: 115px;
     text-align: center;
 }
 
@@ -265,7 +265,7 @@ header{
 .hot-line::before{
     font-family:  FontAwesome;
     content: "\f095";
-    padding-right: 2%;
+    padding-right: 5px;
 }
 
 .navbar label{
