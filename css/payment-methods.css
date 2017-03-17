@@ -68,6 +68,8 @@
     width: calc(50% - 2px);
 }
 
-@media screen and (max-width: 480px){
-
+@media screen and (max-width: 400px){
+    #payment-method li{
+        margin: auto 1%;
+    }
 }

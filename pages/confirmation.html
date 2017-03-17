@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width"/>
-    <title>Delivery Methods</title>  <!--TODO: name-->
+    <title>SoftUnikum - The Unofficial SoftUni Gift Shop</title>  <!--TODO: name-->
     <script src="../scripts/lib/jquery-3.1.1.min.js"></script>
     <script src="../scripts/lib/jquery-ui.min.js"></script>
     <script src="../scripts/index-script.js"></script>
     <link rel="stylesheet" href="../css/lib/bootstrap-3.3.7-dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../css/shopping-cart.css">
+    <link rel="stylesheet" href="../css/list-products.css">
     <link rel="stylesheet" href="../css/index-css-edit.css">
-    <link rel="stylesheet" href="../css/payment-methods.css">
-    <link rel="stylesheet" href="../css/delivery-methods.css">
+    <link rel="stylesheet" href="../css/shopping-cart.css">
+    <link rel="stylesheet" href="../css/confirmation.css">
 </head>
 <body>
     <div class="container">
@@ -124,126 +124,129 @@
             </nav>
         </header>
         <main>
-            <section class="row">
-                <ul id="steps" class="col-md-12">
-                    <li class="col-md-3">
-                        <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
-                        <span>Step 1</span>
-                        <h5>Shopping Cart</h5>
-                    </li>
-                    <li class="col-md-3">
-                        <i class="fa fa-credit-card" aria-hidden="true"></i>
-                        <span>Step 2</span>
-                        <h5>Payment Methods</h5>
-                    </li>
-                    <li class="col-md-3 current">
-                        <i class="fa fa-truck" aria-hidden="true"></i>
-                        <span>Step 3</span>
-                        <h5>Delivery Methods</h5>
-                    </li>
-                    <li class="col-md-3">
-                        <i class="fa fa-check" aria-hidden="true"></i>
-                        <span>Step 4</span>
-                        <h5>Confirmation</h5>
-                    </li>
-                </ul>
-            </section>
-            <section class="row">
-                <div class="col-md-8">
-                    <h1>Your Information</h1>
-                    <hr/>
-                    <form action="POST" id="payment-form">
-                        <div class="row">
-                            <div class="col-md-6 col-sm-6 col-xs-12">
-                                <p>First name</p>
-                                <input type="text" required/>
-                            </div>
-                            <div class="col-md-6 col-sm-6 col-xs-12">
-                                <p>Last name</p>
-                                <input type="text" required/>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-3 col-sm-3 col-xs-12">
-                                <p>Country</p>
-                                <select id="delivery-country">
-                                    <option value="1">USA</option>
-                                    <option value="2">Bulgaria</option>
-                                    <option value="1">Russia</option>
-                                </select>
-                            </div>
-                            <div class="col-md-3 col-sm-3 col-xs-12">
-                                <p>City</p>
-                                <select id="delivery-city">
-                                    <option value="0"></option>
-                                    <option value="1">Washington</option>
-                                    <option value="2">Sofia</option>
-                                    <option value="3">Moscow</option>
-                                </select>
-                            </div>
-                            <div class="col-md-6 col-sm-6 col-xs-12">
-                                <p>State</p>
-                                <input type="text"/>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-5 col-sm-5 col-xs-12">
-                                <p>ZIP</p>
-                                <input type="text" required/>
-                            </div>
-                            <div class="col-md-7  col-sm-7 col-xs-12">
-                                <p>Address</p>
-                                <input type="text" required/>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6 col-sm-6 col-xs-12">
-                                <p>Phone</p>
-                                <input type="text" required/>
-                            </div>
-                            <div class="col-md-6 col-sm-6 col-xs-12">
-                                <p>Email</p>
-                                <input type="text" required/>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-                <div class="col-md-4 col-sm-4 col-xs-12">
-                    <h1>Select Your Transportation</h1>
-                    <hr/>
-                    <div class="row">
-                        <div class="col-md-6 col-sm-6 col-xs-3">
-                            <div class="transport-container">
-                                <h2>Free delivery</h2>
-                                <p>7-12 Days</p>
-                            </div>
-                        </div>
-                        <div class="col-md-6  col-sm-6 col-xs-3">
-                            <div class="transport-container fast-delivery">
-                                <h2>Fast delivery</h2>
-                                <p>4-7 Days</p>
-                                <h1 class="extra-price-delivery">+25$</h1>
-                            </div>
-                        </div>
+        <div class="row">
+            <ul id="steps" class="col-md-12 col-sm-12 col-xs-12">
+                <li class="col-md-3 col-sm-3 col-xs-12">
+                    <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+                    <span>Step 1</span>
+                    <h5>Shopping Cart</h5>
+                </li>
+                <li class="col-md-3 col-sm-3 col-xs-12">
+                    <i class="fa fa-credit-card" aria-hidden="true"></i>
+                    <span>Step 2</span>
+                    <h5>Payment Methods</h5>
+                </li>
+                <li class="col-md-3 col-sm-3 col-xs-12">
+                    <i class="fa fa-truck" aria-hidden="true"></i>
+                    <span>Step 3</span>
+                    <h5>Delivery Methods</h5>
+                </li>
+                <li class="col-md-3 col-sm-3 col-xs-12 current">
+                    <i class="fa fa-check" aria-hidden="true"></i>
+                    <span>Step 4</span>
+                    <h5>Confirmation</h5>
+                </li>
+            </ul>
+         </div>
+            <div class="wrapper">
+                <h1>Shopping Cart</h1>
+                <hr/>
+                <section class="row">
+                    <div class="col-md-6 col-sm-6 col-xs-5">
+                        <p>E-book reader bla</p>
                     </div>
-                    <div class="row">
-                        <div class="col-md-7 col-sm-7 col-xs-12">
-                            <div class="transport-container express-delivery">
-                                <h2>Express delivery</h2>
-                                <p>24-48 Hours</p>
-                                <h1 class="extra-price-delivery">+75$</h1>
-                            </div>
-                        </div>
-
+                    <!--TODO-->
+                    <div class="col-md-2 col-sm-2 col-xs-2">
+                        <p>$200.00</p>
                     </div>
-                </div>
-            </section>
-            <section class="row">
-                <div id="buttons" class="col-md-12 col-sm-12 col-xs-12">
-                    <a href="payment-methods.html">Back to Payment</a>
-                    <a href="confirmation.html">Go Confirmation</a>
-                </div>
-            </section>
+                    <div class="col-md-2 col-sm-2 col-xs-3">
+                        <p>02 items</p>
+                    </div>
+                    <div class="col-md-2 col-sm-2 col-xs-2">
+                        <p>$400.00</p>
+                    </div>
+                </section>
+                <hr/>
+                <section class="row">
+                    <div class="col-md-6 col-sm-6 col-xs-5">
+                        <p>E-book reader bla</p>
+                    </div>
+                    <!--TODO-->
+                    <div class="col-md-2 col-sm-2 col-xs-2">
+                        <p>$200.00</p>
+                    </div>
+                    <div class="col-md-2 col-sm-2 col-xs-3">
+                        <p>02 items</p>
+                    </div>
+                    <div class="col-md-2 col-sm-2 col-xs-2">
+                        <p>$400.00</p>
+                    </div>
+                </section>
+                <h1>Payment Information</h1>
+                <hr/>
+                <section class="row">
+                    <div class="col-md-2 col-sm-2 col-xs 2">
+                        <div id="cart-type"><a href="#"></a></div>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-xs 6">
+                        <p>Visa Cart</p>
+                    </div>
+                    <!--TODO-->
+                    <div class="col-md-4 col-sm-4 col-xs-12">
+                        <p>Cart number: XXX-XXX-XXX-686</p>
+                    </div>
+                </section>
+                <h1>Delivery Information</h1>
+                <hr/>
+                <section class="row delivery-info">
+                    <div class="col-md-3 col-sm-3 col-xs-6">
+                        <p class="system-info">Name</p>
+                        <p>Svetlin Nakov</p>
+                        <p class="system-info">City</p>
+                        <p>Banishora</p>
+                    </div>
+                    <div class="col-md-3 col-sm-3 col-xs-6">
+                        <p class="system-info">Phone</p>
+                        <p>+359 00000002</p>
+                        <p class="system-info">State</p>
+                        <p>Shopsko</p>
+                    </div>
+                    <div class="col-md-3 col-sm-3 col-xs-6">
+                        <p class="system-info">Country</p>
+                        <p>Nashata</p>
+                        <p class="system-info">Zipcode</p>
+                        <p>0000</p>
+                    </div>
+                    <div class="col-md-3 col-sm-3 col-xs-6">
+                        <p class="system-info">Email</p>
+                        <p>nakov@bira.bg</p>
+                        <p class="system-info">Address</p>
+                        <p>Bracigovo</p>
+                    </div>
+                </section>
+                <hr/>
+                <section class="row">
+                    <div class="col-md-6 col-sm-6 col-xs-6">
+                        <p>Express Delivery</p>
+                    </div>
+                    <div class="col-md-3 col-sm-3 col-xs-3">
+                        <p class="system-info">24-48 Hours</p>
+                    </div>
+                    <div class="col-md-3 col-sm-3 col-xs-3">
+                        <p class="extra-price-confirmation">+$25</p>
+                    </div>
+                </section>
+                <hr/>
+                <section class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <p>Total price: <span class="total-price-confirmation">$525.00</span></p>
+                    </div>
+                </section>
+            </div>
+            <div id="buttons" class="col-md-12 col-sm-12 col-xs-12">
+                <a href="delivery-methods.html">Back to Delivery</a>
+                <a href="#">Proceed Checkout</a>
+            </div>
         </main>
         <footer>
             <section class="row newsletter-bar">

@@ -9,14 +9,14 @@
     <script src="../scripts/index-script.js"></script>
     <link rel="stylesheet" href="../css/lib/bootstrap-3.3.7-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/shopping-cart.css">
-    <link rel="stylesheet" href="../css/index-css.css">
+    <link rel="stylesheet" href="../css/index-css-edit.css">
     <link rel="stylesheet" href="../css/payment-methods.css">
 </head>
 <body>
     <div class="container">
         <header>
             <section class="row upper-nav">
-                <div class="col-md-2"><span>Welcome to SmartTech center</span></div>
+                <div class="col-md-2"><span>Welcome to SoftUnikum Gift Shop</span></div>
                 <div class="col-md-2"></div>
                 <div class="col-md-6">
                     <ul>
@@ -51,42 +51,46 @@
                 </div>
             </section>
             <section class="row search-bar-nav">
-                <div class="col-md-3">
-                    <h1 class="logo">SmartTech</h1>
+                <div class="col-md-5">
+                    <h1 class="logo"><img src="../img/logo.png" width="70" height="35" alt="Logo"/>SoftUnikum</h1>
                 </div>
-                <div class="col-md-6 search-bar">
+                <div class="col-md-4 search-bar">
                     <select name="search-bar">
                         <option value="1">All Categories</option>
                         <option value="2">Gadgets</option>
-                        <option value="3">Clothing </option>
-                        <option value="4">Gifts</option>
+                        <option value="3">T-Shirts</option>
+                        <option value="4">Hats</option>
+                        <option value="5">Key Rings</option>
                     </select>
                     <input type="text" placeholder="Search entire store here..."/>
                     <button><i class="fa fa-search" aria-hidden="true"></i></button>
                 </div>
-                <div class="col-md-3 shopping-card">
-                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                    <p class="number-of-products">2</p>
-                    <p class="products"><span>My cart</span><br/>2 items - $100.00</p>
-                    <div class="shopping-card-details">
-                        <h1>You have <span>2</span> items</h1>
-                        <p>Check or edit your item below!</p>
-                        <div class="shopping-card-item">
-                            <a href="#"><img src="../img/homepage/12018Matias_EP_DE_03.jpg" alt="product"/></a>
-                            <a href="#"><p class="shopping-card-product-details">E-book reader digitals</p></a> <br>
-                            <p class="shopping-card-price">$35.00 <span class="shopping-card-count-products">(x2)</span></p>
-                        </div>
-                        <hr/>
-                        <div class="shopping-card-item">
-                            <a href="#"><img src="../img/homepage/topProduct-handtuch-370x250.jpg" alt="product"/></a>
-                            <a href="#"><p class="shopping-card-product-details">E-book reader digitals</p></a> <br>
-                            <p class="shopping-card-price-2">$65.00 <span class="shopping-card-count-products">(x2)</span></p>
-                        </div>
-                        <hr/>
-                        <h2 class="shopping-card-total-price">Grand total: <span>$100.00</span></h2>
-                        <div class="shopping-card-buttons">
-                            <button class="shopping-card-btn-go">Go Shopping Cart</button>
-                            <button class="shopping-card-btn-checkout">Check Out</button>
+                <div class="col-md-3 shopping-cart">
+                    <div class="shopping-cart-wrapper">
+                        <p class="products">
+                            <span class="number-of-products">2</span>
+                            <span>My cart</span><br/>2 items - $100.00
+                        </p>
+                        <div class="shopping-cart-details">
+                            <h1>You have <span>2</span> items</h1>
+                            <p>Check or edit your item below!</p>
+                            <div class="shopping-cart-item">
+                                <a href="#"><img src="../img/homepage/6926CSS-ninja.jpg" alt="product"/></a>
+                                <a href="#"><p class="shopping-cart-product-details">CSS Puns Ninja</p></a> <br>
+                                <p class="shopping-cart-price">$25.95 <span class="shopping-cart-count-products">(x2)</span></p>
+                            </div>
+                            <hr/>
+                            <div class="shopping-cart-item">
+                                <a href="#"><img src="../img/homepage/12018Matias_EP_DE_03.jpg" alt="product"/></a>
+                                <a href="#"><p class="shopping-cart-product-details">Matias Ergo Pro Keyboard</p></a> <br>
+                                <p class="shopping-cart-price-2">$299.95 <span class="shopping-cart-count-products">(x2)</span></p>
+                            </div>
+                            <hr/>
+                            <h2 class="shopping-cart-total-price">Grand total: <span>$651.80</span></h2>
+                            <div class="shopping-cart-buttons">
+                                <button class="shopping-cart-btn-go"><a href="shopping-cart.html">Go Shopping Cart</a></button>
+                                <button class="shopping-cart-btn-checkout"><a href="#">Check Out</a></button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -98,21 +102,23 @@
                     <select id="our-categories-select">
                         <option value="1">Our Categories</option>
                         <option value="2">Gadgets</option>
-                        <option value="3">Clothing </option>
-                        <option value="4">Gifts</option>
+                        <option value="3">T-Shirts</option>
+                        <option value="4">Hats</option>
+                        <option value="5">Key Rings</option>
+                        <option value="6">Random Stuff</option>
                     </select>
                 </div>
                 <div class="flex-item-main-nav nav-ul">
                     <ul>
-                        <li class="flex-item-nav-li"><a href="#">Home</a></li>
-                        <li class="flex-item-nav-li"><a href="#">Gadgets</a></li>
-                        <li class="flex-item-nav-li"><a href="#">Clothing</a></li>
-                        <li class="flex-item-nav-li"><a href="#">Gifts</a></li>
-                        <li class="flex-item-nav-li"><a href="#">Community</a></li>
+                        <li class="flex-item-nav-li"><a href="list-products.html">Gadgets</a></li>
+                        <li class="flex-item-nav-li"><a href="#"t>T-Shirts</a></li>
+                        <li class="flex-item-nav-li"><a href="#">Hats</a></li>
+                        <li class="flex-item-nav-li"><a href="#">Key Rings</a></li>
+                        <li class="flex-item-nav-li"><a href="#">Random Stuff</a></li>
                     </ul>
                 </div>
                 <div class="flex-item-hotline nav-hotline">
-                    <span class="hot-line">Hotline: (+100)1234567890</span>
+                    <span class="hot-line">Hotline: (+359) 666</span>
                 </div>
             </nav>
         </header>
@@ -218,8 +224,8 @@
         <footer>
             <section class="row newsletter-bar">
                 <div class="col-md-6">
-                    <span class="food-span-left">Subscribe our newsletter</span>
-                    <span class="foot-span-right">Get <span class="discount-price">25% Off</span> for first purchase!</span>
+                    <span class="food-span-left">Subscribe to our newsletter</span>
+                    <span class="foot-span-right">Get as much <span class="discount-price">spam</span> as possible!</span>
                 </div>
                 <div class="col-md-6">
                     <form class="subscribe-email">
@@ -245,10 +251,10 @@
             </section>
             <section class="row foot-bottom">
                 <section class="col-md-3">
-                    <h1>Contact SmartTech!</h1>
+                    <h1>Contact SoftUnikum!</h1>
                     <p>Address: Sofia, Izgrev residential area, 15-17 Tintyava str, fl. 1</p>
-                    <p>Phone: (+100)1234567890</p>
-                    <p>Support: Support@smarttech.com</p>
+                    <p>Phone: (+359) 666</p>
+                    <p>Support: no-reply@softunikum.com</p>
                     <p>
                         <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
                         <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
@@ -260,30 +266,31 @@
                 <section class="col-md-3">
                     <h1>Categories</h1>
                     <ul>
-                        <li><a href="#">Gadgets</a></li>
-                        <li><a href="#">Clothing</a></li>
-                        <li><a href="#">Gifts</a></li>
+                        <li class="flex-item-nav-li"><a href="list-products.html">Gadgets</a></li>
+                        <li class="flex-item-nav-li"><a href="#"t>T-Shirts</a></li>
+                        <li class="flex-item-nav-li"><a href="#">Hats</a></li>
+                        <li class="flex-item-nav-li"><a href="#">Key Rings</a></li>
+                        <li class="flex-item-nav-li"><a href="#">Random Stuff</a></li>
                     </ul>
                 </section>
                 <section class="col-md-3">
                     <h1>Customer Service</h1>
                     <ul>
-                        <li><a href="#">Shipping and Returns</a></li>
-                        <li><a href="#">Secure Shopping</a></li>
-                        <li><a href="#">International Shipping</a></li>
-                        <li><a href="#">Affiliates</a></li>
-                        <li><a href="#">Contacts</a></li>
+                        <li><a href="#">Non-Existent</a></li>
+                        <li><a href="#">Dream about it</a></li>
+                        <li><a href="#">Leads to nowhere</a></li>
+                        <li><a href="#">We put that just for fun</a></li>
+                        <li><a href="#">Clickable and useless</a></li>
                     </ul>
                 </section>
                 <section class="col-md-3">
                     <h1>Information</h1>
                     <ul>
-                        <li><a href="#">Our Blog</a></li>
-                        <li><a href="#">About Our Shop</a></li>
-                        <li><a href="#">Secure Shopping</a></li>
-                        <li><a href="#">Delivery information</a></li>
-                        <li><a href="#">Store Locations</a></li>
-                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Non-Existent</a></li>
+                        <li><a href="#">Dream about it</a></li>
+                        <li><a href="#">Leads to nowhere</a></li>
+                        <li><a href="#">We put that just for fun</a></li>
+                        <li><a href="#">Clickable and useless</a></li>
                     </ul>
                 </section>
             </section>
