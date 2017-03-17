@@ -3,6 +3,16 @@
 .transport-container{
     border: 2px solid #e2e2e2;
     margin: 5% auto;
+    width: 130px;
+    height: 60px;
+}
+
+.transport-container.fast-delivery{
+    width: 170px;
+}
+
+.transport-container.express-delivery{
+    width:  200px;
 }
 
 .transport-container:hover{
@@ -31,4 +41,53 @@
 
 .transport-container .current{
     border: 2px solid #0088cc;
+}
+
+main h1{
+    font-size: 2rem;
+}
+
+h1.extra-price-delivery{
+    font-size: 1.5rem;
+    font-weight: bold;
+    position: relative;
+    top: -60px;
+    padding: 5px;
+    border-left: 1px solid #e2e2e2;
+}
+
+.transport-container.fast-delivery h1.extra-price-delivery{
+    left: 110px;
+}
+
+.transport-container.express-delivery h1.extra-price-delivery{
+    left: 140px;
+}
+
+#payment-form p{
+    margin: 0;
+}
+
+#payment-form select{
+    width: 100%;
+}
+
+.express-delivery{
+    margin-left: 15px;
+}
+
+@media screen and (max-width: 991px){
+
+}
+
+@media screen and (max-width: 767px){
+    .fast-delivery{
+        margin-left: 10px;
+    }
+}
+
+@media screen and (max-width: 400px){
+    .fast-delivery{
+        margin-left: 30px;
+    }
 }
