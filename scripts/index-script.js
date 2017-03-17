@@ -1,4 +1,4 @@
-
-$(document).ready(() => {
-    $( "#tabs" ).tabs();
+jQuery(document).ready(function(){
+    jQuery( "#tabs" ).tabs();
+    jQuery( ".fancybox" ).fancybox();
 });
