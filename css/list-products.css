@@ -616,6 +616,13 @@ aside > a {
         background-color: #0088cc;
         color: white;
     }
+    .similar-product, .recent-item{
+        flex-basis: 24%;
+    }
+    .similar-product:last-of-type, .recent-item:last-of-type {
+        display: none;
+    }
+
 }
 
 @media screen and (max-width: 767px){
@@ -668,6 +675,21 @@ aside > a {
 
     .recent-item {
         flex-basis: 45%;
+    }
+    .similar-product, .recent-item {
+        flex-basis: 32%;
+    }
+    .similar-product:nth-child(4), .recent-item:nth-child(4) {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .similar-product, .recent-item {
+        flex-basis: 49%;
+    }
+    .similar-product:nth-child(3), .recent-item:nth-child(3) {
+        display: none;
     }
 }
 
