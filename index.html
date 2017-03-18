@@ -3,767 +3,894 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width"/>
-    <title>SmartTech</title>  <!--TODO: name-->
+    <title>SoftUnikum - The Unofficial SoftUni Gift Shop</title>
     <script src="scripts/lib/jquery-3.1.1.min.js"></script>
     <script src="scripts/lib/jquery-ui.min.js"></script>
+    <script src="scripts/jquery.fancybox.pack.js"></script>
     <script src="scripts/index-script.js"></script>
     <link rel="stylesheet" href="css/lib/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/jquery.fancybox.css">
     <link rel="stylesheet" href="css/list-products.css">
     <link rel="stylesheet" href="css/index-css.css">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <section class="row upper-nav">
-                <div class="col-md-2"><span>Welcome to SmartTech center</span></div>
-                <div class="col-md-2"></div>
-                <div class="col-md-6">
-                    <ul>
-                        <li><a href="#">Login/Register</a></li>
-                        <li><a href="#">Store Location</a></li>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">Newsletter</a></li>
-                        <li><a href="#">
-                            <select name="language">
-                                <option value="1">English</option>
-                                <option value="2">Russian</option>
-                                <option value="3">Bulgarian</option>
-                            </select>
-                        </a></li>
-                        <li><a href="#">
-                            <select name="currency">
-                                <option value="1">USD</option>
-                                <option value="2">RUB</option>
-                                <option value="3">BGN</option>
-                            </select>
-                        </a></li>
-                    </ul>
-                </div>
-                <div class="col-md-2">
+<div class="container">
+    <header>
+        <section class="row upper-nav">
+            <div class="col-xs-6 col-md-2"><span>Welcome to SoftUnikum Gift Shop</span></div>
+            <div class="col-xs-6 col-md-2 pull-right">
                     <span>
-                        <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                        <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                        <a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
-                        <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                        <a href="#"><i class="fa fa-vimeo" aria-hidden="true"></i></a>
+                        <a class="fancybox" href="#social"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                        <a class="fancybox" href="#social"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                        <a class="fancybox" href="#social"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
+                        <a class="fancybox" href="#social"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                        <a class="fancybox" href="#social"><i class="fa fa-vimeo" aria-hidden="true"></i></a>
                     </span>
-                </div>
-            </section>
-            <section class="row search-bar-nav">
-                <div class="col-md-3">
-                    <h1 class="logo">SmartTech</h1>
-                </div>
-                <div class="col-md-6 search-bar">
-                    <select name="search-bar">
-                        <option value="1">All Categories</option>
-                        <option value="2">Gifts</option>
-                        <option value="3">Hats</option>
-                        <option value="4">Key Rings</option>
-                        <option value="5">T-Shirts</option>
-                    </select>
-                    <input type="text" placeholder="Search entire store here..."/>
-                    <button><i class="fa fa-search" aria-hidden="true"></i></button>
-                </div>
-                <div class="col-md-3 shopping-card">
-                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                    <p class="number-of-products">2</p>
-                    <p class="products"><span>My cart</span><br/>2 items - $100.00</p>
-                    <div class="shopping-card-details">
+            </div>
+            <div class="col-md-2 placeholder"></div>
+            <div class="col-md-6">
+                <ul>
+                    <li><a class="fancybox" href="#login">Login/Register</a></li>
+                    <li><a class="fancybox" href="#location">Store Location</a></li>
+                    <li><a class="fancybox" href="#faq">FAQ</a></li>
+                    <li><a class="fancybox" href="#newsletter">Newsletter</a></li>
+                    <li><a href="#">
+                        <select name="language">
+                            <option value="1">English</option>
+                            <option value="2">Russian</option>
+                            <option value="3">Bulgarian</option>
+                        </select>
+                    </a></li>
+                    <li><a href="#">
+                        <select name="currency">
+                            <option value="1">USD</option>
+                            <option value="2">RUB</option>
+                            <option value="3">BGN</option>
+                        </select>
+                    </a></li>
+                </ul>
+            </div>
+        </section>
+        <section class="row search-bar-nav">
+            <div class="col-xs-7 col-sm-7 col-md-5">
+                <h1 class="logo"><img src="img/logo.png" width="70" height="35" alt="Logo"/>SoftUnikum</h1>
+            </div>
+            <div class="col-xs-5 col-sm-5 col-md-3 shopping-cart pull-right">
+                <div class="shopping-cart-wrapper">
+                    <p class="products">
+                        <span class="number-of-products">2</span>
+                        <span>My cart</span><br/>2 items - $100.00
+                    </p>
+                    <div class="shopping-cart-details">
                         <h1>You have <span>2</span> items</h1>
                         <p>Check or edit your item below!</p>
-                        <div class="shopping-card-item">
+                        <div class="shopping-cart-item">
                             <a href="#"><img src="img/homepage/6926CSS-ninja.jpg" alt="product"/></a>
-                            <a href="#"><p class="shopping-card-product-details">CSS Puns Ninja</p></a> <br>
-                            <p class="shopping-card-price">$25.95 <span class="shopping-card-count-products">(x2)</span></p>
+                            <a href="#"><p class="shopping-cart-product-details">CSS Puns Ninja</p></a> <br>
+                            <p class="shopping-cart-price">$25.95 <span class="shopping-cart-count-products">(x2)</span>
+                            </p>
                         </div>
                         <hr/>
-                        <div class="shopping-card-item">
+                        <div class="shopping-cart-item">
                             <a href="#"><img src="img/homepage/12018Matias_EP_DE_03.jpg" alt="product"/></a>
-                            <a href="#"><p class="shopping-card-product-details">Matias Ergo Pro Keyboard</p></a> <br>
-                            <p class="shopping-card-price-2">$299.95 <span class="shopping-card-count-products">(x2)</span></p>
+                            <a href="#"><p class="shopping-cart-product-details">Matias Ergo Pro Keyboard</p></a> <br>
+                            <p class="shopping-cart-price-2">$299.95 <span
+                                    class="shopping-cart-count-products">(x2)</span></p>
                         </div>
                         <hr/>
-                        <h2 class="shopping-card-total-price">Grand total: <span>$651.80</span></h2>
-                        <div class="shopping-card-buttons">
-                            <button class="shopping-card-btn-go"><a href="pages/shopping-cart.html">Go Shopping Cart</a></button>
-                            <button class="shopping-card-btn-checkout"><a href="#">Check Out</a></button>
+                        <h2 class="shopping-cart-total-price">Grand total: <span>$651.80</span></h2>
+                        <div class="shopping-cart-buttons">
+                            <button class="shopping-cart-btn-go"><a href="pages/shopping-cart.html">Go Shopping Cart</a>
+                            </button>
+                            <button class="shopping-cart-btn-checkout"><a href="#">Check Out</a></button>
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="col-xs-7 col-sm-6 col-md-4 search-bar">
+                <select name="search-bar">
+                    <option value="1">All Categories</option>
+                    <option value="2">Gadgets</option>
+                    <option value="3">T-Shirts</option>
+                    <option value="4">Hats</option>
+                    <option value="5">Key Rings</option>
+                </select>
+                <input type="text" placeholder="Search entire store here..."/>
+                <button><i class="fa fa-search" aria-hidden="true"></i></button>
+            </div>
+        </section>
+        <nav class="flex-box-container navbar">
+            <a href="#" id="responsive-icon"><i class="fa fa-bars" aria-hidden="true"></i></a>
+            <div class="flex-item-main-nav nav-ul">
+                <ul>
+                    <li class="flex-item-nav-li"><a href="pages/gadgets.html" title="SoftUnikum Gadgets">Gadgets</a>
+                    </li>
+                    <li class="flex-item-nav-li"><a href="pages/t-shirts.html" title="SoftUnikum T-Shirts">T-Shirts</a>
+                    </li>
+                    <li class="flex-item-nav-li"><a href="pages/hats.html" title="SoftUnikum Hats">Hats</a></li>
+                    <li class="flex-item-nav-li"><a href="pages/key-rings.html" title="SoftUnikum Key Rings">Key
+                        Rings</a></li>
+                    <li class="flex-item-nav-li"><a href="pages/random-stuff" title="SoftUnikum Random Stuff">Random
+                        Stuff</a></li>
+                </ul>
+            </div>
+            <div class="flex-item-hotline nav-hotline">
+                <span class="hot-line">Hotline: (+359) 666</span>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="row">
+            <section class="col-md-8 main-slider">
+                <h2>Product Description</h2>
+                <h1>Product Title</h1>
+                <h3>Starting at <span>$8.65</span></h3>
             </section>
-            <!--<nav class="row navbar">
-                <a href="#" id="responsive-icon"><i class="fa fa-bars" aria-hidden="true"></i></a>
-                <div class="col-md-2 nav-select">
-                    <label for="our-categories-select"><i class="fa fa-list-ul" aria-hidden="true"></i></label>
-                    <select id="our-categories-select">
-                        <option value="1">Our Categories</option>
-                        <option value="2">Gadgets</option>
-                        <option value="3">Clothing </option>
-                        <option value="4">Gifts</option>
-                    </select>
-                </div>
-                <div class="col-md-7 nav-ul">
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Gadgets</a></li> <!--TODO: make this hover with JS
-                        <li><a href="#">Clothing</a></li> <!--TODO: make this hover with JS
-                        <li><a href="#">Gifts</a></li>
-                        <li><a href="#">Community</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-3 nav-hotline">
-                    <span class="hot-line">Hotline: (+100)1234567890</span>
-                </div>
-            </nav>-->
-            <nav class="flex-box-container navbar">
-                <a href="#" id="responsive-icon"><i class="fa fa-bars" aria-hidden="true"></i></a>
-                <div class="nav-select flex-item-nav-select">
-                    <label for="our-categories-select"><i class="fa fa-list-ul" aria-hidden="true"></i></label>
-                    <select id="our-categories-select">
-                        <option value="1">Our Categories</option>
-                        <option value="2">Gifts</option>
-                        <option value="3">Hats</option>
-                        <option value="4">Key Rings</option>
-                        <option value="5">T-Shirts</option>
-                    </select>
-                </div>
-                <div class="flex-item-main-nav nav-ul">
-                    <ul>
-                        <li class="flex-item-nav-li"><a href="pages/list-products.html">Gifts</a></li>
-                        <li class="flex-item-nav-li"><a href="#">Hats</a></li>
-                        <li class="flex-item-nav-li"><a href="#">Key Rings</a></li>
-                        <li class="flex-item-nav-li"><a href="#">T-Shirts</a></li>
-                        <li class="flex-item-nav-li"><a href="#">Community</a></li>
-                    </ul>
-                </div>
-                <div class="flex-item-hotline nav-hotline">
-                    <span class="hot-line">Hotline: (+100)1234567890</span>
-                </div>
-            </nav>
-        </header>
-        <main>
-            <div class="row">
-                <section class="col-md-8 main-slider">
+            <section class="col-md-4 flex-box-container">
+                <section class="top-product flex-item">
                     <h2>Product Description</h2>
                     <h1>Product Title</h1>
-                    <h3>Starting at <span>$8.65</span></h3>
+                    <h3>$299.99</h3>
                 </section>
-                <section class="col-md-4 flex-box-container">
-                    <section class="top-product flex-item">
-                        <h2>Product Description</h2>
-                        <h1>Product Title</h1>
-                        <h3>$299.99</h3>
-                    </section>
-                    <section class="weekly-sale flex-item">
-                        <h1>Weekly <span>Sale!</span></h1>
-                        <p>Saving up to 50% of all online <br/>
-                            store items this week.</p>
-                        <button><a href="#">Shop now</a></button>
-                    </section>
-                </section>
-            </div>
-            <section class="row services">
-                <section class="col-md-3 free-shipping">
-                    <div class="row">
-                        <div class="col-md-3">
-                            <i class="fa fa-truck" aria-hidden="true"></i>
-                        </div>
-                        <div class="col-md-9">
-                            <h1>Free Shipping</h1>
-                            <p>On order over $99</p>
-                        </div>
-                    </div>
-                </section>
-                <section class="col-md-3 money-returns">
-                    <div class="row">
-                        <div class="col-md-3">
-                            <i class="fa fa-money" aria-hidden="true"></i>
-                        </div>
-                        <div class="col-md-9">
-                            <h1>Money Returns</h1>
-                            <p>30 days money return</p>
-                        </div>
-                    </div>
-                </section>
-                <section class="col-md-3 support">
-                    <div class="row">
-                        <div class="col-md-3">
-                            <i class="fa fa-question" aria-hidden="true"></i>
-                        </div>
-                        <div class="col-md-9">
-                            <h1>24/7 Support</h1>
-                            <p>Hotline:(+100)1234567890</p>
-                        </div>
-                    </div>
-                </section>
-                <section class="col-md-3 safe-payment">
-                    <div class="row">
-                        <div class="col-md-3">
-                            <i class="fa fa-credit-card-alt" aria-hidden="true"></i>
-                        </div>
-                        <div class="col-md-9">
-                            <h1>Safe Payment</h1>
-                            <p>Protect online payment</p>
-                        </div>
-                    </div>
+                <section class="weekly-sale flex-item">
+                    <h1>Weekly <span>Sale!</span></h1>
+                    <p>Saving up to 50% of all online <br/>
+                        store items this week.</p>
+                    <button><a href="#">Shop now</a></button>
                 </section>
             </section>
-            <div class="row">
-                <section class="col-md-12" id="tabs">
-                    <ul>
-                        <li><a class="tabs-a" href="#tabs-1">Featured</a></li>
-                        <li><a class="tabs-a" href="#tabs-2">Special</a></li>
-                        <li><a class="tabs-a" href="#tabs-3">On sale</a></li>
-                    </ul>
-                    <div id="tabs-1" class="recently-viewed-container">
-                        <ul class="col-md-12 col-sm-12 col-xs-12 recent-item-container">
-                            <li class="recent-item">
-                                <article>
-                                    <div class="img-container col-md-12">
-                                        <div class="actions">
-                                            <a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a>
-                                            <a href="#"><i class="fa fa-bars" aria-hidden="true"></i></a>
-                                        </div>
+        </div>
+        <section class="row services">
+            <section class="col-xs-3 xol-sm-3 col-md-3 free-shipping">
+                <div class="row">
+                    <div class="col-md-3">
+                        <i class="fa fa-truck" aria-hidden="true"></i>
+                    </div>
+                    <div class="col-md-9">
+                        <h1>Free Shipping</h1>
+                        <p>Never happens</p>
+                    </div>
+                </div>
+            </section>
+            <section class="col-xs-3 xol-sm-3 col-md-3 money-returns">
+                <div class="row">
+                    <div class="col-md-3">
+                        <i class="fa fa-money" aria-hidden="true"></i>
+                    </div>
+                    <div class="col-md-9">
+                        <h1>Money Returns</h1>
+                        <p>Are strictly forbidden</p>
+                    </div>
+                </div>
+            </section>
+            <section class="col-xs-3 xol-sm-3 col-md-3 support">
+                <div class="row">
+                    <div class="col-md-3">
+                        <i class="fa fa-question" aria-hidden="true"></i>
+                    </div>
+                    <div class="col-md-9">
+                        <h1>24/7 Support</h1>
+                        <p>Hotline: (+359) 666</p>
+                    </div>
+                </div>
+            </section>
+            <section class="col-xs-3 xol-sm-3 col-md-3 safe-payment">
+                <div class="row">
+                    <div class="col-md-3">
+                        <i class="fa fa-credit-card-alt" aria-hidden="true"></i>
+                    </div>
+                    <div class="col-md-9">
+                        <h1>Safe Payment</h1>
+                        <p>Forget about it</p>
+                    </div>
+                </div>
+            </section>
+        </section>
+        <div class="row">
+            <section class="col-md-12" id="tabs">
+                <ul>
+                    <li><a class="tabs-a" href="#tabs-1">Featured</a></li>
+                    <li><a class="tabs-a" href="#tabs-2">Special</a></li>
+                    <li><a class="tabs-a" href="#tabs-3">On sale</a></li>
+                </ul>
+                <div id="tabs-1" class="recently-viewed-container">
+                    <ul class="col-md-12 col-sm-12 col-xs-12 recent-item-container">
+                        <li class="recent-item">
+                            <article>
+                                <div class="img-container col-md-12">
+                                    <div class="actions">
+                                        <a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a>
+                                        <a href="#"><i class="fa fa-bars" aria-hidden="true"></i></a>
+                                    </div>
+                                    <a href="pages/product-details.html">
                                         <img src="img/products/tshirts/tshirt-web-developers-style-white-1.jpg">
-                                        <div class="quickview">
-                                            <a href="#">Quickview</a>
-                                        </div>
+                                    </a>
+                                    <div class="quickview">
+                                        <a href="#">Quickview</a>
                                     </div>
-                                    <p class="item-type">T-shirts</p>
-                                    <a href="pages/product-details.html" class="item-name">Web Developers Style T-Shirt</a>
-                                    <p class="item-rating"><span class="yellow">&starf;&starf;&starf;&starf;</span>&star;<span class="item-reviews">12 Review(s)</span></p>
-                                    <p class="item-price">$169.95<a href="#"><i class="fa fa-cart-arrow-down" aria-hidden="true"></i></a></p>
-                                </article>
-                            </li>
-                            <li class="recent-item">
-                                <article>
-                                    <div class="img-container col-md-12">
-                                        <div class="actions">
-                                            <a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a>
-                                            <a href="#"><i class="fa fa-bars" aria-hidden="true"></i></a>
-                                        </div>
-                                        <img src="img/homepage/product-binaryClock-190x190.jpg">
-                                        <div class="quickview">
-                                            <a href="#">Quickview</a>
-                                        </div>
+                                </div>
+                                <a href="pages/product-details.html">
+                                <p class="item-type">T-shirts</p>
+                                <div class="item-name">Web Developers Style T-Shirt</div>
+                                <p class="item-rating"><span
+                                        class="yellow">&starf;&starf;&starf;&starf;</span>&star;<span
+                                        class="item-reviews">12 Review(s)</span></p></a>
+                                <p class="item-price">$169.95<a href="#"><i class="fa fa-cart-arrow-down"
+                                                                            aria-hidden="true"></i></a></p>
+                            </article>
+                        </li>
+                        <li class="recent-item">
+                            <article>
+                                <div class="img-container col-md-12">
+                                    <div class="actions">
+                                        <a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a>
+                                        <a href="#"><i class="fa fa-bars" aria-hidden="true"></i></a>
                                     </div>
-                                    <p class="item-type">Clothing</p>
-                                    <a href="#" class="item-name">CSS Puns Ninja</a>
-                                    <p class="item-rating"><span class="yellow">&starf;&starf;&starf;</span>&star;&star;<span class="item-reviews">18 Review(s)</span></p>
-                                    <p class="item-price">$25.95<a href="#"><i class="fa fa-cart-arrow-down" aria-hidden="true"></i></a></p>
-                                </article>
-                            </li>
-                            <li class="recent-item new-item">
-                                <article>
-                                    <div class="img-container col-md-12">
-                                        <div class="actions">
-                                            <a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a>
-                                            <a href="#"><i class="fa fa-bars" aria-hidden="true"></i></a>
-                                        </div>
-                                        <img src="img/homepage/product-binaryClock-190x190.jpg">
-                                        <div class="quickview">
-                                            <a href="#">Quickview</a>
-                                        </div>
+                                    <img src="img/homepage/product-binaryClock-190x190.jpg">
+                                    <div class="quickview">
+                                        <a href="#">Quickview</a>
                                     </div>
-                                    <p class="item-type">PC</p>
-                                    <a href="#" class="item-name">Matias Ergo Pro Keyboard</a>
-                                    <p class="item-rating"><span class="yellow">&starf;&starf;&starf;&starf;</span>&star;<span class="item-reviews">6 Review(s)</span></p>
-                                    <p class="item-price">$299.95<a href="#"><i class="fa fa-cart-arrow-down" aria-hidden="true"></i></a></p>
-                                </article>
-                            </li>
-                            <li class="recent-item">
-                                <article>
-                                    <div class="img-container col-md-12">
-                                        <div class="actions">
-                                            <a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a>
-                                            <a href="#"><i class="fa fa-bars" aria-hidden="true"></i></a>
-                                        </div>
-                                        <img src="img/homepage/product-binaryClock-190x190.jpg">
-                                        <div class="quickview">
-                                            <a href="#">Quickview</a>
-                                        </div>
+                                </div>
+                                <p class="item-type">Clothing</p>
+                                <a href="#" class="item-name">CSS Puns Ninja</a>
+                                <p class="item-rating"><span
+                                        class="yellow">&starf;&starf;&starf;</span>&star;&star;<span
+                                        class="item-reviews">18 Review(s)</span></p>
+                                <p class="item-price">$25.95<a href="#"><i class="fa fa-cart-arrow-down"
+                                                                           aria-hidden="true"></i></a></p>
+                            </article>
+                        </li>
+                        <li class="recent-item new-item">
+                            <article>
+                                <div class="img-container col-md-12">
+                                    <div class="actions">
+                                        <a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a>
+                                        <a href="#"><i class="fa fa-bars" aria-hidden="true"></i></a>
                                     </div>
-                                    <p class="item-type">Home</p>
-                                    <a href="#" class="item-name">Bath Towel Binary</a>
-                                    <p class="item-rating"><span class="yellow">&starf;&starf;&starf;&starf;</span>&star;<span class="item-reviews">12 Review(s)</span></p>
-                                    <p class="item-price">$29.95<a href="#"><i class="fa fa-cart-arrow-down" aria-hidden="true"></i></a></p>
-                                </article>
-                            </li>
-                            <li class="recent-item discount-item">
-                                <article>
-                                    <div class="img-container col-md-12">
-                                        <div class="actions">
-                                            <a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a>
-                                            <a href="#"><i class="fa fa-bars" aria-hidden="true"></i></a>
-                                        </div>
-                                        <img src="img/homepage/product-binaryClock-190x190.jpg">
-                                        <div class="quickview">
-                                            <a href="#">Quickview</a>
-                                        </div>
+                                    <img src="img/homepage/product-binaryClock-190x190.jpg">
+                                    <div class="quickview">
+                                        <a href="#">Quickview</a>
                                     </div>
-                                    <p class="item-type">Games</p>
-                                    <a href="#" class="item-name">Retro Games Controller</a>
-                                    <p class="item-rating"><span class="yellow">&starf;&starf;&starf;&starf;</span>&star;<span class="item-reviews">35 Review(s)</span></p>
-                                    <p class="item-price"><span class="new-price">$19.95</span><span class="old-price">$24.95</span><a href="#"><i class="fa fa-cart-arrow-down" aria-hidden="true"></i></a></p>
-                                </article>
-                            </li>
-                        </ul>
-                    </div>
-                    <div id="tabs-2" class="recently-viewed-container">
-                        <ul class="col-md-12 col-sm-12 col-xs-12 recent-item-container">
-                            <li class="recent-item">
-                                <article>
-                                    <div class="img-container col-md-12">
-                                        <div class="actions">
-                                            <a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a>
-                                            <a href="#"><i class="fa fa-bars" aria-hidden="true"></i></a>
-                                        </div>
-                                        <img src="img/homepage/coffee-mug-css-is-awesome.jpg">
-                                        <div class="quickview">
-                                            <a href="#">Quickview</a>
-                                        </div>
+                                </div>
+                                <p class="item-type">PC</p>
+                                <a href="#" class="item-name">Matias Ergo Pro Keyboard</a>
+                                <p class="item-rating"><span
+                                        class="yellow">&starf;&starf;&starf;&starf;</span>&star;<span
+                                        class="item-reviews">6 Review(s)</span></p>
+                                <p class="item-price">$299.95<a href="#"><i class="fa fa-cart-arrow-down"
+                                                                            aria-hidden="true"></i></a></p>
+                            </article>
+                        </li>
+                        <li class="recent-item">
+                            <article>
+                                <div class="img-container col-md-12">
+                                    <div class="actions">
+                                        <a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a>
+                                        <a href="#"><i class="fa fa-bars" aria-hidden="true"></i></a>
                                     </div>
-                                    <p class="item-type">On the road</p>
-                                    <a href="#" class="item-name">Das Keyboard HackShield RFID Backpack</a>
-                                    <p class="item-rating"><span class="yellow">&starf;&starf;&starf;&starf;</span>&star;<span class="item-reviews">12 Review(s)</span></p>
-                                    <p class="item-price">$169.95<a href="#"><i class="fa fa-cart-arrow-down" aria-hidden="true"></i></a></p>
-                                </article>
-                            </li>
-                            <li class="recent-item">
-                                <article>
-                                    <div class="img-container col-md-12">
-                                        <div class="actions">
-                                            <a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a>
-                                            <a href="#"><i class="fa fa-bars" aria-hidden="true"></i></a>
-                                        </div>
-                                        <img src="img/homepage/product-binaryClock-190x190.jpg">
-                                        <div class="quickview">
-                                            <a href="#">Quickview</a>
-                                        </div>
+                                    <img src="img/homepage/product-binaryClock-190x190.jpg">
+                                    <div class="quickview">
+                                        <a href="#">Quickview</a>
                                     </div>
-                                    <p class="item-type">Clothing</p>
-                                    <a href="#" class="item-name">CSS Puns Ninja</a>
-                                    <p class="item-rating"><span class="yellow">&starf;&starf;&starf;</span>&star;&star;<span class="item-reviews">18 Review(s)</span></p>
-                                    <p class="item-price">$25.95<a href="#"><i class="fa fa-cart-arrow-down" aria-hidden="true"></i></a></p>
-                                </article>
-                            </li>
-                            <li class="recent-item new-item">
-                                <article>
-                                    <div class="img-container col-md-12">
-                                        <div class="actions">
-                                            <a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a>
-                                            <a href="#"><i class="fa fa-bars" aria-hidden="true"></i></a>
-                                        </div>
-                                        <img src="img/homepage/product-binaryClock-190x190.jpg">
-                                        <div class="quickview">
-                                            <a href="#">Quickview</a>
-                                        </div>
+                                </div>
+                                <p class="item-type">Home</p>
+                                <a href="#" class="item-name">Bath Towel Binary</a>
+                                <p class="item-rating"><span
+                                        class="yellow">&starf;&starf;&starf;&starf;</span>&star;<span
+                                        class="item-reviews">12 Review(s)</span></p>
+                                <p class="item-price">$29.95<a href="#"><i class="fa fa-cart-arrow-down"
+                                                                           aria-hidden="true"></i></a></p>
+                            </article>
+                        </li>
+                        <li class="recent-item discount-item">
+                            <article>
+                                <div class="img-container col-md-12">
+                                    <div class="actions">
+                                        <a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a>
+                                        <a href="#"><i class="fa fa-bars" aria-hidden="true"></i></a>
                                     </div>
-                                    <p class="item-type">PC</p>
-                                    <a href="#" class="item-name">Matias Ergo Pro Keyboard</a>
-                                    <p class="item-rating"><span class="yellow">&starf;&starf;&starf;&starf;</span>&star;<span class="item-reviews">6 Review(s)</span></p>
-                                    <p class="item-price">$299.95<a href="#"><i class="fa fa-cart-arrow-down" aria-hidden="true"></i></a></p>
-                                </article>
-                            </li>
-                            <li class="recent-item">
-                                <article>
-                                    <div class="img-container col-md-12">
-                                        <div class="actions">
-                                            <a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a>
-                                            <a href="#"><i class="fa fa-bars" aria-hidden="true"></i></a>
-                                        </div>
-                                        <img src="img/homepage/product-binaryClock-190x190.jpg">
-                                        <div class="quickview">
-                                            <a href="#">Quickview</a>
-                                        </div>
+                                    <img src="img/homepage/product-binaryClock-190x190.jpg">
+                                    <div class="quickview">
+                                        <a href="#">Quickview</a>
                                     </div>
-                                    <p class="item-type">Home</p>
-                                    <a href="#" class="item-name">Bath Towel Binary</a>
-                                    <p class="item-rating"><span class="yellow">&starf;&starf;&starf;&starf;</span>&star;<span class="item-reviews">12 Review(s)</span></p>
-                                    <p class="item-price">$29.95<a href="#"><i class="fa fa-cart-arrow-down" aria-hidden="true"></i></a></p>
-                                </article>
-                            </li>
-                            <li class="recent-item discount-item">
-                                <article>
-                                    <div class="img-container col-md-12">
-                                        <div class="actions">
-                                            <a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a>
-                                            <a href="#"><i class="fa fa-bars" aria-hidden="true"></i></a>
-                                        </div>
-                                        <img src="img/homepage/product-binaryClock-190x190.jpg">
-                                        <div class="quickview">
-                                            <a href="#">Quickview</a>
-                                        </div>
+                                </div>
+                                <p class="item-type">Games</p>
+                                <a href="#" class="item-name">Retro Games Controller</a>
+                                <p class="item-rating"><span
+                                        class="yellow">&starf;&starf;&starf;&starf;</span>&star;<span
+                                        class="item-reviews">35 Review(s)</span></p>
+                                <p class="item-price"><span class="new-price">$19.95</span><span class="old-price">$24.95</span><a
+                                        href="#"><i class="fa fa-cart-arrow-down" aria-hidden="true"></i></a></p>
+                            </article>
+                        </li>
+                    </ul>
+                </div>
+                <div id="tabs-2" class="recently-viewed-container">
+                    <ul class="col-md-12 col-sm-12 col-xs-12 recent-item-container">
+                        <li class="recent-item">
+                            <article>
+                                <div class="img-container col-md-12">
+                                    <div class="actions">
+                                        <a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a>
+                                        <a href="#"><i class="fa fa-bars" aria-hidden="true"></i></a>
                                     </div>
-                                    <p class="item-type">Games</p>
-                                    <a href="#" class="item-name">Retro Games Controller</a>
-                                    <p class="item-rating"><span class="yellow">&starf;&starf;&starf;&starf;</span>&star;<span class="item-reviews">35 Review(s)</span></p>
-                                    <p class="item-price"><span class="new-price">$19.95</span><span class="old-price">$24.95</span><a href="#"><i class="fa fa-cart-arrow-down" aria-hidden="true"></i></a></p>
-                                </article>
-                            </li>
-                        </ul>
-                    </div>
-                    <div id="tabs-3" class="recently-viewed-container">
-                        <ul class="col-md-12 col-sm-12 col-xs-12 recent-item-container">
-                            <li class="recent-item">
-                                <article>
-                                    <div class="img-container col-md-12">
-                                        <div class="actions">
-                                            <a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a>
-                                            <a href="#"><i class="fa fa-bars" aria-hidden="true"></i></a>
-                                        </div>
-                                        <img src="img/homepage/12018Matias_EP_DE_03.jpg">
-                                        <div class="quickview">
-                                            <a href="#">Quickview</a>
-                                        </div>
+                                    <img src="img/homepage/coffee-mug-css-is-awesome.jpg">
+                                    <div class="quickview">
+                                        <a href="#">Quickview</a>
                                     </div>
-                                    <p class="item-type">On the road</p>
-                                    <a href="#" class="item-name">Das Keyboard HackShield RFID Backpack</a>
-                                    <p class="item-rating"><span class="yellow">&starf;&starf;&starf;&starf;</span>&star;<span class="item-reviews">12 Review(s)</span></p>
-                                    <p class="item-price">$169.95<a href="#"><i class="fa fa-cart-arrow-down" aria-hidden="true"></i></a></p>
-                                </article>
-                            </li>
-                            <li class="recent-item">
-                                <article>
-                                    <div class="img-container col-md-12">
-                                        <div class="actions">
-                                            <a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a>
-                                            <a href="#"><i class="fa fa-bars" aria-hidden="true"></i></a>
-                                        </div>
-                                        <img src="img/homepage/product-binaryClock-190x190.jpg">
-                                        <div class="quickview">
-                                            <a href="#">Quickview</a>
-                                        </div>
+                                </div>
+                                <p class="item-type">On the road</p>
+                                <a href="#" class="item-name">Das Keyboard HackShield RFID Backpack</a>
+                                <p class="item-rating"><span
+                                        class="yellow">&starf;&starf;&starf;&starf;</span>&star;<span
+                                        class="item-reviews">12 Review(s)</span></p>
+                                <p class="item-price">$169.95<a href="#"><i class="fa fa-cart-arrow-down"
+                                                                            aria-hidden="true"></i></a></p>
+                            </article>
+                        </li>
+                        <li class="recent-item">
+                            <article>
+                                <div class="img-container col-md-12">
+                                    <div class="actions">
+                                        <a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a>
+                                        <a href="#"><i class="fa fa-bars" aria-hidden="true"></i></a>
                                     </div>
-                                    <p class="item-type">Clothing</p>
-                                    <a href="#" class="item-name">CSS Puns Ninja</a>
-                                    <p class="item-rating"><span class="yellow">&starf;&starf;&starf;</span>&star;&star;<span class="item-reviews">18 Review(s)</span></p>
-                                    <p class="item-price">$25.95<a href="#"><i class="fa fa-cart-arrow-down" aria-hidden="true"></i></a></p>
-                                </article>
-                            </li>
-                            <li class="recent-item new-item">
-                                <article>
-                                    <div class="img-container col-md-12">
-                                        <div class="actions">
-                                            <a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a>
-                                            <a href="#"><i class="fa fa-bars" aria-hidden="true"></i></a>
-                                        </div>
-                                        <img src="img/homepage/product-binaryClock-190x190.jpg">
-                                        <div class="quickview">
-                                            <a href="#">Quickview</a>
-                                        </div>
+                                    <img src="img/homepage/product-binaryClock-190x190.jpg">
+                                    <div class="quickview">
+                                        <a href="#">Quickview</a>
                                     </div>
-                                    <p class="item-type">PC</p>
-                                    <a href="#" class="item-name">Matias Ergo Pro Keyboard</a>
-                                    <p class="item-rating"><span class="yellow">&starf;&starf;&starf;&starf;</span>&star;<span class="item-reviews">6 Review(s)</span></p>
-                                    <p class="item-price">$299.95<a href="#"><i class="fa fa-cart-arrow-down" aria-hidden="true"></i></a></p>
-                                </article>
-                            </li>
-                            <li class="recent-item">
-                                <article>
-                                    <div class="img-container col-md-12">
-                                        <div class="actions">
-                                            <a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a>
-                                            <a href="#"><i class="fa fa-bars" aria-hidden="true"></i></a>
-                                        </div>
-                                        <img src="img/homepage/product-binaryClock-190x190.jpg">
-                                        <div class="quickview">
-                                            <a href="#">Quickview</a>
-                                        </div>
+                                </div>
+                                <p class="item-type">Clothing</p>
+                                <a href="#" class="item-name">CSS Puns Ninja</a>
+                                <p class="item-rating"><span
+                                        class="yellow">&starf;&starf;&starf;</span>&star;&star;<span
+                                        class="item-reviews">18 Review(s)</span></p>
+                                <p class="item-price">$25.95<a href="#"><i class="fa fa-cart-arrow-down"
+                                                                           aria-hidden="true"></i></a></p>
+                            </article>
+                        </li>
+                        <li class="recent-item new-item">
+                            <article>
+                                <div class="img-container col-md-12">
+                                    <div class="actions">
+                                        <a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a>
+                                        <a href="#"><i class="fa fa-bars" aria-hidden="true"></i></a>
                                     </div>
-                                    <p class="item-type">Home</p>
-                                    <a href="#" class="item-name">Bath Towel Binary</a>
-                                    <p class="item-rating"><span class="yellow">&starf;&starf;&starf;&starf;</span>&star;<span class="item-reviews">12 Review(s)</span></p>
-                                    <p class="item-price">$29.95<a href="#"><i class="fa fa-cart-arrow-down" aria-hidden="true"></i></a></p>
-                                </article>
-                            </li>
-                            <li class="recent-item discount-item">
-                                <article>
-                                    <div class="img-container col-md-12">
-                                        <div class="actions">
-                                            <a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a>
-                                            <a href="#"><i class="fa fa-bars" aria-hidden="true"></i></a>
-                                        </div>
-                                        <img src="img/homepage/product-binaryClock-190x190.jpg">
-                                        <div class="quickview">
-                                            <a href="#">Quickview</a>
-                                        </div>
+                                    <img src="img/homepage/product-binaryClock-190x190.jpg">
+                                    <div class="quickview">
+                                        <a href="#">Quickview</a>
                                     </div>
-                                    <p class="item-type">Games</p>
-                                    <a href="#" class="item-name">Retro Games Controller</a>
-                                    <p class="item-rating"><span class="yellow">&starf;&starf;&starf;&starf;</span>&star;<span class="item-reviews">35 Review(s)</span></p>
-                                    <p class="item-price"><span class="new-price">$19.95</span><span class="old-price">$24.95</span><a href="#"><i class="fa fa-cart-arrow-down" aria-hidden="true"></i></a></p>
-                                </article>
-                            </li>
-                        </ul>
-                    </div>
-                </section>
+                                </div>
+                                <p class="item-type">PC</p>
+                                <a href="#" class="item-name">Matias Ergo Pro Keyboard</a>
+                                <p class="item-rating"><span
+                                        class="yellow">&starf;&starf;&starf;&starf;</span>&star;<span
+                                        class="item-reviews">6 Review(s)</span></p>
+                                <p class="item-price">$299.95<a href="#"><i class="fa fa-cart-arrow-down"
+                                                                            aria-hidden="true"></i></a></p>
+                            </article>
+                        </li>
+                        <li class="recent-item">
+                            <article>
+                                <div class="img-container col-md-12">
+                                    <div class="actions">
+                                        <a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a>
+                                        <a href="#"><i class="fa fa-bars" aria-hidden="true"></i></a>
+                                    </div>
+                                    <img src="img/homepage/product-binaryClock-190x190.jpg">
+                                    <div class="quickview">
+                                        <a href="#">Quickview</a>
+                                    </div>
+                                </div>
+                                <p class="item-type">Home</p>
+                                <a href="#" class="item-name">Bath Towel Binary</a>
+                                <p class="item-rating"><span
+                                        class="yellow">&starf;&starf;&starf;&starf;</span>&star;<span
+                                        class="item-reviews">12 Review(s)</span></p>
+                                <p class="item-price">$29.95<a href="#"><i class="fa fa-cart-arrow-down"
+                                                                           aria-hidden="true"></i></a></p>
+                            </article>
+                        </li>
+                        <li class="recent-item discount-item">
+                            <article>
+                                <div class="img-container col-md-12">
+                                    <div class="actions">
+                                        <a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a>
+                                        <a href="#"><i class="fa fa-bars" aria-hidden="true"></i></a>
+                                    </div>
+                                    <img src="img/homepage/product-binaryClock-190x190.jpg">
+                                    <div class="quickview">
+                                        <a href="#">Quickview</a>
+                                    </div>
+                                </div>
+                                <p class="item-type">Games</p>
+                                <a href="#" class="item-name">Retro Games Controller</a>
+                                <p class="item-rating"><span
+                                        class="yellow">&starf;&starf;&starf;&starf;</span>&star;<span
+                                        class="item-reviews">35 Review(s)</span></p>
+                                <p class="item-price"><span class="new-price">$19.95</span><span class="old-price">$24.95</span><a
+                                        href="#"><i class="fa fa-cart-arrow-down" aria-hidden="true"></i></a></p>
+                            </article>
+                        </li>
+                    </ul>
+                </div>
+                <div id="tabs-3" class="recently-viewed-container">
+                    <ul class="col-md-12 col-sm-12 col-xs-12 recent-item-container">
+                        <li class="recent-item">
+                            <article>
+                                <div class="img-container col-md-12">
+                                    <div class="actions">
+                                        <a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a>
+                                        <a href="#"><i class="fa fa-bars" aria-hidden="true"></i></a>
+                                    </div>
+                                    <img src="img/homepage/12018Matias_EP_DE_03.jpg">
+                                    <div class="quickview">
+                                        <a href="#">Quickview</a>
+                                    </div>
+                                </div>
+                                <p class="item-type">On the road</p>
+                                <a href="#" class="item-name">Das Keyboard HackShield RFID Backpack</a>
+                                <p class="item-rating"><span
+                                        class="yellow">&starf;&starf;&starf;&starf;</span>&star;<span
+                                        class="item-reviews">12 Review(s)</span></p>
+                                <p class="item-price">$169.95<a href="#"><i class="fa fa-cart-arrow-down"
+                                                                            aria-hidden="true"></i></a></p>
+                            </article>
+                        </li>
+                        <li class="recent-item">
+                            <article>
+                                <div class="img-container col-md-12">
+                                    <div class="actions">
+                                        <a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a>
+                                        <a href="#"><i class="fa fa-bars" aria-hidden="true"></i></a>
+                                    </div>
+                                    <img src="img/homepage/product-binaryClock-190x190.jpg">
+                                    <div class="quickview">
+                                        <a href="#">Quickview</a>
+                                    </div>
+                                </div>
+                                <p class="item-type">Clothing</p>
+                                <a href="#" class="item-name">CSS Puns Ninja</a>
+                                <p class="item-rating"><span
+                                        class="yellow">&starf;&starf;&starf;</span>&star;&star;<span
+                                        class="item-reviews">18 Review(s)</span></p>
+                                <p class="item-price">$25.95<a href="#"><i class="fa fa-cart-arrow-down"
+                                                                           aria-hidden="true"></i></a></p>
+                            </article>
+                        </li>
+                        <li class="recent-item new-item">
+                            <article>
+                                <div class="img-container col-md-12">
+                                    <div class="actions">
+                                        <a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a>
+                                        <a href="#"><i class="fa fa-bars" aria-hidden="true"></i></a>
+                                    </div>
+                                    <img src="img/homepage/product-binaryClock-190x190.jpg">
+                                    <div class="quickview">
+                                        <a href="#">Quickview</a>
+                                    </div>
+                                </div>
+                                <p class="item-type">PC</p>
+                                <a href="#" class="item-name">Matias Ergo Pro Keyboard</a>
+                                <p class="item-rating"><span
+                                        class="yellow">&starf;&starf;&starf;&starf;</span>&star;<span
+                                        class="item-reviews">6 Review(s)</span></p>
+                                <p class="item-price">$299.95<a href="#"><i class="fa fa-cart-arrow-down"
+                                                                            aria-hidden="true"></i></a></p>
+                            </article>
+                        </li>
+                        <li class="recent-item">
+                            <article>
+                                <div class="img-container col-md-12">
+                                    <div class="actions">
+                                        <a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a>
+                                        <a href="#"><i class="fa fa-bars" aria-hidden="true"></i></a>
+                                    </div>
+                                    <img src="img/homepage/product-binaryClock-190x190.jpg">
+                                    <div class="quickview">
+                                        <a href="#">Quickview</a>
+                                    </div>
+                                </div>
+                                <p class="item-type">Home</p>
+                                <a href="#" class="item-name">Bath Towel Binary</a>
+                                <p class="item-rating"><span
+                                        class="yellow">&starf;&starf;&starf;&starf;</span>&star;<span
+                                        class="item-reviews">12 Review(s)</span></p>
+                                <p class="item-price">$29.95<a href="#"><i class="fa fa-cart-arrow-down"
+                                                                           aria-hidden="true"></i></a></p>
+                            </article>
+                        </li>
+                        <li class="recent-item discount-item">
+                            <article>
+                                <div class="img-container col-md-12">
+                                    <div class="actions">
+                                        <a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a>
+                                        <a href="#"><i class="fa fa-bars" aria-hidden="true"></i></a>
+                                    </div>
+                                    <img src="img/homepage/product-binaryClock-190x190.jpg">
+                                    <div class="quickview">
+                                        <a href="#">Quickview</a>
+                                    </div>
+                                </div>
+                                <p class="item-type">Games</p>
+                                <a href="#" class="item-name">Retro Games Controller</a>
+                                <p class="item-rating"><span
+                                        class="yellow">&starf;&starf;&starf;&starf;</span>&star;<span
+                                        class="item-reviews">35 Review(s)</span></p>
+                                <p class="item-price"><span class="new-price">$19.95</span><span class="old-price">$24.95</span><a
+                                        href="#"><i class="fa fa-cart-arrow-down" aria-hidden="true"></i></a></p>
+                            </article>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+        <section class="top-selling recently-viewed-container row">
+            <div>
+                <h1 class="top-selling-label">Top Selling of the Week</h1>
             </div>
-                <section class="top-selling recently-viewed-container">
-                    <div class="col-md-12">
-                        <h1 class="top-selling-label">Top Selling of the Week</h1>
-                    </div>
-                        <ul class="col-md-12 col-sm-12 col-xs-12 recent-item-container">
-                            <li class="recent-item most-selling-item">
-                                <article>
-                                    <div class="img-container col-md-12">
-                                        <img src="img/homepage/mostSelledProduct-hat-450x340.jpg">
-                                    </div>
-                                    <p class="item-type">On the road</p>
-                                    <a href="#" class="item-name">Das Keyboard HackShield</a>
-                                    <div class="item-info">
-                                        <p>28min</p>
-                                        <p>38min</p>
-                                    </div>
-                                    <a href="#" class="details-btn">View Details</a>
-                                </article>
-                            </li>
-                            <li class="recent-item">
-                                <article>
-                                    <div class="img-container col-md-12">
-                                        <div class="actions">
-                                            <a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a>
-                                            <a href="#"><i class="fa fa-bars" aria-hidden="true"></i></a>
-                                        </div>
-                                        <img src="img/homepage/product-binaryClock-190x190.jpg">
-                                        <div class="quickview">
-                                            <a href="#">Quickview</a>
-                                        </div>
-                                    </div>
-                                    <p class="item-type">Clothing</p>
-                                    <a href="#" class="item-name">CSS Puns Ninja</a>
-                                    <p class="item-rating"><span class="yellow">&starf;&starf;&starf;</span>&star;&star;<span class="item-reviews">18 Review(s)</span></p>
-                                    <p class="item-price">$25.95<a href="#"><i class="fa fa-cart-arrow-down" aria-hidden="true"></i></a></p>
-                                </article>
-                            </li>
-                            <li class="recent-item new-item">
-                                <article>
-                                    <div class="img-container col-md-12">
-                                        <div class="actions">
-                                            <a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a>
-                                            <a href="#"><i class="fa fa-bars" aria-hidden="true"></i></a>
-                                        </div>
-                                        <img src="img/homepage/product-binaryClock-190x190.jpg">
-                                        <div class="quickview">
-                                            <a href="#">Quickview</a>
-                                        </div>
-                                    </div>
-                                    <p class="item-type">PC</p>
-                                    <a href="#" class="item-name">Matias Ergo Pro Keyboard</a>
-                                    <p class="item-rating"><span class="yellow">&starf;&starf;&starf;&starf;</span>&star;<span class="item-reviews">6 Review(s)</span></p>
-                                    <p class="item-price">$299.95<a href="#"><i class="fa fa-cart-arrow-down" aria-hidden="true"></i></a></p>
-                                </article>
-                            </li>
-
-                        </ul>
-                        <ul class="col-md-12 col-sm-12 col-xs-12 recent-item-container">
-                            <li class="recent-item">
-                                <article>
-                                    <div class="img-container col-md-12">
-                                        <div class="actions">
-                                            <a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a>
-                                            <a href="#"><i class="fa fa-bars" aria-hidden="true"></i></a>
-                                        </div>
-                                        <img src="img/homepage/product-binaryClock-190x190.jpg">
-                                        <div class="quickview">
-                                            <a href="#">Quickview</a>
-                                        </div>
-                                    </div>
-                                    <p class="item-type">On the road</p>
-                                    <a href="#" class="item-name">Das Keyboard HackShield RFID Backpack</a>
-                                    <p class="item-rating"><span class="yellow">&starf;&starf;&starf;&starf;</span>&star;<span class="item-reviews">12 Review(s)</span></p>
-                                    <p class="item-price">$169.95<a href="#"><i class="fa fa-cart-arrow-down" aria-hidden="true"></i></a></p>
-                                </article>
-                            </li>
-                            <li class="recent-item">
-                                <article>
-                                    <div class="img-container col-md-12">
-                                        <div class="actions">
-                                            <a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a>
-                                            <a href="#"><i class="fa fa-bars" aria-hidden="true"></i></a>
-                                        </div>
-                                        <img src="img/homepage/product-binaryClock-190x190.jpg">
-                                        <div class="quickview">
-                                            <a href="#">Quickview</a>
-                                        </div>
-                                    </div>
-                                    <p class="item-type">Clothing</p>
-                                    <a href="#" class="item-name">CSS Puns Ninja</a>
-                                    <p class="item-rating"><span class="yellow">&starf;&starf;&starf;</span>&star;&star;<span class="item-reviews">18 Review(s)</span></p>
-                                    <p class="item-price">$25.95<a href="#"><i class="fa fa-cart-arrow-down" aria-hidden="true"></i></a></p>
-                                </article>
-                            </li>
-                            <li class="recent-item new-item">
-                                <article>
-                                    <div class="img-container col-md-12">
-                                        <div class="actions">
-                                            <a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a>
-                                            <a href="#"><i class="fa fa-bars" aria-hidden="true"></i></a>
-                                        </div>
-                                        <img src="img/homepage/product-binaryClock-190x190.jpg">
-                                        <div class="quickview">
-                                            <a href="#">Quickview</a>
-                                        </div>
-                                    </div>
-                                    <p class="item-type">PC</p>
-                                    <a href="#" class="item-name">Matias Ergo Pro Keyboard</a>
-                                    <p class="item-rating"><span class="yellow">&starf;&starf;&starf;&starf;</span>&star;<span class="item-reviews">6 Review(s)</span></p>
-                                    <p class="item-price">$299.95<a href="#"><i class="fa fa-cart-arrow-down" aria-hidden="true"></i></a></p>
-                                </article>
-                            </li>
-                            <li class="recent-item">
-                                <article>
-                                    <div class="img-container col-md-12">
-                                        <div class="actions">
-                                            <a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a>
-                                            <a href="#"><i class="fa fa-bars" aria-hidden="true"></i></a>
-                                        </div>
-                                        <img src="img/6926CSS-ninja.jpg">
-                                        <div class="quickview">
-                                            <a href="#">Quickview</a>
-                                        </div>
-                                    </div>
-                                    <p class="item-type">Home</p>
-                                    <a href="#" class="item-name">Bath Towel Binary</a>
-                                    <p class="item-rating"><span class="yellow">&starf;&starf;&starf;&starf;</span>&star;<span class="item-reviews">12 Review(s)</span></p>
-                                    <p class="item-price">$29.95<a href="#"><i class="fa fa-cart-arrow-down" aria-hidden="true"></i></a></p>
-                                </article>
-                            </li>
-                            <li class="recent-item discount-item">
-                                <article>
-                                    <div class="img-container col-md-12">
-                                        <div class="actions">
-                                            <a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a>
-                                            <a href="#"><i class="fa fa-bars" aria-hidden="true"></i></a>
-                                        </div>
-                                        <img src="img/homepage/product-binaryClock-190x190.jpg">
-                                        <div class="quickview">
-                                            <a href="#">Quickview</a>
-                                        </div>
-                                    </div>
-                                    <p class="item-type">Games</p>
-                                    <a href="#" class="item-name">Retro Games Controller</a>
-                                    <p class="item-rating"><span class="yellow">&starf;&starf;&starf;&starf;</span>&star;<span class="item-reviews">35 Review(s)</span></p>
-                                    <p class="item-price"><span class="new-price">$19.95</span><span class="old-price">$24.95</span><a href="#"><i class="fa fa-cart-arrow-down" aria-hidden="true"></i></a></p>
-                                </article>
-                            </li>
-                        </ul>
-                </section>
-            <div class="row">
-                <section class="from-blog">
-                    <div class="row">
-                        <div class="col-md-12 from-blog-label">
-                            <h1>From Our Blog</h1>
+            <ul class="recent-item-container">
+                <li class="recent-item most-selling-item">
+                    <article>
+                        <div class="img-container col-md-12">
+                            <img src="img/homepage/mostSelledProduct-hat-450x340.jpg">
                         </div>
+                        <p class="item-type">On the road</p>
+                        <a href="#" class="item-name">Das Keyboard HackShield</a>
+                        <div class="item-info">
+                            <p>28min</p>
+                            <p>38min</p>
+                        </div>
+                        <a href="#" class="details-btn">View Details</a>
+                    </article>
+                </li>
+                <li class="recent-item">
+                    <article>
+                        <div class="img-container col-md-12">
+                            <div class="actions">
+                                <a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-bars" aria-hidden="true"></i></a>
+                            </div>
+                            <img src="img/homepage/product-binaryClock-190x190.jpg">
+                            <div class="quickview">
+                                <a href="#">Quickview</a>
+                            </div>
+                        </div>
+                        <p class="item-type">Clothing</p>
+                        <a href="#" class="item-name">CSS Puns Ninja</a>
+                        <p class="item-rating"><span class="yellow">&starf;&starf;&starf;</span>&star;&star;<span
+                                class="item-reviews">18 Review(s)</span></p>
+                        <p class="item-price">$25.95<a href="#"><i class="fa fa-cart-arrow-down" aria-hidden="true"></i></a>
+                        </p>
+                    </article>
+                </li>
+                <li class="recent-item">
+                    <article>
+                        <div class="img-container col-md-12">
+                            <div class="actions">
+                                <a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-bars" aria-hidden="true"></i></a>
+                            </div>
+                            <img src="img/homepage/product-binaryClock-190x190.jpg">
+                            <div class="quickview">
+                                <a href="#">Quickview</a>
+                            </div>
+                        </div>
+                        <p class="item-type">Clothing</p>
+                        <a href="#" class="item-name">CSS Puns Ninja</a>
+                        <p class="item-rating"><span class="yellow">&starf;&starf;&starf;</span>&star;&star;<span
+                                class="item-reviews">18 Review(s)</span></p>
+                        <p class="item-price">$25.95<a href="#"><i class="fa fa-cart-arrow-down" aria-hidden="true"></i></a>
+                        </p>
+                    </article>
+                </li>
+                <li class="recent-item new-item">
+                    <article>
+                        <div class="img-container col-md-12">
+                            <div class="actions">
+                                <a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-bars" aria-hidden="true"></i></a>
+                            </div>
+                            <img src="img/homepage/product-binaryClock-190x190.jpg">
+                            <div class="quickview">
+                                <a href="#">Quickview</a>
+                            </div>
+                        </div>
+                        <p class="item-type">PC</p>
+                        <a href="#" class="item-name">Matias Ergo Pro Keyboard</a>
+                        <p class="item-rating"><span class="yellow">&starf;&starf;&starf;&starf;</span>&star;<span
+                                class="item-reviews">6 Review(s)</span></p>
+                        <p class="item-price">$299.95<a href="#"><i class="fa fa-cart-arrow-down"
+                                                                    aria-hidden="true"></i></a></p>
+                    </article>
+                </li>
+
+            </ul>
+            <ul class="recent-item-container">
+                <li class="recent-item">
+                    <article>
+                        <div class="img-container col-md-12">
+                            <div class="actions">
+                                <a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-bars" aria-hidden="true"></i></a>
+                            </div>
+                            <img src="img/homepage/product-binaryClock-190x190.jpg">
+                            <div class="quickview">
+                                <a href="#">Quickview</a>
+                            </div>
+                        </div>
+                        <p class="item-type">On the road</p>
+                        <a href="#" class="item-name">Das Keyboard HackShield RFID Backpack</a>
+                        <p class="item-rating"><span class="yellow">&starf;&starf;&starf;&starf;</span>&star;<span
+                                class="item-reviews">12 Review(s)</span></p>
+                        <p class="item-price">$169.95<a href="#"><i class="fa fa-cart-arrow-down"
+                                                                    aria-hidden="true"></i></a></p>
+                    </article>
+                </li>
+                <li class="recent-item">
+                    <article>
+                        <div class="img-container col-md-12">
+                            <div class="actions">
+                                <a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-bars" aria-hidden="true"></i></a>
+                            </div>
+                            <img src="img/homepage/product-binaryClock-190x190.jpg">
+                            <div class="quickview">
+                                <a href="#">Quickview</a>
+                            </div>
+                        </div>
+                        <p class="item-type">Clothing</p>
+                        <a href="#" class="item-name">CSS Puns Ninja</a>
+                        <p class="item-rating"><span class="yellow">&starf;&starf;&starf;</span>&star;&star;<span
+                                class="item-reviews">18 Review(s)</span></p>
+                        <p class="item-price">$25.95<a href="#"><i class="fa fa-cart-arrow-down" aria-hidden="true"></i></a>
+                        </p>
+                    </article>
+                </li>
+                <li class="recent-item new-item">
+                    <article>
+                        <div class="img-container col-md-12">
+                            <div class="actions">
+                                <a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-bars" aria-hidden="true"></i></a>
+                            </div>
+                            <img src="img/homepage/product-binaryClock-190x190.jpg">
+                            <div class="quickview">
+                                <a href="#">Quickview</a>
+                            </div>
+                        </div>
+                        <p class="item-type">PC</p>
+                        <a href="#" class="item-name">Matias Ergo Pro Keyboard</a>
+                        <p class="item-rating"><span class="yellow">&starf;&starf;&starf;&starf;</span>&star;<span
+                                class="item-reviews">6 Review(s)</span></p>
+                        <p class="item-price">$299.95<a href="#"><i class="fa fa-cart-arrow-down"
+                                                                    aria-hidden="true"></i></a></p>
+                    </article>
+                </li>
+                <li class="recent-item">
+                    <article>
+                        <div class="img-container col-md-12">
+                            <div class="actions">
+                                <a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-bars" aria-hidden="true"></i></a>
+                            </div>
+                            <img src="img/6926CSS-ninja.jpg">
+                            <div class="quickview">
+                                <a href="#">Quickview</a>
+                            </div>
+                        </div>
+                        <p class="item-type">Home</p>
+                        <a href="#" class="item-name">Bath Towel Binary</a>
+                        <p class="item-rating"><span class="yellow">&starf;&starf;&starf;&starf;</span>&star;<span
+                                class="item-reviews">12 Review(s)</span></p>
+                        <p class="item-price">$29.95<a href="#"><i class="fa fa-cart-arrow-down" aria-hidden="true"></i></a>
+                        </p>
+                    </article>
+                </li>
+                <li class="recent-item discount-item">
+                    <article>
+                        <div class="img-container col-md-12">
+                            <div class="actions">
+                                <a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-bars" aria-hidden="true"></i></a>
+                            </div>
+                            <img src="img/homepage/product-binaryClock-190x190.jpg">
+                            <div class="quickview">
+                                <a href="#">Quickview</a>
+                            </div>
+                        </div>
+                        <p class="item-type">Games</p>
+                        <a href="#" class="item-name">Retro Games Controller</a>
+                        <p class="item-rating"><span class="yellow">&starf;&starf;&starf;&starf;</span>&star;<span
+                                class="item-reviews">35 Review(s)</span></p>
+                        <p class="item-price"><span class="new-price">$19.95</span><span class="old-price">$24.95</span><a
+                                href="#"><i class="fa fa-cart-arrow-down" aria-hidden="true"></i></a></p>
+                    </article>
+                </li>
+            </ul>
+        </section>
+        <div class="row">
+            <section class="from-blog">
+                <div>
+                    <div class="col-md-12 from-blog-label">
+                        <h1>From Our Blog</h1>
                     </div>
-                    <div class="row">
-                        <article class="col-md-4">
-                            <div class="blog-post-container">
-                                <a href="#"><img src="img/placehold-blog-post-370x230.png" alt="blog post image"/></a>
-                                <p class="blog-post-comments-date"><i class="fa fa-bookmark-o" aria-hidden="true"></i> 25 Dec, 2016
-                                    <i class="fa fa-comment-o" aria-hidden="true"></i> 13 Comments</p>
-                                <h1>Samsung annonsed S8</h1>
-                                <p class="blog-post-comments">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ligula lacus, vulputate et mi nec [...}</p>
-                                <a href="#">Read more...</a>
-                            </div>
-                        </article>
-                        <article class="col-md-4">
-                            <div class="blog-post-container">
-                                <a href="#"><img src="img/placehold-blog-post-370x230.png" alt="blog post image"/></a>
-                                <p class="blog-post-comments-date"><i class="fa fa-bookmark-o" aria-hidden="true"></i> 25 Dec, 2016
-                                    <i class="fa fa-comment-o" aria-hidden="true"></i> 13 Comments</p>
-                                <h1>Samsung annonsed S8</h1>
-                                <p class="blog-post-comments">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ligula lacus, vulputate et mi nec [...}</p>
-                                <a href="#">Read more...</a>
-                            </div>
-                        </article>
-                        <article class="col-md-4">
-                            <div class="blog-post-container">
-                                <a href="#"><img src="img/placehold-blog-post-370x230.png" alt="blog post image"/></a>
-                                <p class="blog-post-comments-date"><i class="fa fa-bookmark-o" aria-hidden="true"></i> 25 Dec, 2016
-                                    <i class="fa fa-comment-o" aria-hidden="true"></i> 13 Comments</p>
-                                <h1>Samsung annonsed S8</h1>
-                                <p class="blog-post-comments">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ligula lacus, vulputate et mi nec [...}</p>
-                                <a href="#">Read more...</a>
-                            </div>
-                        </article>
-                    </div>
-                </section>
+                </div>
+                <div class="row">
+                    <article class="col-md-4">
+                        <div class="blog-post-container">
+                            <a href="#"><img src="img/placehold-blog-post-370x230.png" alt="blog post image"/></a>
+                            <p class="blog-post-comments-date"><i class="fa fa-bookmark-o" aria-hidden="true"></i> 25
+                                Dec, 2016
+                                <i class="fa fa-comment-o" aria-hidden="true"></i> 13 Comments</p>
+                            <h1>Samsung annonsed S8</h1>
+                            <p class="blog-post-comments">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Aliquam ligula lacus, vulputate et mi nec [...}</p>
+                            <a href="#">Read more...</a>
+                        </div>
+                    </article>
+                    <article class="col-md-4">
+                        <div class="blog-post-container">
+                            <a href="#"><img src="img/placehold-blog-post-370x230.png" alt="blog post image"/></a>
+                            <p class="blog-post-comments-date"><i class="fa fa-bookmark-o" aria-hidden="true"></i> 25
+                                Dec, 2016
+                                <i class="fa fa-comment-o" aria-hidden="true"></i> 13 Comments</p>
+                            <h1>Samsung annonsed S8</h1>
+                            <p class="blog-post-comments">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Aliquam ligula lacus, vulputate et mi nec [...}</p>
+                            <a href="#">Read more...</a>
+                        </div>
+                    </article>
+                    <article class="col-md-4">
+                        <div class="blog-post-container">
+                            <a href="#"><img src="img/placehold-blog-post-370x230.png" alt="blog post image"/></a>
+                            <p class="blog-post-comments-date"><i class="fa fa-bookmark-o" aria-hidden="true"></i> 25
+                                Dec, 2016
+                                <i class="fa fa-comment-o" aria-hidden="true"></i> 13 Comments</p>
+                            <h1>Samsung annonsed S8</h1>
+                            <p class="blog-post-comments">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Aliquam ligula lacus, vulputate et mi nec [...}</p>
+                            <a href="#">Read more...</a>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <section class="row newsletter-bar">
+            <div class="col-md-6">
+                <span class="food-span-left">Subscribe to our newsletter</span>
+                <span class="foot-span-right">Get as much <span class="discount-price">spam</span> as possible!</span>
             </div>
-        </main>
-        <footer>
-            <section class="row newsletter-bar">
-                <div class="col-md-6">
-                    <span class="food-span-left">Subscribe our newsletter</span>
-                    <span class="foot-span-right">Get <span class="discount-price">25% Off</span> for first purchase!</span>
-                </div>
-                <div class="col-md-6">
-                    <form class="subscribe-email">
-                        <input type="email" placeholder="Your email here..."/>
-                        <button class="foot-subscribe-btn">Subscribe</button>
-                    </form>
-                </div>
+            <div class="col-md-6">
+                <form class="subscribe-email">
+                    <input type="email" placeholder="Your email here..."/>
+                    <button class="foot-subscribe-btn">Subscribe</button>
+                </form>
+            </div>
+        </section>
+        <section class="row foot-bottom">
+            <section class="col-md-3">
+                <h1>Contact SoftUnikum!</h1>
+                <p>Address: Sofia, Izgrev residential area, 15-17 Tintyava str, fl. 1</p>
+                <p>Phone: (+359) 666</p>
+                <p>Support: no-reply@softunikum.com</p>
+                <p>
+                    <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                    <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                    <a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
+                    <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                    <a href="#"><i class="fa fa-vimeo" aria-hidden="true"></i></a>
+                </p>
             </section>
-            <section class="row foot-navbar">
-                <div class="col-md-11">
-                    <ul>
-                        <li><a href="#">About us</a></li>
-                        <li><a href="#">Customer Service</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Site Map</a></li>
-                        <li><a href="#">Search Terms</a></li>
-                        <li><a href="#">Advanced Search</a></li>
-                        <li><a href="#">Orders and Returns</a></li>
-                        <li><a href="#">Contact Us</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-1"></div>
+            <section class="col-md-3 footer-categories">
+                <h1>Categories</h1>
+                <ul>
+                    <li class="flex-item-nav-li"><a href="pages/gadgets.html" title="SoftUnikum Gadgets">Gadgets</a>
+                    </li>
+                    <li class="flex-item-nav-li"><a href="pages/t-shirts.html" title="SoftUnikum T-Shirts">T-Shirts</a>
+                    </li>
+                    <li class="flex-item-nav-li"><a href="pages/hats.html" title="SoftUnikum Hats">Hats</a></li>
+                    <li class="flex-item-nav-li"><a href="pages/key-rings.html" title="SoftUnikum Key Rings">Key
+                        Rings</a></li>
+                    <li class="flex-item-nav-li"><a href="pages/random-stuff" title="SoftUnikum Random Stuff">Random
+                        Stuff</a></li>
+                </ul>
             </section>
-            <section class="row foot-bottom">
-                <section class="col-md-3">
-                    <h1>Contact SmartTech!</h1>
-                    <p>Address: Sofia, Izgrev residential area, 15-17 Tintyava str, fl. 1</p>
-                    <p>Phone: (+100)1234567890</p>
-                    <p>Support: Support@smarttech.com</p>
-                    <p>
-                        <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                        <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                        <a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
-                        <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                        <a href="#"><i class="fa fa-vimeo" aria-hidden="true"></i></a>
-                    </p>
-                </section>
-                <section class="col-md-3">
-                    <h1>Categories</h1>
-                    <ul>
-                        <li><a href="#">Gadgets</a></li>
-                        <li><a href="#">Clothing</a></li>
-                        <li><a href="#">Gifts</a></li>
-                    </ul>
-                </section>
-                <section class="col-md-3">
-                    <h1>Customer Service</h1>
-                    <ul>
-                        <li><a href="#">Shipping and Returns</a></li>
-                        <li><a href="#">Secure Shopping</a></li>
-                        <li><a href="#">International Shipping</a></li>
-                        <li><a href="#">Affiliates</a></li>
-                        <li><a href="#">Contacts</a></li>
-                    </ul>
-                </section>
-                <section class="col-md-3">
-                    <h1>Information</h1>
-                    <ul>
-                        <li><a href="#">Our Blog</a></li>
-                        <li><a href="#">About Our Shop</a></li>
-                        <li><a href="#">Secure Shopping</a></li>
-                        <li><a href="#">Delivery information</a></li>
-                        <li><a href="#">Store Locations</a></li>
-                        <li><a href="#">FAQs</a></li>
-                    </ul>
-                </section>
+            <section class="col-md-3 footer-customer-service">
+                <h1>Customer Service</h1>
+                <ul>
+                    <li><a class="fancybox" href="#non-existent">Non-Existent</a></li>
+                    <li><a class="fancybox" href="#non-existent">Dream about it</a></li>
+                    <li><a class="fancybox" href="#non-existent">Leads to nowhere</a></li>
+                    <li><a class="fancybox" href="#non-existent">We put that just for fun</a></li>
+                    <li><a class="fancybox" href="#non-existent">Clickable and useless</a></li>
+                </ul>
             </section>
-        </footer>
+            <section class="col-md-3 footer-information">
+                <h1>Information</h1>
+                <ul>
+                    <li><a class="fancybox" href="#non-existent">Non-Existent</a></li>
+                    <li><a class="fancybox" href="#non-existent">Dream about it</a></li>
+                    <li><a class="fancybox" href="#non-existent">Leads to nowhere</a></li>
+                    <li><a class="fancybox" href="#non-existent">We put that just for fun</a></li>
+                    <li><a class="fancybox" href="#non-existent">Clickable and useless</a></li>
+                </ul>
+            </section>
+        </section>
+    </footer>
+    <div id="login" class="popup">
+        <div class="popup-title">
+            <h2>Sorry!</h2>
+        </div>
+        <div class="popup-content">
+            <p>
+                We regret to inform you that you are persona non grata in our online store!
+            </p>
+            <p>
+                Therefore you are banned from logging in and registering a new account.
+            </p>
+        </div>
     </div>
+    <div id="location" class="popup">
+        <div class="popup-title">
+            <h2>Location</h2>
+        </div>
+        <div class="popup-content">
+            <p>
+                In a dark corner of the Software University.
+            </p>
+            <p>
+                Stop trying to find us or we will find you instead!
+            </p>
+        </div>
+    </div>
+    <div id="faq" class="popup">
+        <div class="popup-title">
+            <h2>FAQ</h2>
+        </div>
+        <div class="popup-content">
+            <p class="faq-question">
+                Are you insane?
+            </p>
+            <p>Who knows... We never got tested.</p>
+        </div>
+    </div>
+    <div id="newsletter" class="popup">
+        <div class="popup-title">
+            <h2>Newsletter</h2>
+        </div>
+        <div class="popup-content">
+            <p>
+                Are you so desperate for spam?
+            </p>
+            <p>
+                Get a hobby!
+            </p>
+        </div>
+    </div>
+    <div id="social" class="popup">
+        <div class="popup-title">
+            <h2>Realy?</h2>
+        </div>
+        <div class="popup-content">
+            <p>
+                Seems like you have too much time to waste!
+            </p>
+            <p>
+                What about finding some real-life friends and doing something useful with your life?
+            </p>
+        </div>
+    </div>
+    <div id="non-existent" class="popup">
+        <div class="popup-title">
+            <h2>Come on, dude...</h2>
+        </div>
+        <div class="popup-content">
+            <img src="img/nakov.jpg" alt="Nakov" title="Are be pich">
+        </div>
+    </div>
+</div>
 </body>
 </html>
