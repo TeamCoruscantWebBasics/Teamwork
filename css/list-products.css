@@ -15,6 +15,10 @@ main > p {
     border-bottom: 1px solid #dddddd;
 }
 
+main > p:first-of-type {
+    padding: 8px 0;
+}
+
 main > p span {
     color: #989898;
     word-spacing: 0.7em;
