@@ -291,3 +291,16 @@
 	text-align: center;
 	margin-top: 20px;
 }
+
+#nakov-forbids h2 {
+	margin-bottom: 30px;
+}
+
+#nakov-forbids img, #nakov-forbids p {
+	display: inline-block;
+	float: left;
+}
+
+#nakov-forbids p {
+	margin-left: 30px;
+}

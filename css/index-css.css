@@ -532,9 +532,9 @@ header{
 
 /*START .main-slider*/
 .main-slider{
-    background: url("../img/homepage/mainSlider-retroGame-800x500.jpg") no-repeat;;
+    background: url("../img/homepage/main-banner.png") no-repeat;
+    background-size: cover;
     height: 500px;
-    background-size: 100%;
 }
 
 .main-slider h2{
@@ -585,7 +585,8 @@ header{
 
 /*START .top-product*/
 .top-product{
-    background: url("../img/homepage/topProduct-keyboardLock-370x250.jpg");
+    background: url("../img/homepage/main-banner-2.png");
+    background-repeat: no-repeat;
     width: 100%;
     height: 250px;
 }
@@ -640,7 +641,7 @@ header{
 }
 
 .weekly-sale p{
-    color: rgba(255, 255, 255, 0.5);
+    color: #fff;
 }
 
 .weekly-sale button{
@@ -796,7 +797,7 @@ header{
 .most-selling-item .item-type,
 .most-selling-item .item-name{
     position: absolute;
-    left: 50px;
+    left: 250px;
 }
 
 .most-selling-item .item-name{
@@ -833,7 +834,7 @@ header{
 }
 
 .most-selling-item .details-btn{
-    top: 210px;
+    top: 280px;
     padding: 10px 15px;
     background-color: #0188cc;
     color: #ffffff;
