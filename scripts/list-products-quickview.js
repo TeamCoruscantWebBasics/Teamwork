@@ -131,7 +131,6 @@ jQuery(document).ready(function($){
 
                     if($('li.selected').length > 0)  {
                         dataToShow = $('li.selected').parent('.cd-slider').attr('class').slice(-1);
-                        console.log(dataToShow);
                     }
 
                     if(dataToShow == 'a') {
