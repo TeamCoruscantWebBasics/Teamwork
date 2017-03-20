@@ -3,16 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width"/>
-    <title>Hats</title>  <!--TODO: name-->
+    <title>Nakov's practical hat</title>
     <script src="../scripts/lib/jquery-3.1.1.min.js"></script>
     <script src="../scripts/lib/jquery-ui.min.js"></script>
-    <script src="../scripts/slider.js"></script>
     <script src="../scripts/jquery.fancybox.pack.js"></script>
+    <script src="../scripts/index-script.js"></script>
+    <script src="../scripts/slider.js"></script>
     <link rel="stylesheet" href="../css/lib/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/lib/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css.map">
     <link rel="stylesheet" href="../css/jquery.fancybox.css">
+    <link rel="stylesheet" href="../css/lib/jquery-ui.css">
     <link rel="stylesheet" href="../css/index-css.css">
     <link rel="stylesheet" href="../css/list-products.css">
-    <link rel="stylesheet" href="../css/lib/jquery-ui.css">
+    <link rel="stylesheet" href="../css/product-details.css">
 </head>
 <body>
 <div class="container">
@@ -124,211 +127,207 @@
             </div>
         </nav>
     </header>
-    <main class="row">
-        <p><span><a href="../index.html">Home</a> &rsaquo; </span>Hats</p>
-        <aside class="col-md-3 col-sm-12 col-xs-12 row">
-            <div id="categories" class="col-md-12 col-sm-4 col-xs-6">
-            <h4>Categories</h4>
-                <ul>
-                    <li><label for="men"><input type="checkbox" id="men" name="men">Hats for men</label></li>
-                    <li><label for="her"><input type="checkbox" id="her" name="her">Hats for her</label></li>
-                    <li><label for="kids"><input type="checkbox" id="kids" name="kids">Hats for kids</label></li>
-                    <li><label for="programmers"><input type="checkbox" id="programmers" name="programmers" checked="checked">Hats for programmers</label></li>
-                    <li><label for="funny"><input type="checkbox" id="funny" name="funny">Funny hats</label></li>
+    <main>
+        <p class="breadcrumb"><span class="breadcrumb-home">Home</span><span
+                class="breadcrumb-devider">&rsaquo;</span><span class="breadcrumb-category">Hats</span><span
+                class="breadcrumb-devider">&rsaquo;</span><span class="breadcrumb-current-page">Nakov's practical hat</span>
+        </p>
+        <div class="product-view">
+            <div class="product-view-left">
+                <div class="product-main-image">
+                    <img src="../img/products/hats/nakov-hat-v2.png"
+                         alt="Nakov's practical hat"/>
+                </div>
+                <div class="product-additional-images">
+                    <span><a href="#"><i class="fa fa-angle-left" aria-hidden="true"></i></a></span>
+                    <div class="additional-image-container">
+                        <a href="../img/products/hats/nakov-hat-v1.png" target="_blank"><img src="../img/products/hats/nakov-hat-v1.png"
+                             alt="Nakov's practical hat"/></a>
+                    </div>
+                    <span><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i></a></span>
+                </div>
+            </div>
+            <div class="product-view-right">
+                <div class="selected-item-type">Hats</div>
+                <h1 class="selected-item-name">Nakov's practical hat</h1>
+                <div class="selected-item-rating"><span class="yellow">&starf;&starf;&starf;&starf;&starf;</span><span
+                        class="item-reviews">12 Review(s)</span></div>
+                <div class="selected-item-price">$69.95</div>
+                <div class="selected-item-availability">Availability:<span class="in-stock"> In stock</span></div>
+                <div class="selected-item-description">
+                    <p>Do it like a web developer - with a lot of style!</p>
+                    <p>This unique hat is a must-have piece for all SoftUni students. Seriously! You can get part of Nakov's problem solving skills with this semi-magical hat.</p>
+                </div>
+                <div class="choose-size">
+                    <span class="size">S</span>
+                    <span class="size selected">M</span>
+                    <span class="size">L</span>
+                    <span class="size">XL</span>
+                </div>
+                <ul class="selected-item-actions">
+                    <li class="wishlist"><a href="#"><i class="fa fa-heart" aria-hidden="true"></i> Add to Wishlist</a>
+                    </li>
+                    <li class="compare"><a href="#"><i class="fa fa-bars" aria-hidden="true"></i> Add to Compare</a>
+                    </li>
+                    <li class="send-via-email"><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i> Email to a
+                        friend</a></li>
+                </ul>
+                <div class="place-order">
+                    <input type="text" name="choose-quantity" id="choose-quantity" value="1">
+                    <button class="add-to-cart"><i class="fa fa-cart-arrow-down" aria-hidden="true"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+            <div class="product-view-tabs">
+                <div id="product-tabs">
+                    <ul>
+                        <li><a href="#tabs-1">Product Details</a></li>
+                        <li><a href="#tabs-2">Customer Reviews</a></li>
+                        <li><a href="#tabs-3">Shipping &amp; Payment</a></li>
+                    </ul>
+                    <div id="tabs-1" class="product-details-tab">
+                        <ul>
+                            <li>100% Cotton</li>
+                            <li>Machine-washable</li>
+                            <li>Nakov-Approved</li>
+                        </ul>
+                    </div>
+                    <div id="tabs-2" class="customer-reviews-tab">
+                        <p>Taa 6apka rulira, bratle!!! Лов ит!!!</p>
+                        <p class="reviews-devider">&diamondsuit;&diamondsuit;&diamondsuit;</p>
+                        <p>Доста логично измислено, браво!</p>
+                        <p class="reviews-devider">&diamondsuit;&diamondsuit;&diamondsuit;</p>
+                        <p>Na svatbata mi 6te nakaram bude6tata mi jena da bude s takawa 6apka vmesto voal ;)</p>
+                    </div>
+                    <div id="tabs-3" class="shipping-and-payment-tab">
+                        <p>We ship only to the address of the Software University via "Reketyori Ltd." courier
+                            company.</p>
+                        <p>Please note that you have to bear all the costs for the shipment which are 50% of the total
+                            sum of your order + a tip for the courier.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section class="similar-products-container col-md-12">
+            <div class="similar-products-top">
+                <h2 class="col-xs-8 col-sm-10 col-md-10">Similar Products</h2>
+                <ul class="col-xs-4 col-sm-2 col-md-2 pages">
+                    <li><a href="#"><i class="fa fa-angle-left" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
                 </ul>
             </div>
-            <div id="price" class="col-md-12 col-sm-4 col-xs-6">
-                <h4>Price</h4>
-                <div id="slider-range"></div>
-                <input type="text" id="amount" readonly>
-            </div>
-            <button id="filter" class="col-md-4 col-sm-2 col-xs-3">Filter</button>
-            <div id="rating" class="col-md-12 col-sm-4 col-xs-6">
-                <h4>Rating</h4>
-                <p class="rating"><span class="yellow">&starf;&starf;&starf;&starf;&starf;</span><span class="rating-count">(25)</span></p>
-                <p class="rating"><span class="yellow">&starf;&starf;&starf;&starf;</span>&star;<span class="rating-count">(48)</span></p>
-                <p class="rating"><span class="yellow">&starf;&starf;&starf;</span>&star;&star;<span class="rating-count">(18)</span></p>
-                <p class="rating"><span class="yellow">&starf;&starf;</span>&star;&star;&star;<span class="rating-count">(8)</span></p>
-                <p class="rating"><span class="yellow">&starf;</span>&star;&star;&star;&star;<span class="rating-count">(3)</span></p>
-            </div>
-            <div id="size" class="col-md-12 col-sm-4 col-xs-6">
-            <h4>Size</h4>
-                <span class="size">S</span>
-                <span class="size selected">M</span>
-                <span class="size">L</span>
-                <span class="size">XL</span>
-            </div>
-            <div id="colors" class="col-md-12 col-sm-4 col-xs-6">
-                <h4>Color</h4>
-                <ul>
-                    <li><label for="red"><input type="checkbox" id="red" name="red">Red</label><span>(18)</span></li>
-                    <li><label for="yellow"><input type="checkbox" id="yellow" name="yellow">Yellow</label><span>(9)</span></li>
-                    <li><label for="black"><input type="checkbox" id="black" name="black">Black</label><span>(24)</span></li>
-                    <li><label for="blue"><input type="checkbox" id="blue" name="blue">Blue</label><span>(17)</span></li>
-                    <li><label for="grey"><input type="checkbox" id="grey" name="grey">Grey</label><span>(22)</span></li>
-                    <li><label for="pink"><input type="checkbox" id="pink" name="pink">Pink</label><span>(5)</span></li>
-                    <li><label for="white"><input type="checkbox" id="white" name="white">White</label><span>(8)</span></li>
-                    <li><label for="green"><input type="checkbox" id="green" name="green">Green</label><span>(10)</span></li>
-                </ul>
-                <a href="#">+ See more</a>
-            </div>
-        </aside>
-        <section id="products" class="col-md-9 col-sm-12 col-xs-12">
-            <header>
-                <h3>Hats</h3>
-                <p>
-                    <span>Showing 1-6 of 96 results</span>
-                    <span>Show 06<i class="fa fa-caret-down" aria-hidden="true"></i></span>
-                    <span>Sort by Default<i class="fa fa-caret-down" aria-hidden="true"></i></span>
-                    <span>
-                        <a href="#" ><i class="fa fa-list" aria-hidden="true"></i></a>
-                        <a href="#" ><i class="fa fa-th" aria-hidden="true"></i></a>
-                    </span>
-                </p>
-            </header>
-            <article class="col-md-12 col-sm-12 col-xs-12">
-                <div class="img-container col-md-3 col-sm-3 col-xs-6">
-                    <a href="nakov-hat.html"><img src="../img/products/hats/nakov-hat-v2.png"></a>
-                </div>
-                <div class="item-description col-md-6 col-sm-6 col-xs-12">
-                    <p class="item-type">Nakov's hat</p>
-                    <p class="item-name"><a href="nakov-hat.html">Nakov's practical hat</a></p>
-                    <p class="item-rating"><span class="yellow">&starf;&starf;&starf;&starf;&starf;</span><span class="item-reviews">12 Review(s)</span></p>
-                    <ul class="item-info">
-                        <li>Sun hat</li>
-                        <li>Wallet</li>
-                    </ul>
-                </div>
-                <div class="actions col-md-3 col-sm-3 col-xs-6">
-                    <p class="heart"><a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a></p>
-                    <p class="bars"><a href="nakov-hat.html"><i class="fa fa-bars" aria-hidden="true"></i></a></p>
-                    <p class="item-price">$69.95</p>
-                    <p class="availability">Availability: <span>In stock</span></p>
-                    <button><i class="fa fa-cart-arrow-down" aria-hidden="true"></i> Add to Cart</button>
-                </div>
-            </article>
-            <article class="col-md-12 col-sm-12 col-xs-12">
-                <div class="img-container col-md-3 col-sm-3 col-xs-6">
-                    <a href="css-hat.html"><img src="../img/hat-css.jpg"></a>
-                </div>
-                <div class="item-description col-md-6 col-sm-6 col-xs-12">
-                    <p class="item-type">Programmer hat</p>
-                    <p class="item-name"><a href="css-hat.html">CSS Hat</a></p>
-                    <p class="item-rating"><span class="yellow">&starf;&starf;&starf;&starf;</span>&star;<span class="item-reviews">35 Review(s)</span></p>
-                    <ul class="item-info">
-                        <li>CSS 3</li>
-                        <li>SASS</li>
-                        <li>LESS</li>
-                        <li>Bootstrap</li>
-                    </ul>
-                </div>
-                <div class="actions col-md-3 col-sm-3 col-xs-6">
-                    <p class="heart"><a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a></p>
-                    <p class="bars"><a href="css-hat.html"><i class="fa fa-bars" aria-hidden="true"></i></a></p>
-                    <p class="item-price">$17.95</p>
-                    <p class="availability">Availability: <span>In stock</span></p>
-                    <button><i class="fa fa-cart-arrow-down" aria-hidden="true"></i> Add to Cart</button>
-                </div>
-            </article>
-            <article class="col-md-12 col-sm-12 col-xs-12">
-                <div class="img-container col-md-3 col-sm-3 col-xs-6">
-                    <a href="#"><img src="../img/products/hats/cSharp-vs-Java.png"></a>
-                </div>
-                <div class="item-description col-md-6 col-sm-6 col-xs-12">
-                    <p class="item-type">Programmer hat</p>
-                    <p class="item-name"><a href="#">Warriors hat</a></p>
-                    <p class="item-rating"><span class="yellow">&starf;&starf;&starf;&starf;</span>&star;<span class="item-reviews">1 Review(s)</span></p>
-                    <ul class="item-info">
-                        <li>OOP</li>
-                        <li>LINQ</li>
-                        <li>.NET</li>
-                    </ul>
-                </div>
-                <div class="actions col-md-3 col-sm-3 col-xs-6">
-                    <p class="heart"><a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a></p>
-                    <p class="bars"><a href="#"><i class="fa fa-bars" aria-hidden="true"></i></a></p>
-                    <p class="item-price">$10.95</p>
-                    <p class="availability">Availability: <span>In stock</span></p>
-                    <button><i class="fa fa-cart-arrow-down" aria-hidden="true"></i> Add to Cart</button>
-                </div>
-            </article>
-            <article class="col-md-12 col-sm-12 col-xs-12">
-                <div class="img-container col-md-3 col-sm-3 col-xs-6">
-                    <a href="#"><img src="../img/view.jpg"></a>
-                </div>
-                <div class="item-description col-md-6 col-sm-6 col-xs-12">
-                    <p class="item-type">Programmer hat</p>
-                    <p class="item-name"><a href="#">Header hat</a></p>
-                    <p class="item-rating"><span class="yellow">&starf;&starf;&starf;&starf;</span>&star;<span class="item-reviews">6 Review(s)</span></p>
-                    <ul class="item-info">
-                        <li>Contains META tags</li>
-                    </ul>
-                </div>
-                <div class="actions col-md-3 col-sm-3 col-xs-6">
-                    <p class="heart"><a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a></p>
-                    <p class="bars"><a href="#"><i class="fa fa-bars" aria-hidden="true"></i></a></p>
-                    <p class="item-price">$9.95</p>
-                    <p class="availability">Availability: <span>In stock</span></p>
-                    <button><i class="fa fa-cart-arrow-down" aria-hidden="true"></i> Add to Cart</button>
-                </div>
-            </article>
-            <article class="col-md-12 col-sm-12 col-xs-12">
-                <div class="img-container col-md-3 col-sm-3 col-xs-6">
-                    <a href="#"><img src="../img/products/hats/softuni.png"></a>
-                </div>
-                <div class="item-description col-md-6 col-sm-6 col-xs-12">
-                    <p class="item-type">Kids hat</p>
-                    <p class="item-name"><a href="#">SoftUni Snow</a></p>
-                    <p class="item-rating"><span class="yellow">&starf;&starf;&starf;</span>&star;&star;<span class="item-reviews">18 Review(s)</span></p>
-                    <ul class="item-info">
-                        <li>Hat for large brains</li>
-                    </ul>
-                </div>
-                <div class="actions col-md-3 col-sm-3 col-xs-6">
-                    <p class="heart"><a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a></p>
-                    <p class="bars"><a href="#"><i class="fa fa-bars" aria-hidden="true"></i></a></p>
-                    <p class="item-price">$25.95</p>
-                    <p class="availability">Availability: <span>In stock</span></p>
-                    <button><i class="fa fa-cart-arrow-down" aria-hidden="true"></i> Add to Cart</button>
-                </div>
-            </article>
-            <article class="col-md-12 col-sm-12 col-xs-12">
-                <div class="img-container col-md-3 col-sm-3 col-xs-6">
-                    <a href="#"><img src="../img/products/hats/brain-content.png"></a>
-                </div>
-                <div class="item-description col-md-6 col-sm-6 col-xs-12">
-                    <p class="item-type">Man hat</p>
-                    <p class="item-name"><a href="#">Brain Hat</a></p>
-                    <p class="item-rating"><span class="yellow">&starf;&starf;&starf;&starf;&starf;</span><span class="item-reviews">5 Review(s)</span></p>
-                    <ul class="item-info">
-                        <li>Different dimensions</li>
-                        <li>Different colors</li>
-                    </ul>
-                </div>
-                <div class="actions col-md-3 col-sm-3 col-xs-6">
-                    <p class="heart"><a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a></p>
-                    <p class="bars"><a href="#"><i class="fa fa-bars" aria-hidden="true"></i></a></p>
-                    <p class="item-price">$14.95</p>
-                    <p class="availability">Availability: <span>In stock</span></p>
-                    <button><i class="fa fa-cart-arrow-down" aria-hidden="true"></i> Add to Cart</button>
-                </div>
-            </article>
-            <ul class="pages col-md-12 col-sm-12 col-xs-12">
-                <li><a href="#"><i class="fa fa-angle-left" aria-hidden="true"></i></a></li>
-                <li><a href="#" class="selected">1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+            <ul class="similar-products-list">
+                <li class="similar-product">
+                    <article>
+                        <div class="img-container col-md-12">
+                            <div class="actions">
+                                <a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-bars" aria-hidden="true"></i></a>
+                            </div>
+                            <img src="../img/products/hats/brain-content.png">
+                            <div class="quickview">
+                                <a href="#">Quickview</a>
+                            </div>
+                        </div>
+                        <p class="item-type">Hat</p>
+                        <a href="#" class="item-name">Brain hat</a>
+                        <p class="item-rating"><span class="yellow">&starf;&starf;&starf;&starf;</span>&star;<span
+                                class="item-reviews">12 Review(s)</span></p>
+                        <p class="item-price">$12.95<a href="#"><i class="fa fa-cart-arrow-down"
+                                                                   aria-hidden="true"></i></a></p>
+                    </article>
+                </li>
+                <li class="similar-product">
+                    <article>
+                        <div class="img-container col-md-12">
+                            <div class="actions">
+                                <a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-bars" aria-hidden="true"></i></a>
+                            </div>
+                            <img src="../img/products/hats/softuni.png">
+                            <div class="quickview">
+                                <a href="#">Quickview</a>
+                            </div>
+                        </div>
+                        <p class="item-type">Hat</p>
+                        <a href="#" class="item-name">SoftUni Snow</a>
+                        <p class="item-rating"><span class="yellow">&starf;&starf;&starf;&starf;&starf;</span><span
+                                class="item-reviews">6 Review(s)</span></p>
+                        <p class="item-price">$22.95<a href="#"><i class="fa fa-cart-arrow-down"
+                                                                   aria-hidden="true"></i></a></p>
+                    </article>
+                </li>
+                <li class="similar-product">
+                    <article>
+                        <div class="img-container col-md-12">
+                            <div class="actions">
+                                <a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-bars" aria-hidden="true"></i></a>
+                            </div>
+                            <img src="../img/products/hats/hat-head-style.jpg">
+                            <div class="quickview">
+                                <a href="#">Quickview</a>
+                            </div>
+                        </div>
+                        <p class="item-type">Hat</p>
+                        <a href="#" class="item-name">CSS Hat</a>
+                        <p class="item-rating"><span class="yellow">&starf;&starf;&starf;&starf;&starf;</span><span
+                                class="item-reviews">6 Review(s)</span></p>
+                        <p class="item-price">$17.95<a href="#"><i class="fa fa-cart-arrow-down"
+                                                                   aria-hidden="true"></i></a></p>
+                    </article>
+                </li>
+                <li class="similar-product">
+                    <article>
+                        <div class="img-container col-md-12">
+                            <div class="actions">
+                                <a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-bars" aria-hidden="true"></i></a>
+                            </div>
+                            <img src="../img/products/hats/cSharp-vs-Java.png">
+                            <div class="quickview">
+                                <a href="#">Quickview</a>
+                            </div>
+                        </div>
+                        <p class="item-type">Hat</p>
+                        <a href="#" class="item-name">Warrior Hat</a>
+                        <p class="item-rating"><span class="yellow">&starf;&starf;&starf;&starf;</span>&star;<span
+                                class="item-reviews">10 Review(s)</span></p>
+                        <p class="item-price">$10.95<a href="#"><i class="fa fa-cart-arrow-down"
+                                                                   aria-hidden="true"></i></a></p>
+                    </article>
+                </li>
+                <li class="similar-product">
+                    <article>
+                        <div class="img-container col-md-12">
+                            <div class="actions">
+                                <a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-bars" aria-hidden="true"></i></a>
+                            </div>
+                            <img src="../img/products/hats/hat-head-tag-white.jpg">
+                            <div class="quickview">
+                                <a href="#">Quickview</a>
+                            </div>
+                        </div>
+                        <p class="item-type">Hat</p>
+                        <a href="#" class="item-name">Header hat (white)</a>
+                        <p class="item-rating"><span class="yellow">&starf;&starf;&starf;</span>&star;&star;<span
+                                class="item-reviews">8 Review(s)</span></p>
+                        <p class="item-price">$9.95<a href="#"><i class="fa fa-cart-arrow-down"
+                                                                   aria-hidden="true"></i></a></p>
+                    </article>
+                </li>
             </ul>
         </section>
-        <section id="recently-viewed" class="col-md-12 col-sm-12 col-xs-12">
-            <h4 class="col-md-10 col-sm-10 col-xs-8">Your Recently Viewed Items</h4>
-            <ul class="pages col-sm-2 col-xs-4">
-                <li><a href="#"><i class="fa fa-angle-left" aria-hidden="true"></i></a></li>
-                <li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
-            </ul>
-            <hr class="col-md-12 col-sm-12 col-xs-12">
-            <ul id="recent-items" class="col-md-12 col-sm-12 col-xs-12">
+        <section id="recently-viewed">
+            <div class="similar-products-top">
+                <h2 class="col-xs-8 col-sm-10 col-md-10">Your Recently Viewed Items</h2>
+                <ul class="col-xs-4 col-sm-2 col-md-2 pages">
+                    <li><a href="#"><i class="fa fa-angle-left" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
+            <ul id="recent-items">
                 <li class="recent-item">
                     <article>
                         <div class="img-container col-md-12">
@@ -343,8 +342,10 @@
                         </div>
                         <p class="item-type">On the road</p>
                         <a href="#" class="item-name">Das Keyboard HackShield RFID Backpack</a>
-                        <p class="item-rating"><span class="yellow">&starf;&starf;&starf;&starf;</span>&star;<span class="item-reviews">12 Review(s)</span></p>
-                        <p class="item-price">$169.95<a href="#"><i class="fa fa-cart-arrow-down" aria-hidden="true"></i></a></p>
+                        <p class="item-rating"><span class="yellow">&starf;&starf;&starf;&starf;</span>&star;<span
+                                class="item-reviews">12 Review(s)</span></p>
+                        <p class="item-price">$169.95<a href="#"><i class="fa fa-cart-arrow-down"
+                                                                    aria-hidden="true"></i></a></p>
                     </article>
                 </li>
                 <li class="recent-item">
@@ -361,8 +362,10 @@
                         </div>
                         <p class="item-type">Clothing</p>
                         <a href="#" class="item-name">CSS Puns Ninja</a>
-                        <p class="item-rating"><span class="yellow">&starf;&starf;&starf;</span>&star;&star;<span class="item-reviews">18 Review(s)</span></p>
-                        <p class="item-price">$25.95<a href="#"><i class="fa fa-cart-arrow-down" aria-hidden="true"></i></a></p>
+                        <p class="item-rating"><span class="yellow">&starf;&starf;&starf;</span>&star;&star;<span
+                                class="item-reviews">18 Review(s)</span></p>
+                        <p class="item-price">$25.95<a href="#"><i class="fa fa-cart-arrow-down"
+                                                                   aria-hidden="true"></i></a></p>
                     </article>
                 </li>
                 <li class="recent-item new-item">
@@ -379,8 +382,10 @@
                         </div>
                         <p class="item-type">PC</p>
                         <a href="#" class="item-name">Matias Ergo Pro Keyboard</a>
-                        <p class="item-rating"><span class="yellow">&starf;&starf;&starf;&starf;</span>&star;<span class="item-reviews">6 Review(s)</span></p>
-                        <p class="item-price">$299.95<a href="#"><i class="fa fa-cart-arrow-down" aria-hidden="true"></i></a></p>
+                        <p class="item-rating"><span class="yellow">&starf;&starf;&starf;&starf;</span>&star;<span
+                                class="item-reviews">6 Review(s)</span></p>
+                        <p class="item-price">$299.95<a href="#"><i class="fa fa-cart-arrow-down"
+                                                                    aria-hidden="true"></i></a></p>
                     </article>
                 </li>
                 <li class="recent-item">
@@ -397,8 +402,10 @@
                         </div>
                         <p class="item-type">Home</p>
                         <a href="#" class="item-name">Bath Towel Binary</a>
-                        <p class="item-rating"><span class="yellow">&starf;&starf;&starf;&starf;</span>&star;<span class="item-reviews">12 Review(s)</span></p>
-                        <p class="item-price">$29.95<a href="#"><i class="fa fa-cart-arrow-down" aria-hidden="true"></i></a></p>
+                        <p class="item-rating"><span class="yellow">&starf;&starf;&starf;&starf;</span>&star;<span
+                                class="item-reviews">12 Review(s)</span></p>
+                        <p class="item-price">$29.95<a href="#"><i class="fa fa-cart-arrow-down"
+                                                                   aria-hidden="true"></i></a></p>
                     </article>
                 </li>
                 <li class="recent-item discount-item">
@@ -415,8 +422,11 @@
                         </div>
                         <p class="item-type">Games</p>
                         <a href="#" class="item-name">Retro Games Controller</a>
-                        <p class="item-rating"><span class="yellow">&starf;&starf;&starf;&starf;</span>&star;<span class="item-reviews">35 Review(s)</span></p>
-                        <p class="item-price"><span class="new-price">$19.95</span><span class="old-price">$24.95</span><a href="#"><i class="fa fa-cart-arrow-down" aria-hidden="true"></i></a></p>
+                        <p class="item-rating"><span class="yellow">&starf;&starf;&starf;&starf;</span>&star;<span
+                                class="item-reviews">35 Review(s)</span></p>
+                        <p class="item-price"><span class="new-price">$19.95</span><span
+                                class="old-price">$24.95</span><a href="#"><i class="fa fa-cart-arrow-down"
+                                                                              aria-hidden="true"></i></a></p>
                     </article>
                 </li>
             </ul>
@@ -426,7 +436,8 @@
         <section class="row newsletter-bar">
             <div class="col-md-6">
                 <span class="food-span-left">Subscribe to our newsletter</span>
-                <span class="foot-span-right">Get as much <span class="discount-price">spam</span> as possible!</span>
+                <span class="foot-span-right">Get as much <span
+                        class="discount-price">spam</span> as possible!</span>
             </div>
             <div class="col-md-6">
                 <form class="subscribe-email">
@@ -454,7 +465,8 @@
                 <ul>
                     <li class="flex-item-nav-li"><a href="../pages/gadgets.html" title="SoftUnikum Gadgets">Gadgets</a>
                     </li>
-                    <li class="flex-item-nav-li"><a href="../pages/t-shirts.html" title="SoftUnikum T-Shirts">T-Shirts</a>
+                    <li class="flex-item-nav-li"><a href="../pages/t-shirts.html"
+                                                    title="SoftUnikum T-Shirts">T-Shirts</a>
                     </li>
                     <li class="flex-item-nav-li"><a href="../pages/hats.html" title="SoftUnikum Hats">Hats</a></li>
                     <li class="flex-item-nav-li"><a href="../pages/key-rings.html" title="SoftUnikum Key Rings">Key
@@ -553,7 +565,7 @@
             <h2>Come on, dude...</h2>
         </div>
         <div class="popup-content">
-            <img src="../img/nakov.jpg" alt="Nakov" title="Are be pich">
+            <img src="../img/nakov.jpg" alt="Nakov" title="Are be pich" height="120" width="120" />
         </div>
     </div>
 </div>
