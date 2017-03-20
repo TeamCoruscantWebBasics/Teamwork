@@ -726,3 +726,8 @@ aside > a {
         flex-basis: 90%;
     }
 }
+
+.logo,
+.shopping-cart-details h1 {
+    color: #555555
+}
