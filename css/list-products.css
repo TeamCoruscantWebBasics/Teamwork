@@ -311,7 +311,7 @@ aside > a {
 }
 
 #recently-viewed img {
-    max-width: 100%;
+    max-width: 400px;
 }
 
 #recent-items {
@@ -503,6 +503,25 @@ aside > a {
     font-size: 1.3em;
     font-weight: 700;
     color: black;
+}
+
+
+.actions button:hover {
+    opacity: 0.4;
+}
+
+.item-name a:hover {
+    text-decoration: none;
+    color: #0088cc;
+}
+
+#recently-viewed article img {
+    max-width: 100%;
+}
+
+
+.cd-slider li img {
+    max-width: 400px;
 }
 
 @media screen and (max-width: 991px){

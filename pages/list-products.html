@@ -10,104 +10,14 @@
     <link rel="stylesheet" href="../css/index-css.css">
     <link rel="stylesheet" href="../css/list-products.css">
     <link rel="stylesheet" href="../css/lib/jquery-ui.css">
-    <script>
-        $( function() {
-            $( "#slider-range" ).slider({
-                range: true,
-                min: 0,
-                max: 1000,
-                values: [ 75, 700 ],
-                slide: function( event, ui ) {
-                    $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
-                }
-            });
-            $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) +
-                    " - $" + $( "#slider-range" ).slider( "values", 1 ) );
-        } );
-    </script>
+    <link rel="stylesheet" href="../css/quickview.css">
+    <script src="../scripts/lib/modernizr.js"></script>
+    <script src="../scripts/lib/velocity.min.js"></script>
+    <script src="../scripts/list-products-quickview.js"></script>
+    <script src="../scripts/slider.js"></script>
 </head>
 <body>
 <div class="container">
-    <header>
-        <div class="row upper-nav">
-            <div class="col-md-2"><span>Welcome to SmartTech center</span></div>
-            <div class="col-md-2"></div>
-            <div class="col-md-6">
-                <ul>
-                    <li><a href="#">Login/Register</a></li>
-                    <li><a href="#">Store Location</a></li>
-                    <li><a href="#">FAQ</a></li>
-                    <li><a href="#">Newsletter</a></li>
-                    <li><a href="#">
-                        <select name="language">
-                            <option value="1">English</option>
-                            <option value="2">Russian</option>
-                            <option value="3">Bulgarian</option>
-                        </select>
-                    </a></li>
-                    <li><a href="#">
-                        <select name="currency">
-                            <option value="1">USD</option>
-                            <option value="2">RUB</option>
-                            <option value="3">BGN</option>
-                        </select>
-                    </a></li>
-                </ul>
-            </div>
-            <div class="col-md-2">
-                    <span>
-                        <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                        <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                        <a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
-                        <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                        <a href="#"><i class="fa fa-vimeo" aria-hidden="true"></i></a>
-                    </span>
-            </div>
-        </div>
-        <div class="row search-bar-nav">
-            <div class="col-md-3">
-                <h1 class="logo">SmartTech</h1>
-            </div>
-            <div class="col-md-6 search-bar">
-                <select name="search-bar">
-                    <option value="1">All Categories</option>
-                    <option value="2">Gadgets</option>
-                    <option value="3">Clothing </option>
-                    <option value="4">Gifts</option>
-                </select>
-                <input type="text" placeholder="Search entire store here..."/>
-                <button><i class="fa fa-search" aria-hidden="true"></i></button>
-            </div>
-            <div class="col-md-3 shopping-card">
-                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                <p class="number-of-products">3</p>
-                <p class="products"><span>My cart</span><br/>3 items - $500.00</p>
-            </div>
-        </div>
-        <div class="row navbar">
-            <div class="col-md-2">
-                <label for="our-categories-select"><i class="fa fa-list-ul" aria-hidden="true"></i></label>
-                <select id="our-categories-select">
-                    <option value="1">Our Categories</option>
-                    <option value="2">Gadgets</option>
-                    <option value="3">Clothing </option>
-                    <option value="4">Gifts</option>
-                </select>
-            </div>
-            <div class="col-md-7">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Gadgets</a></li> <!--TODO: make this hover with JS-->
-                    <li><a href="#">Clothing</a></li> <!--TODO: make this hover with JS-->
-                    <li><a href="#">Gifts</a></li>
-                    <li><a href="#">Community</a></li>
-                </ul>
-            </div>
-            <div class="col-md-3">
-                <span class="hot-line">Hotline: (+100)1234567890</span>
-            </div>
-        </div>
-    </header>
     <main class="row">
         <p><span>Home &rsaquo; </span>Gifts for programmmers</p>
         <aside class="col-md-3 col-sm-12 col-xs-12 row">
@@ -177,11 +87,11 @@
             </header>
             <article class="col-md-12 col-sm-12 col-xs-12">
                 <div class="img-container col-md-3 col-sm-3 col-xs-6">
-                    <img src="../img/149Binaeruhr_02.jpg">
+                    <a href="#" ><img src="../img/149Binaeruhr_02.jpg"></a>
                 </div>
                 <div class="item-description col-md-6 col-sm-6 col-xs-12">
                     <p class="item-type">Clock</p>
-                    <p class="item-name">Binary Clock</p>
+                    <p class="item-name"><a href="#">Binary Clock</a></p>
                     <p class="item-rating"><span class="yellow">&starf;&starf;&starf;&starf;&starf;</span><span class="item-reviews">5 Review(s)</span></p>
                     <ul class="item-info">
                         <li>Dimensions: 8.9x8.9x5cm</li>
@@ -198,11 +108,11 @@
             </article>
             <article class="col-md-12 col-sm-12 col-xs-12">
                 <div class="img-container col-md-3 col-sm-3 col-xs-6">
-                    <img src="../img/1226912269_retro_games_controller_01.jpg">
+                    <a href="#"><img src="../img/1226912269_retro_games_controller_01.jpg"></a>
                 </div>
                 <div class="item-description col-md-6 col-sm-6 col-xs-12">
                     <p class="item-type">Games</p>
-                    <p class="item-name">Retro Games Controller</p>
+                    <p class="item-name"><a href="#">Retro Games Controller</a></p>
                     <p class="item-rating"><span class="yellow">&starf;&starf;&starf;&starf;</span>&star;<span class="item-reviews">35 Review(s)</span></p>
                     <ul class="item-info">
                         <li>Required Batteries: 3 * AAA (not included)</li>
@@ -222,11 +132,11 @@
             </article>
             <article class="col-md-12 col-sm-12 col-xs-12">
                 <div class="img-container col-md-3 col-sm-3 col-xs-6">
-                    <img src="../img/Handtuch-Binaer.jpg">
+                    <a href="#"><img src="../img/Handtuch-Binaer.jpg"></a>
                 </div>
                 <div class="item-description col-md-6 col-sm-6 col-xs-12">
                     <p class="item-type">Home</p>
-                    <p class="item-name">Bath Towel Binary</p>
+                    <p class="item-name"><a href="#">Bath Towel Binary</a></p>
                     <p class="item-rating"><span class="yellow">&starf;&starf;&starf;&starf;</span>&star;<span class="item-reviews">12 Review(s)</span></p>
                     <ul class="item-info">
                         <li>Dimensions: app. 140x70cm</li>
@@ -244,11 +154,11 @@
             </article>
             <article class="col-md-12 col-sm-12 col-xs-12">
                 <div class="img-container col-md-3 col-sm-3 col-xs-6">
-                    <img src="../img/12018Matias_EP_DE_03.jpg">
+                    <a href="#"><img src="../img/12018Matias_EP_DE_03.jpg"></a>
                 </div>
                 <div class="item-description col-md-6 col-sm-6 col-xs-12">
                     <p class="item-type">PC</p>
-                    <p class="item-name">Matias Ergo Pro Keyboard</p>
+                    <p class="item-name"><a href="#">Matias Ergo Pro Keyboard</a></p>
                     <p class="item-rating"><span class="yellow">&starf;&starf;&starf;&starf;</span>&star;<span class="item-reviews">6 Review(s)</span></p>
                     <ul class="item-info">
                         <li>Power supply: by USB</li>
@@ -266,11 +176,11 @@
             </article>
             <article class="col-md-12 col-sm-12 col-xs-12">
                 <div class="img-container col-md-3 col-sm-3 col-xs-6">
-                    <img src="../img/6926CSS-ninja.jpg">
+                    <a href="#"><img src="../img/6926CSS-ninja.jpg"></a>
                 </div>
                 <div class="item-description col-md-6 col-sm-6 col-xs-12">
                     <p class="item-type">Clothing</p>
-                    <p class="item-name">CSS Puns Ninja</p>
+                    <p class="item-name"><a href="#">CSS Puns Ninja</a></p>
                     <p class="item-rating"><span class="yellow">&starf;&starf;&starf;</span>&star;&star;<span class="item-reviews">18 Review(s)</span></p>
                     <ul class="item-info">
                         <li>The components are more than easy: Of course, a ninja should wear black, invisible, and fast or present for a very short time!. All that is required for years of hard training in real ninja life, but fortunately, it's merely a beginner's task in CSS.
@@ -287,11 +197,11 @@
             </article>
             <article class="col-md-12 col-sm-12 col-xs-12">
                 <div class="img-container col-md-3 col-sm-3 col-xs-6">
-                    <img src="../img/Product_Heros_backpack_floor_1024x1024.jpg">
+                    <a href="#"><img src="../img/Product_Heros_backpack_floor_1024x1024.jpg"></a>
                 </div>
                 <div class="item-description col-md-6 col-sm-6 col-xs-12">
                     <p class="item-type">On the road</p>
-                    <p class="item-name">Das Keyboard HackShield RFID Backpack</p>
+                    <p class="item-name"><a href="#">Das Keyboard HackShield RFID Backpack</a></p>
                     <p class="item-rating"><span class="yellow">&starf;&starf;&starf;&starf;</span>&star;<span class="item-reviews">12 Review(s)</span></p>
                     <ul class="item-info">
                         <li>Dimensions: approx. 37 x 50 x 8cm</li>
@@ -322,17 +232,17 @@
                 <li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
             </ul>
             <hr class="col-md-12 col-sm-12 col-xs-12">
-            <ul id="recent-items" class="col-md-12 col-sm-12 col-xs-12">
-                <li class="recent-item">
+            <ul id="recent-items" class="col-md-12 col-sm-12 col-xs-12 cd-items cd-container">
+                <li class="recent-item cd-item">
                     <article>
                         <div class="img-container col-md-12">
                             <div class="actions">
                                 <a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a>
                                 <a href="#"><i class="fa fa-bars" aria-hidden="true"></i></a>
                             </div>
-                            <img src="../img/Product_Heros_backpack_floor_1024x1024.jpg">
+                            <img src="../img/quickview-list-products/Product_Heros_backpack_floor_1024x1024.jpg" data-type="a">
                             <div class="quickview">
-                                <a href="#">Quickview</a>
+                                <a href="#0" class="cd-trigger">Quickview</a>
                             </div>
                         </div>
                         <p class="item-type">On the road</p>
@@ -341,16 +251,16 @@
                         <p class="item-price">$169.95<a href="#"><i class="fa fa-cart-arrow-down" aria-hidden="true"></i></a></p>
                     </article>
                 </li>
-                <li class="recent-item">
+                <li class="recent-item cd-item">
                     <article>
                         <div class="img-container col-md-12">
                             <div class="actions">
                                 <a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a>
                                 <a href="#"><i class="fa fa-bars" aria-hidden="true"></i></a>
                             </div>
-                            <img src="../img/6926CSS-ninja.jpg">
+                            <img src="../img/quickview-list-products/6926CSS-ninja.jpg" data-type="b">
                             <div class="quickview">
-                                <a href="#">Quickview</a>
+                                <a href="#0" class="cd-trigger">Quickview</a>
                             </div>
                         </div>
                         <p class="item-type">Clothing</p>
@@ -359,16 +269,16 @@
                         <p class="item-price">$25.95<a href="#"><i class="fa fa-cart-arrow-down" aria-hidden="true"></i></a></p>
                     </article>
                 </li>
-                <li class="recent-item new-item">
+                <li class="recent-item new-item cd-item">
                     <article>
                         <div class="img-container col-md-12">
                             <div class="actions">
                                 <a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a>
                                 <a href="#"><i class="fa fa-bars" aria-hidden="true"></i></a>
                             </div>
-                            <img src="../img/12018Matias_EP_DE_03.jpg">
+                            <img src="../img/quickview-list-products/12018Matias_EP_US_02.jpg" data-type="c">
                             <div class="quickview">
-                                <a href="#">Quickview</a>
+                                <a href="#0" class="cd-trigger">Quickview</a>
                             </div>
                         </div>
                         <p class="item-type">PC</p>
@@ -377,16 +287,16 @@
                         <p class="item-price">$299.95<a href="#"><i class="fa fa-cart-arrow-down" aria-hidden="true"></i></a></p>
                     </article>
                 </li>
-                <li class="recent-item">
+                <li class="recent-item cd-item">
                     <article>
                         <div class="img-container col-md-12">
                             <div class="actions">
                                 <a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a>
                                 <a href="#"><i class="fa fa-bars" aria-hidden="true"></i></a>
                             </div>
-                            <img src="../img/Handtuch-Binaer.jpg">
+                            <img src="../img/quickview-list-products/Handtuch-Binaer.jpg" data-type="d">
                             <div class="quickview">
-                                <a href="#">Quickview</a>
+                                <a href="#0" class="cd-trigger">Quickview</a>
                             </div>
                         </div>
                         <p class="item-type">Home</p>
@@ -395,16 +305,16 @@
                         <p class="item-price">$29.95<a href="#"><i class="fa fa-cart-arrow-down" aria-hidden="true"></i></a></p>
                     </article>
                 </li>
-                <li class="recent-item discount-item">
+                <li class="recent-item discount-item cd-item">
                     <article>
                         <div class="img-container col-md-12">
                             <div class="actions">
                                 <a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a>
                                 <a href="#"><i class="fa fa-bars" aria-hidden="true"></i></a>
                             </div>
-                            <img src="../img/1226912269_retro_games_controller_01.jpg">
+                            <img src="../img/quickview-list-products/1226912269_retro_games_controller_01.jpg" data-type="e">
                             <div class="quickview">
-                                <a href="#">Quickview</a>
+                                <a href="#0" class="cd-trigger">Quickview</a>
                             </div>
                         </div>
                         <p class="item-type">Games</p>
@@ -414,81 +324,53 @@
                     </article>
                 </li>
             </ul>
+            <div class="cd-quick-view" style="z-index: 10">
+                <div class="cd-slider-wrapper">
+                    <ul class="cd-slider a">
+                        <li><img src="../img/quickview-list-products/Product_Heros_backpack_floor_1024x1024.jpg" alt="Product 1"></li>
+                        <li><img src="../img/quickview-list-products/Hackshield_Rucksack_03.jpg" alt="Product 2"></li>
+                        <li><img src="../img/quickview-list-products/Product_Heros_backpack_2_1024x1024.jpg" alt="Product 3"></li>
+                        <li><img src="../img/quickview-list-products/Product_Heros_backpack_3_1024x1024.jpg" alt="Product 3"></li>
+                    </ul> <!-- cd-slider -->
+                    <ul class="cd-slider b">
+                        <li><img src="../img/quickview-list-products/6926CSS-ninja.jpg"></li>
+                    </ul>
+                    <ul class="cd-slider c">
+                        <li><img src="../img/quickview-list-products/12018Matias_EP_US_02.jpg" alt="Product 3"></li>
+                        <li><img src="../img/quickview-list-products/12018Matias_EP_US_01.jpg" alt="Product 3"></li>
+                        <li><img src="../img/quickview-list-products/12018Matias_EP_DE_01.jpg" alt="Product 3"></li>
+                        <li><img src="../img/quickview-list-products/12018Matias_EP_DE_03.jpg" alt="Product 3"></li>
+                    </ul>
+                    <ul class="cd-slider d">
+                        <li><img src="../img/quickview-list-products/Handtuch-Binaer.jpg"></li>
+                        <li><img src="../img/quickview-list-products/Binaer_Material.jpg"></li>
+                        <li><img src="../img/quickview-list-products/Handtuch-Binaer-fold.jpg"></li>
+                    </ul>
+                    <ul class="cd-slider e">
+                        <li><img src="../img/quickview-list-products/1226912269_retro_games_controller_01.jpg" alt="Product 3"></li>
+                        <li><img src="../img/quickview-list-products/12269Retrogames_Controller_5.jpg" alt="Product 3"></li>
+                        <li><img src="../img/quickview-list-products/12269Retrogames_Controller_7.jpg" alt="Product 3"></li>
+                    </ul>
+
+                    <ul class="cd-slider-navigation">
+                        <li><a class="cd-next" href="#0">Prev</a></li>
+                        <li><a class="cd-prev" href="#0">Next</a></li>
+                    </ul> <!-- cd-slider-navigation -->
+                </div> <!-- cd-slider-wrapper -->
+
+                <div class="cd-item-info">
+                    <h2>Produt Title</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, omnis illo iste ratione. Numquam eveniet quo, ullam itaque expedita impedit. Eveniet, asperiores amet iste repellendus similique reiciendis, maxime laborum praesentium.</p>
+
+                    <ul class="cd-item-action">
+                        <li><button class="add-to-cart">Add to cart</button></li>
+                        <li><a href="#0">Learn more</a></li>
+                    </ul> <!-- cd-item-action -->
+                </div> <!-- cd-item-info -->
+                <a href="#0" class="cd-close">Close</a>
+            </div>
         </section>
     </main>
-    <footer>
-        <div class="row newsletter-bar">
-            <div class="col-md-6">
-                <span class="food-span-left">Subscribe our newsletter</span>
-                <span class="foot-span-right">Get <span class="discount-price">25% Off</span> for first purchase!</span>
-            </div>
-            <div class="col-md-6">
-                <form class="subscribe-email">
-                    <input type="email" placeholder="Your email here..."/>
-                    <button class="foot-subscribe-btn">Subscribe</button>
-                </form>
-            </div>
-        </div>
-        <div class="row foot-navbar">
-            <div class="col-md-11">
-                <ul>
-                    <li><a href="#">About us</a></li>
-                    <li><a href="#">Customer Service</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Site Map</a></li>
-                    <li><a href="#">Search Terms</a></li>
-                    <li><a href="#">Advanced Search</a></li>
-                    <li><a href="#">Orders and Returns</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                </ul>
-            </div>
-            <div class="col-md-1"></div>
-        </div>
-        <div class="row foot-bottom">
-            <section class="col-md-3">
-                <h1>Contact SmartTech!</h1>
-                <p>Address: Sofia, Izgrev residential area, 15-17 Tintyava str, fl. 1</p>
-                <p>Phone: (+100)1234567890</p>
-                <p>Support: Support@smarttech.com</p>
-                <p>
-                    <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                    <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                    <a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
-                    <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                    <a href="#"><i class="fa fa-vimeo" aria-hidden="true"></i></a>
-                </p>
-            </section>
-            <section class="col-md-3">
-                <h1>Categories</h1>
-                <ul>
-                    <li><a href="#">Gadgets</a></li>
-                    <li><a href="#">Clothing</a></li>
-                    <li><a href="#">Gifts</a></li>
-                </ul>
-            </section>
-            <section class="col-md-3">
-                <h1>Customer Service</h1>
-                <ul>
-                    <li><a href="#">Shipping and Returns</a></li>
-                    <li><a href="#">Secure Shopping</a></li>
-                    <li><a href="#">International Shipping</a></li>
-                    <li><a href="#">Affiliates</a></li>
-                    <li><a href="#">Contacts</a></li>
-                </ul>
-            </section>
-            <section class="col-md-3">
-                <h1>Information</h1>
-                <ul>
-                    <li><a href="#">Our Blog</a></li>
-                    <li><a href="#">About Our Shop</a></li>
-                    <li><a href="#">Secure Shopping</a></li>
-                    <li><a href="#">Delivery information</a></li>
-                    <li><a href="#">Store Locations</a></li>
-                    <li><a href="#">FAQs</a></li>
-                </ul>
-            </section>
-        </div>
-    </footer>
 </div>
 </body>
 </html>
