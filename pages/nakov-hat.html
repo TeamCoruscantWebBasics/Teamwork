@@ -6,16 +6,16 @@
     <title>Nakov's practical hat</title>
     <script src="../scripts/lib/jquery-3.1.1.min.js"></script>
     <script src="../scripts/lib/jquery-ui.min.js"></script>
-    <script src="../scripts/jquery.fancybox.pack.js"></script>
-    <script src="../scripts/index-script.js"></script>
-    <script src="../scripts/slider.js"></script>
     <link rel="stylesheet" href="../css/lib/bootstrap-3.3.7-dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../css/lib/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css.map">
-    <link rel="stylesheet" href="../css/jquery.fancybox.css">
-    <link rel="stylesheet" href="../css/lib/jquery-ui.css">
     <link rel="stylesheet" href="../css/index-css.css">
     <link rel="stylesheet" href="../css/list-products.css">
     <link rel="stylesheet" href="../css/product-details.css">
+    <link rel="stylesheet" href="../css/lib/jquery-ui.css">
+    <link rel="stylesheet" href="../css/quickview.css">
+    <script src="../scripts/lib/modernizr.js"></script>
+    <script src="../scripts/lib/velocity.min.js"></script>
+    <script src="../scripts/list-products-quickview.js"></script>
+    <script src="../scripts/slider.js"></script>
 </head>
 <body>
 <div class="container">
@@ -224,9 +224,9 @@
                                 <a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a>
                                 <a href="#"><i class="fa fa-bars" aria-hidden="true"></i></a>
                             </div>
-                            <img src="../img/products/hats/brain-content.png">
+                            <img src="../img/products/hats/brain-content.png" data-type="g">
                             <div class="quickview">
-                                <a href="#">Quickview</a>
+                                <a href="#0" class="cd-trigger">Quickview</a>
                             </div>
                         </div>
                         <p class="item-type">Hat</p>
@@ -327,109 +327,145 @@
                     <li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
                 </ul>
             </div>
-            <ul id="recent-items">
-                <li class="recent-item">
+            <ul id="recent-items" class="col-md-12 col-sm-12 col-xs-12 cd-items cd-container">
+                <li class="recent-item cd-item">
                     <article>
                         <div class="img-container col-md-12">
                             <div class="actions">
                                 <a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a>
                                 <a href="#"><i class="fa fa-bars" aria-hidden="true"></i></a>
                             </div>
-                            <img src="../img/Product_Heros_backpack_floor_1024x1024.jpg">
+                            <img src="../img/quickview-list-products/Product_Heros_backpack_floor_1024x1024.jpg" data-type="a">
                             <div class="quickview">
-                                <a href="#">Quickview</a>
+                                <a href="#0" class="cd-trigger">Quickview</a>
                             </div>
                         </div>
                         <p class="item-type">On the road</p>
                         <a href="#" class="item-name">Das Keyboard HackShield RFID Backpack</a>
-                        <p class="item-rating"><span class="yellow">&starf;&starf;&starf;&starf;</span>&star;<span
-                                class="item-reviews">12 Review(s)</span></p>
-                        <p class="item-price">$169.95<a href="#"><i class="fa fa-cart-arrow-down"
-                                                                    aria-hidden="true"></i></a></p>
+                        <p class="item-rating"><span class="yellow">&starf;&starf;&starf;&starf;</span>&star;<span class="item-reviews">12 Review(s)</span></p>
+                        <p class="item-price">$169.95<a href="#"><i class="fa fa-cart-arrow-down" aria-hidden="true"></i></a></p>
                     </article>
                 </li>
-                <li class="recent-item">
+                <li class="recent-item cd-item">
                     <article>
                         <div class="img-container col-md-12">
                             <div class="actions">
                                 <a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a>
                                 <a href="#"><i class="fa fa-bars" aria-hidden="true"></i></a>
                             </div>
-                            <img src="../img/6926CSS-ninja.jpg">
+                            <img src="../img/quickview-list-products/6926CSS-ninja.jpg" data-type="b">
                             <div class="quickview">
-                                <a href="#">Quickview</a>
+                                <a href="#0" class="cd-trigger">Quickview</a>
                             </div>
                         </div>
                         <p class="item-type">Clothing</p>
                         <a href="#" class="item-name">CSS Puns Ninja</a>
-                        <p class="item-rating"><span class="yellow">&starf;&starf;&starf;</span>&star;&star;<span
-                                class="item-reviews">18 Review(s)</span></p>
-                        <p class="item-price">$25.95<a href="#"><i class="fa fa-cart-arrow-down"
-                                                                   aria-hidden="true"></i></a></p>
+                        <p class="item-rating"><span class="yellow">&starf;&starf;&starf;</span>&star;&star;<span class="item-reviews">18 Review(s)</span></p>
+                        <p class="item-price">$25.95<a href="#"><i class="fa fa-cart-arrow-down" aria-hidden="true"></i></a></p>
                     </article>
                 </li>
-                <li class="recent-item new-item">
+                <li class="recent-item new-item cd-item">
                     <article>
                         <div class="img-container col-md-12">
                             <div class="actions">
                                 <a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a>
                                 <a href="#"><i class="fa fa-bars" aria-hidden="true"></i></a>
                             </div>
-                            <img src="../img/12018Matias_EP_DE_03.jpg">
+                            <img src="../img/quickview-list-products/12018Matias_EP_US_02.jpg" data-type="c">
                             <div class="quickview">
-                                <a href="#">Quickview</a>
+                                <a href="#0" class="cd-trigger">Quickview</a>
                             </div>
                         </div>
                         <p class="item-type">PC</p>
                         <a href="#" class="item-name">Matias Ergo Pro Keyboard</a>
-                        <p class="item-rating"><span class="yellow">&starf;&starf;&starf;&starf;</span>&star;<span
-                                class="item-reviews">6 Review(s)</span></p>
-                        <p class="item-price">$299.95<a href="#"><i class="fa fa-cart-arrow-down"
-                                                                    aria-hidden="true"></i></a></p>
+                        <p class="item-rating"><span class="yellow">&starf;&starf;&starf;&starf;</span>&star;<span class="item-reviews">6 Review(s)</span></p>
+                        <p class="item-price">$299.95<a href="#"><i class="fa fa-cart-arrow-down" aria-hidden="true"></i></a></p>
                     </article>
                 </li>
-                <li class="recent-item">
+                <li class="recent-item cd-item">
                     <article>
                         <div class="img-container col-md-12">
                             <div class="actions">
                                 <a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a>
                                 <a href="#"><i class="fa fa-bars" aria-hidden="true"></i></a>
                             </div>
-                            <img src="../img/Handtuch-Binaer.jpg">
+                            <img src="../img/quickview-list-products/Handtuch-Binaer.jpg" data-type="d">
                             <div class="quickview">
-                                <a href="#">Quickview</a>
+                                <a href="#0" class="cd-trigger">Quickview</a>
                             </div>
                         </div>
                         <p class="item-type">Home</p>
                         <a href="#" class="item-name">Bath Towel Binary</a>
-                        <p class="item-rating"><span class="yellow">&starf;&starf;&starf;&starf;</span>&star;<span
-                                class="item-reviews">12 Review(s)</span></p>
-                        <p class="item-price">$29.95<a href="#"><i class="fa fa-cart-arrow-down"
-                                                                   aria-hidden="true"></i></a></p>
+                        <p class="item-rating"><span class="yellow">&starf;&starf;&starf;&starf;</span>&star;<span class="item-reviews">12 Review(s)</span></p>
+                        <p class="item-price">$29.95<a href="#"><i class="fa fa-cart-arrow-down" aria-hidden="true"></i></a></p>
                     </article>
                 </li>
-                <li class="recent-item discount-item">
+                <li class="recent-item discount-item cd-item">
                     <article>
                         <div class="img-container col-md-12">
                             <div class="actions">
                                 <a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a>
                                 <a href="#"><i class="fa fa-bars" aria-hidden="true"></i></a>
                             </div>
-                            <img src="../img/1226912269_retro_games_controller_01.jpg">
+                            <img src="../img/quickview-list-products/1226912269_retro_games_controller_01.jpg" data-type="e">
                             <div class="quickview">
-                                <a href="#">Quickview</a>
+                                <a href="#0" class="cd-trigger">Quickview</a>
                             </div>
                         </div>
                         <p class="item-type">Games</p>
                         <a href="#" class="item-name">Retro Games Controller</a>
-                        <p class="item-rating"><span class="yellow">&starf;&starf;&starf;&starf;</span>&star;<span
-                                class="item-reviews">35 Review(s)</span></p>
-                        <p class="item-price"><span class="new-price">$19.95</span><span
-                                class="old-price">$24.95</span><a href="#"><i class="fa fa-cart-arrow-down"
-                                                                              aria-hidden="true"></i></a></p>
+                        <p class="item-rating"><span class="yellow">&starf;&starf;&starf;&starf;</span>&star;<span class="item-reviews">35 Review(s)</span></p>
+                        <p class="item-price"><span class="new-price">$19.95</span><span class="old-price">$24.95</span><a href="#"><i class="fa fa-cart-arrow-down" aria-hidden="true"></i></a></p>
                     </article>
                 </li>
             </ul>
+            <div class="cd-quick-view" style="z-index: 10">
+                <div class="cd-slider-wrapper">
+                    <ul class="cd-slider a">
+                        <li><img src="../img/quickview-list-products/Product_Heros_backpack_floor_1024x1024.jpg" alt="Product 1"></li>
+                        <li><img src="../img/quickview-list-products/Hackshield_Rucksack_03.jpg" alt="Product 2"></li>
+                        <li><img src="../img/quickview-list-products/Product_Heros_backpack_2_1024x1024.jpg" alt="Product 3"></li>
+                        <li><img src="../img/quickview-list-products/Product_Heros_backpack_3_1024x1024.jpg" alt="Product 3"></li>
+                    </ul> <!-- cd-slider -->
+                    <ul class="cd-slider b">
+                        <li><img src="../img/quickview-list-products/6926CSS-ninja.jpg"></li>
+                    </ul>
+                    <ul class="cd-slider c">
+                        <li><img src="../img/quickview-list-products/12018Matias_EP_US_02.jpg" alt="Product 3"></li>
+                        <li><img src="../img/quickview-list-products/12018Matias_EP_US_01.jpg" alt="Product 3"></li>
+                        <li><img src="../img/quickview-list-products/12018Matias_EP_DE_01.jpg" alt="Product 3"></li>
+                        <li><img src="../img/quickview-list-products/12018Matias_EP_DE_03.jpg" alt="Product 3"></li>
+                    </ul>
+                    <ul class="cd-slider d">
+                        <li><img src="../img/quickview-list-products/Handtuch-Binaer.jpg"></li>
+                        <li><img src="../img/quickview-list-products/Binaer_Material.jpg"></li>
+                        <li><img src="../img/quickview-list-products/Handtuch-Binaer-fold.jpg"></li>
+                    </ul>
+                    <ul class="cd-slider e">
+                        <li><img src="../img/quickview-list-products/1226912269_retro_games_controller_01.jpg" alt="Product 3"></li>
+                        <li><img src="../img/quickview-list-products/12269Retrogames_Controller_5.jpg" alt="Product 3"></li>
+                        <li><img src="../img/quickview-list-products/12269Retrogames_Controller_7.jpg" alt="Product 3"></li>
+                    </ul>
+                    <ul class="cd-slider g">
+                        <li><img src="../img/products/hats/nakov-hat-v1.png" alt="Product 3"></li>
+                    </ul>
+
+                    <ul class="cd-slider-navigation">
+                        <li><a class="cd-next" href="#0">Prev</a></li>
+                        <li><a class="cd-prev" href="#0">Next</a></li>
+                    </ul> <!-- cd-slider-navigation -->
+                </div> <!-- cd-slider-wrapper -->
+
+                <div class="cd-item-info">
+                    <h2>Produt Title</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, omnis illo iste ratione. Numquam eveniet quo, ullam itaque expedita impedit. Eveniet, asperiores amet iste repellendus similique reiciendis, maxime laborum praesentium.</p>
+                    <ul class="cd-item-action">
+                        <li><button class="add-to-cart">Add to cart</button></li>
+                        <li><a href="#0">Learn more</a></li>
+                    </ul> <!-- cd-item-action -->
+                </div> <!-- cd-item-info -->
+                <a href="#0" class="cd-close">Close</a>
+            </div>
         </section>
     </main>
     <footer>
