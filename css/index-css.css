@@ -346,13 +346,13 @@ header{
 
 .shopping-cart-details .shopping-cart-price, .shopping-cart-details .shopping-cart-price-2{
     position: absolute;
-    top: 32%;
-    left: 30%;
+    top: 120px;
+    left: 90px;
     font-weight: bold;
 }
 
 .shopping-cart-details .shopping-cart-price-2{
-    top: 59%;
+    top: 210px;
 }
 
 .shopping-cart-total-price span{
@@ -417,15 +417,25 @@ header{
     cursor: pointer;
 }
 
-@media screen and (max-width: 768px){
-    .shopping-cart{
-        text-align: center;
-    }
-
+@media screen and (max-width: 767px){
     .shopping-cart-details .shopping-cart-price, .shopping-cart-details .shopping-cart-price-2{
-        left: 41%;
+        left: 90px;
     }
 }
+
+@media screen and (max-width: 480px){
+    .shopping-cart-details{
+        top: 130px;
+        right: 180px;
+    }
+}
+
+@media screen and (max-width: 400px){
+    .shopping-cart-details{
+        right: 100px;
+    }
+}
+
 
 /*END .shopping-cart-details*/
 
