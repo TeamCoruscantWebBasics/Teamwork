@@ -1,3 +1,10 @@
+main::before,
+main::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
 main > ul li {
     display: inline-block;
 }
